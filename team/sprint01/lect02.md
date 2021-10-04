@@ -3,7 +3,7 @@ Mentor: Nagarjun <br />
 Meeting Time: lect02, 2:56pm <br />
 Type of Meeting: Scrum Meeting <br />
 Team: Christine Ong [x], Morgan Lin [x], Robert He [x], Tommy Nguyen [x] <br />
-Scribed Discussion: <br />
+# Scribed Discussion: 
 Goal: <br />
 - To help students find their community within UCSB and further their connections <br />
 - As much as it seems, 4 years is not a long time. Many times, it’s difficult for people to find a community that is right for them. At UCSB, though there are numerous club involvement fairs and daily organization tablings, it’s difficult for people to fit an organization that is the right fit for them as they don’t know what the organization is about, their mission, values, events, and vibe. <br />
