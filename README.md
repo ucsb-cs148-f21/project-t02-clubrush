@@ -8,6 +8,10 @@ Our project will allow students to find at community at UCSB in a more streamlin
    Name       |     Github ID
 ----------------------------------
  Christine Ong |  Christine-ong
+---------------------------------
    Morgan Lin  |   Morgan6688
+---------------------------------
    Robert He   |  roberthe9606
+---------------------------------
   Tommy Nguyen | tommynguyen13810
+---------------------------------
