@@ -18,3 +18,8 @@ Desire: <br />
 Need: <br />
 - Community <br />
 - Social Acceptance <br />
+
+MVP: <br />
+- WebApp that displays various clubs and orginizations
+- We can obtain info from Shoreline, or from clubs/organizations themselves
+- Navigate through the different clubs/organizations 
