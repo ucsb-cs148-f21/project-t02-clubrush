@@ -6,6 +6,7 @@ Figuring out what to develop with
 
 
 # Problem 3
+Figuring out the organzation of clubs to display to user
 
 # subproblem 1
 Website needs to be up 
