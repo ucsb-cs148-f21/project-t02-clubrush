@@ -1,17 +1,26 @@
 # Problem 1
-Website needs to be up 
-# Problem 2 
-buttons?
+Retrieving relevant data to show user
+
+# Problem 2
+Figuring out what to develop with 
+
+
 # Problem 3
+
+# subproblem 1
+Website needs to be up 
+# subproblem 2 
+buttons?
+# subproblem 3
 dropdowns?
-# Problem 4
+# subproblem 4
 image uploads for clubs
-# Problem 5
+# subproblem 5
 description formatting
-# Problem 6
+# subproblem 6
 categorizing clubs + organizing
-# Problem 7
+# subproblem 7
 user friendly font and formatting
-# Problem 8 
+# subproblem 8 
 have a home bar that has the drop downs and maybe and image that links back to the home page of the website
-# Problem 9
+# subproblem 9
