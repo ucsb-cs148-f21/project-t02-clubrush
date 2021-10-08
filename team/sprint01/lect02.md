@@ -16,3 +16,8 @@ MVP: <br />
 - WebApp that displays various clubs and orginizations
 - We can obtain info from Shoreline, or from clubs/organizations themselves
 - Navigate through the different clubs/organizations 
+
+Christine - Today I discussed our goals and completed parts of todays lecture assignment, planned how to implement the app and today I will complete the Hello World app. <br />
+Morgan -   <br />
+Robert -    <br />
+Tommy -  <br />
