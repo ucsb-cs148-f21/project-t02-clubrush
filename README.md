@@ -13,3 +13,6 @@ Our project will allow students to find at community at UCSB in a more streamlin
 ---------------------------------
   Tommy Nguyen | tommynguyen13810
 ---------------------------------
+
+# Tech Stack
+For our project, we will be utilizing React and Node.js
