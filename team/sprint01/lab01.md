@@ -11,7 +11,7 @@ Goal: <br />
 - In contrast to Shoreline, the Club Rush application is open to all members of SB (SBCC, SB residents, graduate students, and such), not just UCSB undergraduate students to help others find a sense of community <br />
 - There are alot of clubs and people can get overwhelmed, we can create a responsive and easy to use webapp in order to convey different clubs mission and values <br />
 
-Christine - Today I created my github branch, pushed my Christine.md, and communicated with my team about what to do. For the future, I will create my Hello World app.
-Morgan - Today I pushed my Morgan.md 
-Robert - Today I pushed my Robert.md 
-Tommy - Today I pushed my Tommy.md 
+Christine - Today I created my github branch, pushed my Christine.md, and communicated with my team about what to do. For the future, I will create my Hello World app. <br />
+Morgan - Today I pushed my Morgan.md  <br />
+Robert - Today I pushed my Robert.md <br />
+Tommy - Today I pushed my Tommy.md <br />
