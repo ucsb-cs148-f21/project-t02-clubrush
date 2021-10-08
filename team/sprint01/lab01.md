@@ -14,4 +14,4 @@ Goal: <br />
 Christine - Today I created my github branch, pushed my Christine.md, and communicated with my team about what to do. For the future, I will create my Hello World app. <br />
 Morgan - Today I created my github branch, pushed my Morgan.md, and communicated with my team about what to do. For the future, I will create my Hello World app.  <br />
 Robert - Today I created my github branch, pushed my Robert.md, and communicated with my team about what to do. For the future, I will create my Hello World app. <br />
-Tommy - Today I pushed my Tommy.md to my github branch and then made a pull request to the main branch. For the future, I will create my hello world app and deploy using heroku.<br />
+Tommy - Today I pushed my Tommy.md to my github branch and then made a pull request to the main branch. For the future, I will create my hello world app and deploy using heroku. Here is the github repository for the hello world app that I will make: https://github.com/tommynguyen13810/my-app.<br />
