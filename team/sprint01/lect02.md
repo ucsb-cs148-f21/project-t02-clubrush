@@ -18,6 +18,6 @@ MVP: <br />
 - Navigate through the different clubs/organizations 
 
 Christine - Today I discussed our goals and completed parts of todays lecture assignment, planned how to implement the app and today I will complete the Hello World app. <br />
-Morgan -   <br />
+Morgan -  Today I came up with some ideas for our project and had a general direction of the app we are going to create. I am currently working on the Hello World app and hope to get it done by tomorrow. <br />
 Robert -    <br />
 Tommy -  <br />
