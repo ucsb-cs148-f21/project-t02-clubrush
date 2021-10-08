@@ -6,6 +6,8 @@ Timmy is a freshman at UCSB and has only met a couple of his floor-mates at the 
 ## Persona 2
 Kevin Chang is a college freshman looking for friends. He decides to join some clubs but he doesn't know where to start. He wants to know what each club does, hoping to find his community. 
 
+
+
 # Problems
 ## Problem 1
 Retrieving relevant data to show user
