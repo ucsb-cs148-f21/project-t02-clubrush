@@ -25,3 +25,6 @@ user friendly font and formatting
 # subproblem 8 
 have a home bar that has the drop downs and maybe and image that links back to the home page of the website
 # subproblem 9
+When people first step foot into UCSB, everyone is scared of not being able to find their strong community or group of friends, especially at a place where you barely know anyone.
+# subproblem 10
+With this Club Rush site, people will be able to more effectively navigate through all the potential clubs and communities there is for one to join, with a more minimal and simplistic site.
