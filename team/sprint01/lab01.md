@@ -12,6 +12,6 @@ Goal: <br />
 - There are alot of clubs and people can get overwhelmed, we can create a responsive and easy to use webapp in order to convey different clubs mission and values <br />
 
 Christine - Today I created my github branch, pushed my Christine.md, and communicated with my team about what to do. For the future, I will create my Hello World app. <br />
-Morgan - Today I pushed my Morgan.md  <br />
+Morgan - Today I created my github branch, pushed my Christine.md, and communicated with my team about what to do. For the future, I will create my Hello World app.  <br />
 Robert - Today I pushed my Robert.md <br />
 Tommy - Today I pushed my Tommy.md <br />
