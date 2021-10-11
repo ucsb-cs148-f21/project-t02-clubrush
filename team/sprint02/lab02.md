@@ -17,7 +17,7 @@ Future Deliverables:
 - Get data scrapping to work<br />
 - Homepage, clickable links to clubs<br />
 - Create different pages for different categories ex: sports, cultural, fraternity<br />
-- 
+
 Tasks:
 - Create a home bar<br />
 - learn javascript <br />
