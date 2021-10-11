@@ -19,3 +19,6 @@ For our project, we want to utilize filters and nested drop-down menus, to give 
 
 # Tech Stack
 For our project, we will be utilizing React and Node.js
+
+# User Roles
+Our Club Rush application would have Users that are students who can search up organizations, but can't add new information/data to the system. We would also have Admin/Organization Leaders that could upload new data to the system that would update organization info that is displayed on the app.
