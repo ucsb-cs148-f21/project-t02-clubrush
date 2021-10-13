@@ -12,8 +12,8 @@
 
 ## Optional
 
-* Front End members - Christine
-* Back End members - Tommy
+* Front End members - Christine and Robert
+* Back End members - Tommy and morgan
 * For styling use bootstrap 
 * Ideas : MongoDB Atlas database for putting data  -  for MVP : a home page (includes club name - clickable {leads to description})
 ## Retro Assessment
