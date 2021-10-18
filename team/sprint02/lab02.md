@@ -24,3 +24,8 @@ Tasks:
 - learn data scrapping<br />
 - refamiliarize with tech stack<br />
 - learn react<br />
+
+Christine - I am working on learning how to format things on the website ( front end things ) and will work on implenting this on the website in the future. <br />
+Morgan - I am working on ... and will work on ... <br />
+Robert - I am working on ... and will work on ... <br /> 
+Tommy - I am working on ... and will work on ...<br />
