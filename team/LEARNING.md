@@ -6,7 +6,7 @@ I will commit to refamiliarizing myself with these.
 I will commit to working through a tutorial on basic HTML on week 3 and learning how to work with Next.js during week 4.
 
 # Robert
-I will lookup tutorials on basic React, HTML, Next.js these next 2 weeks
+I will lookup tutorials on basic React, HTML, Next.js these next 2 weeks. Worked on the MVP with the deployment of the website onto github. Currently looking into the 4 hour React tutorial course posted by one of my peers as well as CSS for stylings. 
 
 # Tommy
 Existing strengths: worked on mongodb and worked on backend and frontend for a project.
