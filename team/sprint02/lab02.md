@@ -26,6 +26,6 @@ Tasks:
 - learn react<br />
 
 Christine - I am working on learning how to format things on the website ( front end things ) and will work on implenting this on the website in the future. <br />
-Morgan - I am working on ... and will work on ... <br />
+Morgan - I am working on get the backend to connect with MongoDB and will work on ... <br />
 Robert - I am working on ... and will work on ... <br /> 
-Tommy - I am working on ... and will work on ...<br />
+Tommy - I am working on getting express to work with alongiside React and will work on data scrapping for information on Shoreline<br />
