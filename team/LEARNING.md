@@ -11,4 +11,6 @@ I will lookup tutorials on basic React, HTML, Next.js these next 2 weeks
 # Tommy
 Existing strengths: worked on mongodb and worked on backend and frontend for a project.
 I will lookup tutorials on React and research more about data scrapping. 
+I posted about setting github ssh key within the git_articles channel. https://docs.github.com/en/authentication/connecting-to-github-with-ssh
+I also posted about a helpful youtube tutorial on data scrapping with javascript. https://www.youtube.com/watch?v=TzZ3YOUhCxo
 
