@@ -1,0 +1,17 @@
+.navbar{
+    background-color: blue;
+}
+
+.navbar .nav-brand{
+    color:aquamarine
+}
+.navbar .navbar-nav li a{
+    color:antiquewhite;
+}
+
+.linkText{ color: white ; }
+
+.dropdown-item {
+    color: #ffffff !important;  
+}
+

@@ -1,38 +1,61 @@
-import React, {useState} from 'react';
-import './Searchbar.css'
+import React, { useState } from "react";
+import "./Searchbar.css";
+import SearchIcon from "@material-ui/icons/Search";
+import CloseIcon from "@material-ui/icons/Close";
 
+function SearchBar({ placeholder, data }) {
+  const [filteredData, setFilteredData] = useState([]);
+  const [wordEntered, setWordEntered] = useState("");
 
+  const handleFilter = (event) => {
+    const searchWord = event.target.value;
+    setWordEntered(searchWord);
+    const newFilter = data.filter((value) => {
+      return value.title.toLowerCase().includes(searchWord.toLowerCase());
+    });
 
-const SearchBar = (props) => {
-    const [searchValue, setSearchValue] = useState("")
-
-    const handleInputChange = (event) => {
-        setSearchValue(event.target.value)
+    if (searchWord === "") {
+      setFilteredData([]);
+    } else {
+      setFilteredData(newFilter);
     }
+  };
 
-    const handleClearClick = () => {
-        setSearchValue("")
-    }
+  const clearInput = () => {
+    setFilteredData([]);
+    setWordEntered("");
+  };
 
-    const filteredClubs = props.clubs.filter((club) => {
-            return club.includes(searchValue)
-    })
-    
-
-    const shouldDisplayButton = searchValue.length > 0
-
-    return (
-        <div>
-            <input type="text" value={searchValue} onChange={handleInputChange} aria-label="Search" placeholder="Search"></input>
-            {shouldDisplayButton && <button onClick={handleClearClick}>clear</button>}
-            <ul>
-                {filteredClubs.map((club) => {
-                    return <li key={club}>{club}</li>
-                })}
-            </ul>
-
+  return (
+    <div className="search">
+      <div className="searchInputs">
+        <input
+          type="text"
+          placeholder={placeholder}
+          value={wordEntered}
+          onChange={handleFilter}
+        />
+        <div className="searchIcon">
+          {filteredData.length === 0 ? (
+            <SearchIcon />
+          ) : (
+            <CloseIcon id="clearBtn" onClick={clearInput} />
+          )}
         </div>
-    )
+      </div>
+      {filteredData.length !== 0 && (
+        <div className="dataResult">
+          {filteredData.slice(0, 15).map((value, key) => {
+            return (
+              <a className="dataItem" href={value.link} rel="noreferrer" target="_blank">
+                <p>{value.title} </p>
+              </a>
+            );
+          })}
+        </div>
+      )}
+    </div>
+  );
 }
 
-export default SearchBar
+export default SearchBar;
