@@ -1,6 +1,4 @@
 
-# project-t02-clubrush
-=======
 # Team Name
 project-t02-clubrush
 # Project Name
