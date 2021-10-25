@@ -17,12 +17,9 @@ export default function Home() {
   return (
     <Layout>
       <Container>
-        
-          
-
-        <h1 style={{ color: 'white'}}>Welcome to Club Rush!</h1>
+        <h1>Welcome to Club Rush!</h1>
         <br />
-        <TextWrapper  style={{color: 'white'}}>
+        <TextWrapper>
           Our project will allow students to find at community at UCSB in a more 
           streamlined website that is more convenient than the current website, Shoreline.
           For our project, we want to utilize filters and nested drop-down menus, to give 
