@@ -1,0 +1,15 @@
+[
+    {     
+      "link": "https://club-rush.herokuapp.com/club1/datascience\n",
+      "title": "Data Science",
+      "mission": "We long to create a welcoming environment for UCSB students who are interested in anime. By having this club, students will be able to create friendships and network with other people who share similar interests. This will allow new students to make friendships with their peers and can hopefully help them adjust to college life a little easier. Additionally, we would like to educate people about Japanese culture and cultural icons through our meetings and special events."
+      
+
+    },
+    {     
+      "link": "https://club-rush.herokuapp.com/club2/anime\n",
+      "title": "Anime",
+      "mission": "We long to create a welcoming environment for UCSB students who are interested in anime. By having this club, students will be able to create friendships and network with other people who share similar interests. This will allow new students to make friendships with their peers and can hopefully help them adjust to college life a little easier. Additionally, we would like to educate people about Japanese culture and cultural icons through our meetings and special events.",
+      "contact": "theucsbanimeclub@gmail.com"
+    }
+]

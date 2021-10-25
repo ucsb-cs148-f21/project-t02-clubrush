@@ -4,7 +4,13 @@ import "./index.css";
 import App, { UserComponent } from "./App";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
 ReactDOM.render(<UserComponent />,
-    document.getElementById('root1')
-  );
+  document.getElementById('root1')
+);
+// reportWebVitals();

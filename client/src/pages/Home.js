@@ -1,9 +1,24 @@
 import React from "react";
 import styled from "styled-components";
 
-import getUser from "../utils/get-user";
+// import getUser from "../utils/get-user";
 import Layout from "../components/Layout";
 import Container from "react-bootstrap/Container";
+import anime1Img from "../images/anime1.png";
+import DataSciImg from "../images/datasci.png";
+
+const Anime1 = styled.img`
+  width: 500px;
+  max-width: 100%;
+  height: auto;
+`;
+const DataSci1 = styled.img`
+  width: 500px;
+  max-width: 100%;
+  height: auto;
+`;
+
+
 
 const TextWrapper = styled.div`
   width: 700px;
@@ -11,26 +26,53 @@ const TextWrapper = styled.div`
 `;
 
 export default function Home() {
-  const user = getUser();
-
+  // const user = getUser();
+  
   return (
-    <Layout user={user}>
+    <Layout>
       <Container>
-        <h1>Hello! This is the Home page!</h1>
-        <TextWrapper>
-          This project was built in React, specically in Create React App (the
-          officially supported version of React developed by Facebook). This
-          starter code will focus on setting up Google Authentication and
-          demonstrating examples of public and private pages. Notice that the{" "}
-          <a href="/profile">Profile</a> page is not located in the NavBar until
-          you login.
-        </TextWrapper>
+        <br/>
+        <h1>Welcome to Club Rush!</h1>
         <br />
         <TextWrapper>
-          This Home page is a public page, meaning that users can view this page
-          without logging in. The Profile page is a private page, meaning that
-          users have to login.
+          Our project will allow students to find at community at UCSB in a more 
+          streamlined website that is more convenient than the current website, Shoreline.
+          For our project, we want to utilize filters and nested drop-down menus, to give 
+          students an easier time in their search for their new community. We want to have broader 
+          categories displayed first such as academic, fraternity, cultural, community service, etc., 
+          and then within those individual categories, have more specific filters to match what the 
+          user is looking for in their search: Co-ed, engineering, Asian, etc. We want this site to 
+          be as minimal and simplistic as possible to give students an easier time in their search. 
+          Sites such as Shoreline is a good option too, but Shoreline has too much unneccessary 
+          information and most organization's page on Shoreline has not been updated in a very long time.
+          Make sure you log in before navigating to the{" "}<a href="/club">Club</a> page!
+          
         </TextWrapper>
+        <br />
+        <h1>
+          <a href="https://club-rush.herokuapp.com/club2/anime"> 
+            <Anime1 src={anime1Img}  style={{
+              borderColor: "red",
+              //borderWidth: 5,
+              borderRadius: "50%",
+              height: 150,
+              width: 150
+            }}/>
+            </a>
+        
+            &emsp;
+          <a href="https://club-rush.herokuapp.com/club1/datascience"> 
+            <DataSci1 src={DataSciImg}  style={{
+              borderColor: "red",
+              //borderWidth: 5,
+              borderRadius: "50%",
+              height: 150,
+              width: 150
+            }}/>
+            
+            </a>
+            
+            </h1>
         <br />
       </Container>
     </Layout>

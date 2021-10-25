@@ -1,0 +1,24 @@
+.navbar{
+    background-color: #0C285C;
+}
+
+.navbar .nav-brand{
+    color:aquamarine
+}
+.navbar .navbar-nav li a{
+    color:antiquewhite;
+}
+
+.linkText{ color: white;     
+    font-family: "Audiowide", sans-serif;
+}
+
+.dropdown-item {
+    color: #ffffff;  
+}
+
+#nav-dropdown {
+    color: #ffffff;
+    font-family: "Audiowide", sans-serif;
+    padding-top: 5px
+}

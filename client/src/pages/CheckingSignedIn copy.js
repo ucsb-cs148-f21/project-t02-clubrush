@@ -19,7 +19,7 @@ export default function CheckingSignedIn() {
     <>
       <Navbar bg="light" expand="lg">
         <Container>
-          <Navbar.Brand href="/">ClubRush</Navbar.Brand>
+          <Navbar.Brand href="/">Club Rush</Navbar.Brand>
         </Container>
       </Navbar>
       <CheckingSignedInWrapper>
