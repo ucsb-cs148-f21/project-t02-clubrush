@@ -42,17 +42,16 @@ export default function App() {
     return <Route {...rest} component={isSignedIn ? component : Private} />;
   }
 
-  if (isSignedIn !== null) {
+  
     return (
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={Home} />
-          <PrivateRoute exact path="/profile" component={Profile} />
+          <Route exact path="/profile" component={Profile} />
           <Route path="/" component={PageNotFound} />
         </Switch>
       </BrowserRouter>
     );
-  }
 
 
 

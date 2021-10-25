@@ -30,16 +30,8 @@ export default function Profile() {
   },[])
 
   return (
-    <Layout user={user}>
+    <Layout>
       <Container>
-        <h1>This is your Profile page!</h1>
-        <div>
-          Here's what this app knows about you based on your Google login:
-        </div>
-        <pre>{JSON.stringify(user, null, "\t")}</pre>
-        <div>
-          Your name is "{user.fullName}" and your email is "{user.email}."
-        </div>
         <div>Google also thinks you'll like this picture :)</div>
         <br />
         <Doggo src={DoggoImg} />
