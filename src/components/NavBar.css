@@ -1,5 +1,5 @@
 .navbar{
-    background-color: blue;
+    background-color: #0C285C;
 }
 
 .navbar .nav-brand{
@@ -9,9 +9,14 @@
     color:antiquewhite;
 }
 
-.linkText{ color: white ; }
-
-.dropdown-item {
-    color: #ffffff !important;  
+.linkText{ color: white;     
+    font-family: "Audiowide", sans-serif;
 }
 
+.dropdown-item {
+    color: #ffffff;  
+}
+
+#nav-dropdown {
+    color: #ffffff;
+}

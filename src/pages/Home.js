@@ -1,11 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
-import getUser from "../utils/get-user";
+// import getUser from "../utils/get-user";
 import Layout from "../components/Layout";
 import Container from "react-bootstrap/Container";
 
-import Pekora from "./Video/Pekora.mp4";
 
 const TextWrapper = styled.div`
   width: 700px;
@@ -13,30 +12,17 @@ const TextWrapper = styled.div`
 `;
 
 export default function Home() {
-  const user = getUser();
+  // const user = getUser();
 
   return (
-    <Layout user={user}>
+    <Layout>
       <Container>
-        <div>
-          <video autoPlay loop muted
-          style={{
-            position: 'absolute',
-            width: "100%",
-            left: "50%",
-            top:"50%",
-            height: "100%",
-            objectFit: "cover",
-            transform: "translate(-50%, -50%)",
-            zIndex: "-1"
-          }}
-          >
-            <source src={Pekora} type="video/mp4"></source>
-          </video>
-        </div>
-        <h1 style={{ color: 'blue', backgroundColor: "orange" }}>Welcome to Club Rush!</h1>
+        
+          
 
-        <TextWrapper>
+        <h1 style={{ color: 'white'}}>Welcome to Club Rush!</h1>
+        <br />
+        <TextWrapper  style={{color: 'white'}}>
           Our project will allow students to find at community at UCSB in a more 
           streamlined website that is more convenient than the current website, Shoreline.
           For our project, we want to utilize filters and nested drop-down menus, to give 
@@ -51,11 +37,7 @@ export default function Home() {
           
         </TextWrapper>
         <br />
-        <TextWrapper>
-          This Home page is a public page, meaning that users can view this page
-          without logging in. The Profile page is a private page, meaning that
-          users have to login.
-        </TextWrapper>
+       
         <br />
       </Container>
     </Layout>

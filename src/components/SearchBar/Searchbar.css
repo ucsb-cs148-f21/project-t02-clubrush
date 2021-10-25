@@ -1,5 +1,5 @@
 .searchInputs {
-    margin-top: 15px;
+    margin-top: 0px;
     display: flex;
   }
   
@@ -11,12 +11,12 @@
     border-bottom-right-radius: 0px;
     font-size: 18px;
     padding: 10px;
-    height: 60px;
+    height: 30px;
     width: 300px;
   }
   
   .searchIcon {
-    height: 60px;
+    height: 30px;
     width: 50px;
     background-color: white;
     display: grid;
