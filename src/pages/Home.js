@@ -50,7 +50,7 @@ export default function Home() {
         </TextWrapper>
         <br />
         <h1>
-          <a href="http://localhost:3000/club2/anime"> 
+          <a href="https://club-rush.herokuapp.com/club2/anime"> 
             <Anime1 src={anime1Img}  style={{
               borderColor: "red",
               //borderWidth: 5,
@@ -61,7 +61,7 @@ export default function Home() {
             </a>
         
             &emsp;
-          <a href="http://localhost:3000/club1/datascience"> 
+          <a href="https://club-rush.herokuapp.com/club1/datascience"> 
             <DataSci1 src={DataSciImg}  style={{
               borderColor: "red",
               //borderWidth: 5,
