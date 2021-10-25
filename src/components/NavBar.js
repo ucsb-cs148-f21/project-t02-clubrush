@@ -20,7 +20,7 @@ export default function NavBar(props) {
           <Nav className="mr-auto">
             <Nav.Link href="/"><h4 className="linkText">Home</h4></Nav.Link>
             <h4>
-            <NavDropdown title="Club1" className="dropdown-item" id="nav-dropdown">
+            <NavDropdown title="Clubs" className="dropdown-item" id="nav-dropdown">
             
               <NavDropdown.Item href="./pages/DataScience" eventkey="/club1">
                 {<Nav.Link href="/club1/datascience">Data Science</Nav.Link>}
@@ -31,7 +31,7 @@ export default function NavBar(props) {
               
             </NavDropdown></h4>
             
-            {<Nav.Link href="/club"><h4 className="linkText">Club</h4></Nav.Link>}
+            {<Nav.Link href="/club"><h4 className="linkText">Bookmarks</h4></Nav.Link>}
           </Nav>
           
           <form class="form-inline my-2 my-lg-0">
