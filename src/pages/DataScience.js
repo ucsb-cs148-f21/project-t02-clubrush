@@ -27,15 +27,10 @@ export default function DataScience() {
     
     <Layout>
       <Container>
+      <img src='https://www.datascienceucsb.org/images/datasciencelogotransparent.png' className='img-fluid shadow-4' alt='...' />
       <br/>
         <div>
-        <h1>Data Science Club<DataSci1 src={DataSciImg1} style={{
-          borderColor: "red",
-          //borderWidth: 5,
-          borderRadius: "50%",
-          height: 100,
-          width: 100
-        }}/></h1>
+        <h1>Data Science Club<DataSci1 /></h1>
         <br />
         <h3>
           Description
