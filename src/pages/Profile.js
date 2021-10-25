@@ -24,18 +24,7 @@ export default function Club() {
   return (
     <Layout>
       <Container>
-        <h1>Data Science Club!</h1>
-        <div>
-          Description
-        </div>
-        <div>
-          Data Science club is for nerds like tommy.
-        </div>
-        <br /> 
-        <div>
-          Your name is "" and your email is ""
-        </div>
-        <div>Google also thinks you'll like this picture :)</div>
+        <h1>Future Page for Bookmarks</h1>
         <br />
         <Doggo src={DoggoImg} />
         <br />

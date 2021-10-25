@@ -27,7 +27,7 @@ export default function DataScience() {
     
     <Layout>
       <Container>
-        
+      <br/>
         <div>
         <h1>Data Science Club<DataSci1 src={DataSciImg1} style={{
           borderColor: "red",
