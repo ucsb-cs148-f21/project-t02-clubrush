@@ -6,7 +6,6 @@ import CloseIcon from "@material-ui/icons/Close";
 function SearchBar({ placeholder, data }) {
   const [filteredData, setFilteredData] = useState([]);
   const [wordEntered, setWordEntered] = useState("");
-
   const handleFilter = (event) => {
     const searchWord = event.target.value;
     setWordEntered(searchWord);
@@ -25,6 +24,12 @@ function SearchBar({ placeholder, data }) {
     setFilteredData([]);
     setWordEntered("");
   };
+
+  // const getClub = (e) => {
+  //   console.log("test");
+  //   console.log(e.currentTarget.href);
+  //   console.log(e.currentTarget.children[0].textContent);
+  // }
 
   return (
     <div className="search">
@@ -49,6 +54,9 @@ function SearchBar({ placeholder, data }) {
             return (
               <a className="dataItem" href={value.link} rel="noreferrer" target="_blank">
                 <p>{value.title} </p>
+
+               {/* <a className="dataItem" href={value.link} rel="noreferrer" target="_blank" onClick={getClub}> */}
+                {/* <p onClick={getClub}>{value.title} </p> */}
               </a>
             );
           })}

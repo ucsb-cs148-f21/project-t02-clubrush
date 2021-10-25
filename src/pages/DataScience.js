@@ -5,7 +5,6 @@ import Container from "react-bootstrap/Container";
 import Layout from "../components/Layout";
 // import getUser from "../utils/get-user";
 import DataSciImg from "../images/data_science_club.png";
-import DataSciImg1 from "../images/datasci.png";
 
 
 const DataSci = styled.img`
@@ -27,15 +26,10 @@ export default function DataScience() {
     
     <Layout>
       <Container>
+      <img src='https://www.datascienceucsb.org/images/datasciencelogotransparent.png' className='img-fluid shadow-4' alt='...' />
       <br/>
         <div>
-        <h1>Data Science Club<DataSci1 src={DataSciImg1} style={{
-          borderColor: "red",
-          //borderWidth: 5,
-          borderRadius: "50%",
-          height: 100,
-          width: 100
-        }}/></h1>
+        <h1>Data Science Club<DataSci1 /></h1>
         <br />
         <h3>
           Description
@@ -53,7 +47,6 @@ export default function DataScience() {
         </h3>
         <div>datascienceucsb@gmail.com
         <a href="https://www.datascienceucsb.org/"> page </a> . </div>
-        <div>Google also thinks you'll like this picture :)</div>
         <br />
 
         <br />

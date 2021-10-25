@@ -4,6 +4,20 @@ import styled from "styled-components";
 // import getUser from "../utils/get-user";
 import Layout from "../components/Layout";
 import Container from "react-bootstrap/Container";
+import anime1Img from "../images/anime1.png";
+import DataSciImg from "../images/datasci.png";
+
+const Anime1 = styled.img`
+  width: 500px;
+  max-width: 100%;
+  height: auto;
+`;
+const DataSci1 = styled.img`
+  width: 500px;
+  max-width: 100%;
+  height: auto;
+`;
+
 
 
 const TextWrapper = styled.div`
@@ -13,7 +27,7 @@ const TextWrapper = styled.div`
 
 export default function Home() {
   // const user = getUser();
-
+  
   return (
     <Layout>
       <Container>
@@ -35,7 +49,30 @@ export default function Home() {
           
         </TextWrapper>
         <br />
-       
+        <h1>
+          <a href="https://club-rush.herokuapp.com/club2/anime"> 
+            <Anime1 src={anime1Img}  style={{
+              borderColor: "red",
+              //borderWidth: 5,
+              borderRadius: "50%",
+              height: 150,
+              width: 150
+            }}/>
+            </a>
+        
+            &emsp;
+          <a href="https://club-rush.herokuapp.com/club1/datascience"> 
+            <DataSci1 src={DataSciImg}  style={{
+              borderColor: "red",
+              //borderWidth: 5,
+              borderRadius: "50%",
+              height: 150,
+              width: 150
+            }}/>
+            
+            </a>
+            
+            </h1>
         <br />
       </Container>
     </Layout>
