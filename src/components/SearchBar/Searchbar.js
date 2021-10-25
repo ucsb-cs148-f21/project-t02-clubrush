@@ -25,11 +25,11 @@ function SearchBar({ placeholder, data }) {
     setWordEntered("");
   };
 
-  const getClub = (e) => {
-    console.log("test");
-    console.log(e.currentTarget.href);
-    console.log(e.currentTarget.children[0].textContent);
-  }
+  // const getClub = (e) => {
+  //   console.log("test");
+  //   console.log(e.currentTarget.href);
+  //   console.log(e.currentTarget.children[0].textContent);
+  // }
 
   return (
     <div className="search">
@@ -52,8 +52,11 @@ function SearchBar({ placeholder, data }) {
         <div className="dataResult">
           {filteredData.slice(0, 15).map((value, key) => {
             return (
-              <a className="dataItem" href={value.link} rel="noreferrer" target="_blank" onClick={getClub}>
-                <p onClick={getClub}>{value.title} </p>
+              <a className="dataItem" href={value.link} rel="noreferrer" target="_blank">
+                <p>{value.title} </p>
+
+               {/* <a className="dataItem" href={value.link} rel="noreferrer" target="_blank" onClick={getClub}> */}
+                {/* <p onClick={getClub}>{value.title} </p> */}
               </a>
             );
           })}
