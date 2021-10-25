@@ -5,7 +5,6 @@ import Container from "react-bootstrap/Container";
 import Layout from "../components/Layout";
 // import getUser from "../utils/get-user";
 import anime1Img from "../images/anime1.png";
-import Pekora from "./Video/Pekora.mp4";
 
 const Anime1 = styled.img`
   width: 500px;
@@ -21,23 +20,7 @@ export default function Anime() {
   return (
     <Layout>
       <Container>
-        <div>
-          <video autoPlay loop muted
-          style={{
-            position: 'absolute',
-            width: "100%",
-            left: "50%",
-            top:"50%",
-            height: "100%",
-            objectFit: "cover",
-            transform: "translate(-50%, -50%)",
-            zIndex: "-1"
-          }}
-          >
-            <source src={Pekora} type="video/mp4"></source>
-          </video>
-        </div>
-        
+        <br/>
         <h1>Anime Club!   <Anime1 src={anime1Img} style={{
           borderColor: "red",
           //borderWidth: 5,

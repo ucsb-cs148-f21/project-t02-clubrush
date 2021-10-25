@@ -17,6 +17,7 @@ export default function Home() {
   return (
     <Layout>
       <Container>
+        <br/>
         <h1>Welcome to Club Rush!</h1>
         <br />
         <TextWrapper>
