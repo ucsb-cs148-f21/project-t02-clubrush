@@ -19,14 +19,17 @@ export default function NavBar(props) {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link href="/"><h4 className="linkText">Home</h4></Nav.Link>
+            <h4>
             <NavDropdown title="Club1" className="dropdown-item" id="nav-dropdown">
+            
               <NavDropdown.Item href="./pages/DataScience" eventkey="/club1">
                 {<Nav.Link href="/club1/datascience">Data Science</Nav.Link>}
               </NavDropdown.Item>
               <NavDropdown.Item href="./pages/Anime" eventkey="/club2">
                 {<Nav.Link href="/club2/anime">Anime</Nav.Link>}
               </NavDropdown.Item>
-            </NavDropdown>
+              
+            </NavDropdown></h4>
             
             {<Nav.Link href="/club"><h4 className="linkText">Club</h4></Nav.Link>}
           </Nav>
