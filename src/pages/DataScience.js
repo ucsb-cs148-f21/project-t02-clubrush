@@ -5,7 +5,6 @@ import Container from "react-bootstrap/Container";
 import Layout from "../components/Layout";
 // import getUser from "../utils/get-user";
 import DataSciImg from "../images/data_science_club.png";
-import DataSciImg1 from "../images/datasci.png";
 
 
 const DataSci = styled.img`
@@ -48,7 +47,6 @@ export default function DataScience() {
         </h3>
         <div>datascienceucsb@gmail.com
         <a href="https://www.datascienceucsb.org/"> page </a> . </div>
-        <div>Google also thinks you'll like this picture :)</div>
         <br />
 
         <br />
