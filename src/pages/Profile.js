@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Container from "react-bootstrap/Container";
 
 import Layout from "../components/Layout";
-import getUser from "../utils/get-user";
+// import getUser from "../utils/get-user";
 import DoggoImg from "../images/doggo.jpg";
 import DataSciImg from "../images/data_science_club.png";
 
@@ -20,10 +20,9 @@ const Doggo = styled.img`
 `;
 
 export default function Club() {
-  const user = getUser();
 
   return (
-    <Layout user={user}>
+    <Layout>
       <Container>
         <h1>Data Science Club!</h1>
         <div>
@@ -34,7 +33,7 @@ export default function Club() {
         </div>
         <br /> 
         <div>
-          Your name is "{user.fullName}" and your email is "{user.email}."
+          Your name is "" and your email is ""
         </div>
         <div>Google also thinks you'll like this picture :)</div>
         <br />
