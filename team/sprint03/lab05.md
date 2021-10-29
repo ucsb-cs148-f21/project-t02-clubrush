@@ -15,5 +15,6 @@ Tommy - I worked on backend. I am setting up the database and working on data sc
 - Need to connect liked clubs to the Bookmark page
 - Login to actually do a Bookmark
 - Display datascrapping info
+- Reviews Section
 - Later: Need to make a admin login functionality to let admin update the page
 
