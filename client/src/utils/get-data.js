@@ -3,4 +3,4 @@ export default async function getData() {
     const json = await data.json();
     console.log(json);
     return json;
-  }
+}

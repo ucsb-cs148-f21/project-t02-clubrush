@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Link from "react-router-dom"
 import Container from "react-bootstrap/Container";
 
 import Layout from "../components/Layout";
@@ -19,20 +20,14 @@ const Doggo = styled.img`
   height: auto;
 `;
 
-export default function Club() {
-
+export default function Club(props) {
+  console.log(props.location.state)
   return (
     <Layout>
       <Container>
       <br/>
         <div>
-        <h1>Data Science Club<DataSci1 src={DataSciImg1} style={{
-          borderColor: "red",
-          //borderWidth: 5,
-          borderRadius: "50%",
-          height: 100,
-          width: 100
-        }}/></h1>
+        <h1>{props.location.state}</h1>
         <br />
         <h3>
           Description

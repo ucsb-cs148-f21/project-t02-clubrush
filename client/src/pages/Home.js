@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import { useHistory, Redirect } from "react-router-dom";
 
 // import getUser from "../utils/get-user";
 import Layout from "../components/Layout";
@@ -18,16 +19,41 @@ const DataSci1 = styled.img`
   height: auto;
 `;
 
-
-
 const TextWrapper = styled.div`
   width: 700px;
   max-width: 100%;
 `;
 
+function change(val) {
+  console.log(val);
+}
+
+function renderRedirect(val) {
+  console.log(val)
+  change(val)
+}
+
 export default function Home() {
   // const user = getUser();
-  
+  const [data, setData] = useState([]);
+  // const [click, setClick] = useState(false);
+  useEffect(() => {
+    fetch("http://localhost:9000/testAPI")
+      .then(async (res) => {
+        const data = await res.json()
+        setData(data)
+      }
+    );
+  },[])
+
+  // if(click) {
+  //   <Redirect
+  //     to={{
+  //       pathname: "/club",
+  //     }}
+  //   />
+  // }
+
   return (
     <Layout>
       <Container>
@@ -74,6 +100,28 @@ export default function Home() {
             
             </h1>
         <br />
+        <div className="App">
+          ({data.map((item,index)=>{
+            // return <a onClick={()=>{setClick.bind(true)}}>
+            return <a onClick={()=>{renderRedirect(item.name)}}>
+            <img src={item.image}  style={{
+              borderColor: "red",
+              //borderWidth: 5,
+              borderRadius: "50%",
+              height: 150,
+              width: 150
+            }}/>
+            {item.name}</a>
+          })})
+      </div>
+      {/* {click? 
+          console.log("hi")
+          :<Redirect
+          to={{
+            pathname: "/club",
+          }}
+        />
+          } */}
       </Container>
     </Layout>
   );

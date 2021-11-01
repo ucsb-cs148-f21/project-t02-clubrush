@@ -25,8 +25,6 @@ export default function Profile() {
         console.log(res)
       }
     );
-    // const json = response.json();
-    // setData({ data: json });
   },[])
 
   return (
