@@ -8,7 +8,7 @@ List at a minimum: <br />
   
 # Testing 
 We implemented the unit test requirement using Jest, and tested for the Searchbar on the homepage. <br />
-Our plans regardint the unit tests going forward are to test to make sure that the Club data is displayed correctly, like the images, the names, and the links to the official club websites or social media. <br />
+Our plans regarding the unit tests going forward are to test to make sure that the Club data is displayed correctly, like the images, the names, and the links to the official club websites or social media. <br />
 We satisfied the component/integration/end-to-end testing requirement from this lab by using Jest and tested ---- TO DO ~! ---- <br />
 Our plans regarding higher-level testing going forward are to ---- TO DO ~! ---- <br />
  
