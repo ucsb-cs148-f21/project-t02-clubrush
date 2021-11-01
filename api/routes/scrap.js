@@ -6,14 +6,14 @@ async function scrapeProduct(url) {
     await page.goto(url);
 
     const names = await page.evaluate(() => Array.from(
-        document.querySelectorAll('.media-heading > a'),
-        club => club.textContent,
+        document.querySelectorAll('.header-cg--h4 > a'),
+        club => club.innerText,
     ));
 
     console.log(names);
     
     const links = await page.evaluate(() => Array.from(
-        document.querySelectorAll('.media-heading > a'),
+        document.querySelectorAll('.header-cg--h4 > a'),
         club => club.href,
     ));
 

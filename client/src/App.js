@@ -9,6 +9,8 @@ import DataScience from "./pages/DataScience"
 import Anime from "./pages/Anime"
 //import Private from "./pages/Private";
 import PageNotFound from "./pages/PageNotFound";
+//import { response } from "../../api/app";
+
 
 export default function App() {
   // const [isSignedIn, setIsSignedIn] = useState(null);
@@ -84,12 +86,21 @@ export class UserComponent extends React.Component {
     return (
       <div className="App">
         <ul>
-            <li>
-              {JSON.stringify(this.state.data, null, 2)}
-            </li>
+          {this.state.data.map((item,index)=>{
+            return <a href="{item.link}"> 
+            <img src={item.image}  style={{
+              borderColor: "red",
+              //borderWidth: 5,
+              borderRadius: "50%",
+              height: 150,
+              width: 150
+            }}/>
+            {item.name}</a>
+          })}
         </ul>
       </div>
     );
   }
 }
+
 
