@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { useHistory, Redirect } from "react-router-dom";
+import { Link } from 'react-router-dom'
 
 // import getUser from "../utils/get-user";
 import Layout from "../components/Layout";
@@ -18,20 +18,16 @@ const DataSci1 = styled.img`
   max-width: 100%;
   height: auto;
 `;
+const Bubble = styled.img`
+  width: 500px;
+  max-width: 100%;
+  height: auto;
+`;
 
 const TextWrapper = styled.div`
   width: 700px;
   max-width: 100%;
 `;
-
-function change(val) {
-  console.log(val);
-}
-
-function renderRedirect(val) {
-  console.log(val)
-  change(val)
-}
 
 export default function Home() {
   // const user = getUser();
@@ -74,54 +70,25 @@ export default function Home() {
           Make sure you log in before navigating to the{" "}<a href="/club">Club</a> page!
           
         </TextWrapper>
-        <br />
-        <h1>
-          <a href="https://club-rush.herokuapp.com/club2/anime"> 
-            <Anime1 src={anime1Img}  style={{
+        <h1 className="App">
+          {data.map((item,index)=>{
+            return <a href={'/club/'+ item.name}>
+            <Bubble src={item.image}  style={{
               borderColor: "red",
               //borderWidth: 5,
               borderRadius: "50%",
               height: 150,
               width: 150
             }}/>
+            {/* {item.name} */}
             </a>
-        
-            &emsp;
-          <a href="https://club-rush.herokuapp.com/club1/datascience"> 
-            <DataSci1 src={DataSciImg}  style={{
-              borderColor: "red",
-              //borderWidth: 5,
-              borderRadius: "50%",
-              height: 150,
-              width: 150
-            }}/>
-            
-            </a>
-            
-            </h1>
-        <br />
-        <div className="App">
-          ({data.map((item,index)=>{
-            // return <a onClick={()=>{setClick.bind(true)}}>
-            return <a onClick={()=>{renderRedirect(item.name)}}>
-            <img src={item.image}  style={{
-              borderColor: "red",
-              //borderWidth: 5,
-              borderRadius: "50%",
-              height: 150,
-              width: 150
-            }}/>
-            {item.name}</a>
-          })})
-      </div>
-      {/* {click? 
-          console.log("hi")
-          :<Redirect
-          to={{
-            pathname: "/club",
-          }}
-        />
-          } */}
+          })}
+      </h1>
+      {/* <h1 className="App">
+          {data.map((item)=>{
+            return <h4>Name: <Link to={`/club/${item.name}`}>{item.name}</Link></h4>
+          })}
+      </h1> */}
       </Container>
     </Layout>
   );

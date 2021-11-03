@@ -16,7 +16,7 @@ export default function App() {
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/club" render={(props) => <Club {...props}/>}/>
+          <Route exact path="/club/:id" component={Club}/>
           <Route exact path="/club1/datascience" component={DataScience} />
           <Route exact path="/club2/anime" component={Anime} />
           <Route path="/" component={PageNotFound} />

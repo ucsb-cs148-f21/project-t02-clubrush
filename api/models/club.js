@@ -9,9 +9,17 @@ const clubSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    banner: {
+        type: String,
+        required: false
+    },
     link: {
         type: String,
         required: true
+    },
+    description: {
+        type: String,
+        required: false
     }
 })
 

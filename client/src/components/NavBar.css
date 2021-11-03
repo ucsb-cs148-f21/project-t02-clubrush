@@ -10,7 +10,9 @@
 }
 
 .linkText{ color: white;     
-    font-family: "Audiowide", sans-serif;
+    /* font-family: "Audiowide", sans-serif; */
+    font-family: 'Maven Pro', sans-serif;
+    font-family: 'Zen Maru Gothic', sans-serif;
 }
 
 .dropdown-item {
@@ -19,6 +21,7 @@
 
 #nav-dropdown {
     color: #ffffff;
-    font-family: "Audiowide", sans-serif;
+    font-family: 'Maven Pro', sans-serif;
+    font-family: 'Zen Maru Gothic', sans-serif;
     padding-top: 5px
 }

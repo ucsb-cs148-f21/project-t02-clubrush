@@ -51,7 +51,7 @@ router.get('/', async function(req, res, next) {
         };
         response[i] = newClub;
     }
-    console.log(response)
+    // console.log(response)
     res.json(response);
 });
 
