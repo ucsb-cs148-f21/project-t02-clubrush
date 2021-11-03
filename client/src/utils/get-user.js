@@ -23,3 +23,4 @@ export default function getUser() {
 
   return user;
 }
+
