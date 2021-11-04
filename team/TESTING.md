@@ -7,8 +7,8 @@ List at a minimum: <br />
   - [ ] complete, delete above
   
 # Testing 
-We implemented the unit test requirement using Jest, and tested for the Searchbar on the homepage. <br />
+We implemented the unit test requirement using Jest and React Testing Library, and tested for the Searchbar on the homepage. <br />
 Our plans regarding the unit tests going forward are to test to make sure that the Club data is displayed correctly, like the images, the names, and the links to the official club websites or social media. <br />
-We satisfied the component/integration/end-to-end testing requirement from this lab by using Jest and tested ---- TO DO ~! ---- <br />
-Our plans regarding higher-level testing going forward are to ---- TO DO ~! ---- <br />
+We satisfied the component/integration/end-to-end testing requirement from this lab by using Jest and React Testing Library and tested that the search bar correctly displays the clubs when searched. For example, if you search up data science, the dropdown menu from the search bar will show "data science". ---- TO DO ~! ---- <br />
+Our plans regarding higher-level testing going forward are to implement an integration test with React Testing Library and msw to mock a user. When he clicks on one of the bubbles, it will navigate him to the club page. We are also thinking of making a test that tests the button, where the user gets to submit a review and after clicking the "submit" button, his review will be posted on the website. ---- TO DO ~! ---- <br />
  
