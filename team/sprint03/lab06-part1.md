@@ -6,12 +6,17 @@ Team: Christine Ong [x], Morgan Lin [x], Robert He [x], Tommy Nguyen [x] <br />
 
 # Scribed Discussion
 Deliverables: <br />
-- A review section where club members can leave their feedback and rating of the club <br />
-- Give admin access to edit club information on the page <br />
-- When hovering on a club bubble, information about the club will pop up <br />
+-  <br />
+
+
+# Leadership Roles
+- Christine: Product Owner, Design Document Coordinator, Deployment Document Coordinator
+- Tommy: Scrum Master, User Manual Coordinator
+- Robert: Final Presentation Leader, UX Coordinator
+- Morgan: Testing/QA Coordinator, Retro 3 leader
 
 # Tasks
-Christine - I add more testing. Worked on unit testing with Morgan and Data Science Club Page. <br />
-Morgan - I am working on getting the backend to connect with MongoDB and will work on setting up the database to store all the information gathered. <br />
-Robert - I am working on formatting the Anime Club Page to look nicer as well as  <br />
-Tommy - I am working on getting express to work with alongiside React and will work on data scrapping for information on Shoreline <br />
+Christine - I did some work on the scroll bar, also did work on unit testing. Will work on fixing installation and modules issues. Will work more on scroll bar in the future <br />
+Morgan - I did unit testing for the lab. Search bar test for lab05. More unit testing. Help with backend. Will work on club filter.<br />
+Robert - I review component for clubs. Not sure how to post the reviews. Working on the bookmark for clubs. <br />
+Tommy - I did the backend and displayed homepage and club page. I will work on login and signup that works alongside database.  <br />
