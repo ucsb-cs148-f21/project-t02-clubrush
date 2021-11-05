@@ -5,9 +5,19 @@ Type of Meeting: Stand Up  <br />
 Team: Christine Ong [x], Morgan Lin [x], Robert He [x], Tommy Nguyen [x] <br />
 
 # Scribed Discussion
-Deliverables: <br />
--  <br />
+Features: <br />
+- Permission to club/admin, signin/login, admin/user, calendar, bookmark, profile page, clubs dropdown will have categories
 
+
+Deliverables: <br />
+- Scroll bar <br />
+- Signin/login <br />
+- bookmark for user <br />
+
+Future Deliverables: <br />
+- Calendar within profile page <br />
+- clubs dropwdown will have categories <br />
+- updates clubs with their own categories <br />
 
 # Leadership Roles
 - Christine: Product Owner, Design Document Coordinator, Deployment Document Coordinator
