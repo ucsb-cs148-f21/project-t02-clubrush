@@ -15,7 +15,7 @@
 
 | Name             |   Roles                      |
 |------------------|-----------------------------|
-| Christine Ong    | Product Owner, Design Document Coordinator, Deployment Document Coordinator, Retro 1 Leader | 
-| Tommy Nguyen     | Scrum Master, User Manual Coordinator |
+| Christine Ong    | Product Owner, Design Document Coordinator, User Manual Coordinator, Retro 1 Leader | 
+| Tommy Nguyen     | Scrum Master, Deployment Document Coordinator |
 | Robert He        | Final Presentation Leader, UX Coordinator, Retro 2 Leader |
 | Morgan Lin       | Testing QA Coordinator, Retro 3 leader |
