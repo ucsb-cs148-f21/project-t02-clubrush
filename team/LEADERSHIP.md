@@ -11,7 +11,8 @@
 
 
 
-Assigned Roles: 
+# Assigned Roles
+
 | Name             |   Roles                      |
 |------------------|-----------------------------|
 | Christine Ong    | Product Owner, Design Document Coordinator, Deployment Document Coordinator, Retro 1 Leader | 
