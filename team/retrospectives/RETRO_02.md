@@ -22,7 +22,7 @@
 
 ## Retro Outcome Assessment
 
-* A brief description of what your retro 2 experiment was 
-* A brief recap of the metric you planned on using 
-* The outcome according to the metric now that the next Sprint is done (maybe already for a while).
-* Your conclusions based on this outcome. You can decide to cement this change going forward, to modify it (start a new experiment), or to discard it and go back to previous procedures.    
+* Our retro 2 experiment was to get better at setting team deadlines. 
+* The metric we planned on using was seeing progress within all the site functionalities within given deadlines
+* The outcome is looking positive. People are on task and working hard towards the project. Things are getting done and there hasn't been a lot of conflict, so it's good. 
+* With this outcome, I can say that our team progress will continue to look bright as long as we continue this habit of setting deadlines.  
