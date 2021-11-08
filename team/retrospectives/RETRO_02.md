@@ -19,3 +19,10 @@
 * For this retro we use the start/stop/continue to see what we are lacking in and what we can improve on.
 * It was very helpful as we got to collectively share our ideas and issues, helping us work better together as a team and giving this product value.
 * Advice I would give to the next person leading the retro is to assess what tasks are reasonable and realistic in the given amount of time we have for the project. Using this to think plan out future meetings and tasks. 
+
+## Retro Outcome Assessment
+
+* A brief description of what your retro 2 experiment was 
+* A brief recap of the metric you planned on using 
+* The outcome according to the metric now that the next Sprint is done (maybe already for a while).
+* Your conclusions based on this outcome. You can decide to cement this change going forward, to modify it (start a new experiment), or to discard it and go back to previous procedures.    
