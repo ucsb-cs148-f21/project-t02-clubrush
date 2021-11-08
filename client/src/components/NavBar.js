@@ -42,6 +42,8 @@ export default function NavBar(props) {
               </div>
             </div>
           </form>
+          <Nav.Link href="/login"><h4 className="linkText">Login</h4></Nav.Link>
+          <Nav.Link href="/signup"><h4 className="linkText">Signup</h4></Nav.Link>
         </Navbar.Collapse>
       </Container>
     </Navbar>

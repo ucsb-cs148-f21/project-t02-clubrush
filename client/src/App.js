@@ -9,7 +9,8 @@ import DataScience from "./pages/DataScience"
 import Anime from "./pages/Anime"
 //import Private from "./pages/Private";
 import PageNotFound from "./pages/PageNotFound";
-//import { response } from "../../api/app";
+import Signup from "./pages/Signup"
+import Login from "./pages/Login"
 
 export default function App() {
     return (
@@ -19,6 +20,8 @@ export default function App() {
           <Route exact path="/club/:id" component={Club}/>
           <Route exact path="/club1/datascience" component={DataScience} />
           <Route exact path="/club2/anime" component={Anime} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/signup" component={Signup} />
           <Route path="/" component={PageNotFound} />
         </Switch>
       </BrowserRouter>

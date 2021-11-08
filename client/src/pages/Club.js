@@ -1,17 +1,10 @@
-import styled from "styled-components";
+// import styled from "styled-components";
 import Container from "react-bootstrap/Container";
 import React, { useState, useEffect } from "react";
 
 import Layout from "../components/Layout";
 // import getUser from "../utils/get-user";
-import DataSciImg from "../images/data_science_club.png";
 import { useParams } from "react-router-dom";
-
-const DataSci = styled.img`
-  width: 500px;
-  max-width: 100%;
-  height: auto;
-`;
 
 export default function Club() {
   const { id } = useParams();
@@ -52,7 +45,6 @@ export default function Club() {
 
         <br />
         </div>
-        <DataSci src={DataSciImg} />
       </Container>
     </Layout>
   );
