@@ -1,23 +1,9 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { Link } from 'react-router-dom'
 
 // import getUser from "../utils/get-user";
 import Layout from "../components/Layout";
 import Container from "react-bootstrap/Container";
-import anime1Img from "../images/anime1.png";
-import DataSciImg from "../images/datasci.png";
-
-const Anime1 = styled.img`
-  width: 500px;
-  max-width: 100%;
-  height: auto;
-`;
-const DataSci1 = styled.img`
-  width: 500px;
-  max-width: 100%;
-  height: auto;
-`;
 const Bubble = styled.img`
   width: 500px;
   max-width: 100%;
@@ -30,25 +16,16 @@ const TextWrapper = styled.div`
 `;
 
 export default function Home() {
-  // const user = getUser();
   const [data, setData] = useState([]);
-  // const [click, setClick] = useState(false);
   useEffect(() => {
-    fetch("http://localhost:9000/testAPI")
+    fetch(`http://localhost:9000/clubs/`)
       .then(async (res) => {
-        const data = await res.json()
+        const data = await res.json();
+        console.log(data)
         setData(data)
       }
     );
-  },[])
-
-  // if(click) {
-  //   <Redirect
-  //     to={{
-  //       pathname: "/club",
-  //     }}
-  //   />
-  // }
+  },[]);
 
   return (
     <Layout>
