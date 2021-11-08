@@ -20,8 +20,8 @@ Future Deliverables: <br />
 - updates clubs with their own categories <br />
 
 # Leadership Roles
-- Christine: Product Owner, Design Document Coordinator, Deployment Document Coordinator
-- Tommy: Scrum Master, User Manual Coordinator
+- Christine: Product Owner, Design Document Coordinator, User Manual Coordinator
+- Tommy: Scrum Master, Deployment Document Coordinator
 - Robert: Final Presentation Leader, UX Coordinator
 - Morgan: Testing/QA Coordinator, Retro 3 leader
 
