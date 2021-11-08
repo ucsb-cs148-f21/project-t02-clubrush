@@ -8,3 +8,13 @@
 | Fri 10/29 | Robert He         | Led second Retro and Sprint discussed setting deadlines|
 | Fri 11/5  | Tommy Nguyen      | Led Sprint Stand Up Meeting to discuss future leadership roles | 
 | ?????     | Morgan Lin        | Will lead third Retro                                  |
+
+
+
+Assigned Roles: 
+| Name             |   Roles                      |
+|------------------|-----------------------------|
+| Christine Ong    | Product Owner, Design Document Coordinator, Deployment Document Coordinator, Retro 1 Leader | 
+| Tommy Nguyen     | Scrum Master, User Manual Coordinator, Retro 2 Leader  |
+| Robert He        | Final Presentation Leader, UX Coordinator  |
+| Morgan Lin       | Testing QA Coordinator, Retro 3 leader |
