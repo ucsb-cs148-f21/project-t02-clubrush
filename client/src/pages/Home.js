@@ -21,7 +21,6 @@ export default function Home() {
     fetch(`http://localhost:9000/clubs/`)
       .then(async (res) => {
         const data = await res.json();
-        console.log(data)
         setData(data)
       }
     );
@@ -46,7 +45,7 @@ export default function Home() {
           information and most organization's page on Shoreline has not been updated in a very long time.
           Make sure you log in before navigating to the{" "}<a href="/club">Club</a> page!
           
-        </TextWrapper>
+        </TextWrapper> 
         <h1 className="App">
           {data.map((item,index)=>{
             return <a href={'/club/'+ item.name}>

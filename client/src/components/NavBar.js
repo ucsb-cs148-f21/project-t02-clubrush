@@ -14,7 +14,7 @@ export default function NavBar(props) {
   return (
     <Navbar class="navbar navbar-expand-lg navbar-light bg-light">
       <Container>
-        <Navbar.Brand class="navbar-brand" href="/"><h1 className="linkText">Club Rush</h1></Navbar.Brand>
+        <Navbar.Brand className="navbar-brand" href="/"><h1 className="linkText">Club Rush</h1></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
@@ -40,8 +40,8 @@ export default function NavBar(props) {
             {<Nav.Link href="/club"><h4 className="linkText">Bookmarks</h4></Nav.Link>}
           </Nav>
           
-          <form class="form-inline my-2 my-lg-0">
-            <div class="dropdown">
+          <form className="form-inline my-2 my-lg-0">
+            <div className="dropdown">
               <div id="myDropdown" class="dropdown-content">
                 <SearchBar placeholder="Search..." data={BookData} />
                                

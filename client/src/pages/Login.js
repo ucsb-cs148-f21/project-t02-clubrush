@@ -6,7 +6,6 @@ import Button from "react-bootstrap/Button";
 import Layout from "../components/Layout";
 
 export default function Login() {
-
   return (
     <Layout>
       <Container>
