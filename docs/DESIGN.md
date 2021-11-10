@@ -1,2 +1,2 @@
 TO-DO lab06 : contains at the very least an overview system architecture diagram and associated explanatio
-![System Architecture Overview](https://imgur.com/a/TaGdhYZ)
+https://imgur.com/a/TaGdhYZ
