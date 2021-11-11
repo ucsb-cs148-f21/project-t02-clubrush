@@ -25,3 +25,8 @@ We are holding meetings and checkouts remotely over Discord, and frequently cont
 # User Roles
 Our Club Rush application would have Users that are students who can search up organizations, but can't add new information/data to the system. We would also have Admin/Organization Leaders that could upload new data to the system that would update organization info that is displayed on the app.
 
+# Design 
+
+
+# Deploy 
+* [Deployment Instructions](./docs/DEPLOY.md)
