@@ -22,7 +22,7 @@ const clubSchema = new mongoose.Schema({
         required: false
     },
     categories: {
-        type: Array,
+        type: String,
         required: false
     }
 })
