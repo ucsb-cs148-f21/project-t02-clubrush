@@ -20,6 +20,10 @@ const clubSchema = new mongoose.Schema({
     description: {
         type: String,
         required: false
+    },
+    categories: {
+        type: Array,
+        required: false
     }
 })
 
