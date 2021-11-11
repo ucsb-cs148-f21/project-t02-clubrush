@@ -1,15 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import SearchBar from "./SearchBar/Searchbar";
-import BookData from "./Data.json";
 import "./NavBar.css"
 
 export default function NavBar(props) {
 
   // const user = props.user;
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    fetch(`http://localhost:9000/clubs/`)
+      .then(async (res) => {
+        const data = await res.json();
+        setData(data)
+      }
+    );
+  },[]);
 
   return (
     <Navbar class="navbar navbar-expand-lg navbar-light bg-light">
@@ -43,7 +51,7 @@ export default function NavBar(props) {
           <form className="form-inline my-2 my-lg-0">
             <div className="dropdown">
               <div id="myDropdown" class="dropdown-content">
-                <SearchBar placeholder="Search..." data={BookData} />
+                <SearchBar placeholder="Search..." data={data} />
                                
               </div>
             </div>

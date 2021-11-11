@@ -22,6 +22,7 @@ export default function Signup() {
     
       let save = async (e) => {
         e.preventDefault();
+        
         const newUser = await fetch('http://localhost:9000/users/signup', {
             method: 'POST',
             mode: 'cors',
@@ -37,6 +38,7 @@ export default function Signup() {
   return (
     <Layout>
       <Container>
+      <br/>
         <div>
             <h1>Please Signup</h1>
         </div>
