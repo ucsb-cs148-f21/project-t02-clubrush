@@ -1,5 +1,8 @@
 .navbar{
     background-color: #0C285C;
+    /* max-height: 80px; */
+    position: -webkit-sticky;
+    position: sticky;
 }
 
 .navbar .nav-brand{
@@ -9,7 +12,8 @@
     color:antiquewhite;
 }
 
-.linkText{ color: white;     
+.linkText{ 
+    color: white;     
     /* font-family: "Audiowide", sans-serif; */
     font-family: 'Maven Pro', sans-serif;
     font-family: 'Zen Maru Gothic', sans-serif;
