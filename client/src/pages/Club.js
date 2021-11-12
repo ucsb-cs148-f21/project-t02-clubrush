@@ -7,7 +7,6 @@ import Layout from "../components/Layout";
 // import getUser from "../utils/get-user";
 import { useParams } from "react-router-dom";
 import Reviews from "../components/Reviews";
-import Button from "../components/Button";
 
 const styles = {
   button:{

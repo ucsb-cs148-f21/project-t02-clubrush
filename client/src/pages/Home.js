@@ -50,11 +50,13 @@ export default function Home() {
           {data.map((item,index)=>{
             return <a href={'/club/'+ item.name}>
             <Bubble src={item.image}  style={{
-              borderColor: "red",
-              //borderWidth: 5,
-              borderRadius: "50%",
-              height: 150,
-              width: 150
+                borderColor: "red",
+                boxShadow: "10px 7px 1px #9E9E9E",
+                borderColor: "red",
+                //borderWidth: 5,
+                borderRadius: "50%",
+                height: 150,
+                width: 150,
             }}/>
             {/* {item.name} */}
             </a>

@@ -13,7 +13,7 @@ import Sports from "./pages/Sport"
 
 //import Private from "./pages/Private";
 import Bookmark from "./pages/Bookmark";
-import Signup from "./pages/Signup"
+import SignUp from "./pages/SignUp"
 import Login from "./pages/Login"
 import useLocalStorage from "./components/useLocalStorage"
 
@@ -50,7 +50,7 @@ export default function App() {
           <Route exact path="/club3/Department" component={Department} />
           <Route exact path="/club3/Sports" component={Sports} />
           <Route exact path="/login" component={Login} />
-          <Route exact path="/signup" component={Signup} />
+          <Route exact path="/signup" component={SignUp} />
           <Route exact path="/club" render={() => <Bookmark cart={cart} setCart={setCart}/>}/>
         </Switch>
       </BrowserRouter>
