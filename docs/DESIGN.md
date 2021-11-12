@@ -23,5 +23,7 @@ User Authentication: <br />
 - We will implement a system so that once the User logs in, they can bookmark clubs and also add club events to their personal calendar.
 
 
-User Flow
+
+# User Flow
 -----------TO-DO-----------
+# Important Team Decisions
