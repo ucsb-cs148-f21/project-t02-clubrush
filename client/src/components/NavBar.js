@@ -35,14 +35,14 @@ export default function NavBar(props) {
               <NavDropdown.Item href="./pages/DataScience" eventkey="/club1">
                 {<Nav.Link href="/club1/datascience">Clubs</Nav.Link>}
               </NavDropdown.Item>
-              <NavDropdown.Item href="./pages/Anime" eventkey="/club2">
-                {<Nav.Link href="/club2/anime">Fraternities</Nav.Link>}
+              <NavDropdown.Item href="./pages/Fraternity" eventkey="/club3">
+                {<Nav.Link href="/club3/Fraternity">Fraternities/Sororities</Nav.Link>}
               </NavDropdown.Item>
-              <NavDropdown.Item href="./pages/Anime" eventkey="/club2">
-                {<Nav.Link href="/club2/anime">Sororities</Nav.Link>}
+              <NavDropdown.Item href="./pages/Department" eventkey="/club3">
+                {<Nav.Link href="/club3/Department">Department</Nav.Link>}
               </NavDropdown.Item>
-              <NavDropdown.Item href="./pages/Anime" eventkey="/club2">
-                {<Nav.Link href="/club2/anime">Sports</Nav.Link>}
+              <NavDropdown.Item href="./pages/Sports" eventkey="/club3">
+                {<Nav.Link href="/club3/Sports">Sports</Nav.Link>}
               </NavDropdown.Item>
               
             </NavDropdown></h4>

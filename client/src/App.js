@@ -7,6 +7,10 @@ import Home from "./pages/Home";
 import Club from "./pages/Club"
 import DataScience from "./pages/DataScience"
 import Anime from "./pages/Anime"
+import Fraternity from "./pages/Fraternity"
+import Department from "./pages/Department"
+import Sports from "./pages/Sport"
+
 //import Private from "./pages/Private";
 import PageNotFound from "./pages/PageNotFound";
 import Signup from "./pages/Signup"
@@ -20,6 +24,9 @@ export default function App() {
           <Route exact path="/club/:id" component={Club}/>
           <Route exact path="/club1/datascience" component={DataScience} />
           <Route exact path="/club2/anime" component={Anime} />
+          <Route exact path="/club3/fraternity" component={Fraternity} />
+          <Route exact path="/club3/Department" component={Department} />
+          <Route exact path="/club3/Sports" component={Sports} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={Signup} />
           <Route path="/" component={PageNotFound} />
