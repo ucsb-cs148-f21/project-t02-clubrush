@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from 'react';
 import { BrowserRouter, Route, Switch} from "react-router-dom";
 
 //import CheckingSignedIn from "./pages/CheckingSignedIn";
@@ -12,16 +12,38 @@ import Department from "./pages/Department"
 import Sports from "./pages/Sport"
 
 //import Private from "./pages/Private";
-import PageNotFound from "./pages/PageNotFound";
+import Bookmark from "./pages/Bookmark";
 import Signup from "./pages/Signup"
 import Login from "./pages/Login"
+import useLocalStorage from "./components/useLocalStorage"
+
 
 export default function App() {
+  const [cart, setCart] = useLocalStorage("cart", []);
+
+  const addToBookmark = (club) => {
+    let newCart = [...cart];
+    let itemInCart = newCart.find(
+      (item) => club.name === item.name
+    );
+    if(itemInCart){
+    }
+    else{
+      itemInCart= {
+        ...club,
+      };
+      newCart.push(itemInCart);
+    }
+    setCart(newCart);
+    console.log("work")
+    console.log(cart)
+};
+
     return (
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/club/:id" component={Club}/>
+          <Route exact path="/club/:id" render={() => <Club cart={cart} setCart={setCart} addToBookmark={addToBookmark}/>}/>
           <Route exact path="/club1/datascience" component={DataScience} />
           <Route exact path="/club2/anime" component={Anime} />
           <Route exact path="/club3/fraternity" component={Fraternity} />
@@ -29,7 +51,7 @@ export default function App() {
           <Route exact path="/club3/Sports" component={Sports} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={Signup} />
-          <Route path="/" component={PageNotFound} />
+          <Route exact path="/club" render={() => <Bookmark cart={cart} setCart={setCart}/>}/>
         </Switch>
       </BrowserRouter>
     );

@@ -1,12 +1,26 @@
 // import styled from "styled-components";
 import Container from "react-bootstrap/Container";
 import React, { useState, useEffect } from "react";
+import useLocalStorage from "../components/useLocalStorage"
 
 import Layout from "../components/Layout";
 // import getUser from "../utils/get-user";
 import { useParams } from "react-router-dom";
+import Reviews from "../components/Reviews";
+import Button from "../components/Button";
 
-export default function Club() {
+const styles = {
+  button:{
+      border: "1px solid #a9a9a9",
+      borderRadius: 5,
+      width: 100,
+      padding: 10,
+      margin: 20,
+  }
+}
+
+
+export default function Club({cart, setCart, addToBookmark}) {
   const { id } = useParams();
   console.log(typeof(id));
 
@@ -21,6 +35,7 @@ export default function Club() {
     );
   },[]);
 
+
   return (
     <Layout>
       <Container>
@@ -29,6 +44,8 @@ export default function Club() {
         <h1>{data.name}</h1>
         <a href={data.link}><img src={data.image}></img></a>
         <br />
+        <button style = {styles.button} onClick={() => addToBookmark(data)}>Favorite</button>
+
         <h3>
           Description
         </h3>
@@ -45,6 +62,8 @@ export default function Club() {
 
         <br />
         </div>
+        <Reviews />
+
       </Container>
     </Layout>
   );
