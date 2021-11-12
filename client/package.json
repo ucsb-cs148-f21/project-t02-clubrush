@@ -48,5 +48,8 @@
   },
   "optionalDependencies": {
     "fsevents": "^2.3.2"
+  },
+  "devDependencies": {
+    "babel-plugin-react-html-attrs": "^3.0.5"
   }
 }
