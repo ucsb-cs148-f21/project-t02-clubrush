@@ -11,10 +11,14 @@ Front end: <br />
 - We have implemented a search bar and dropdown that shows clubs
 - We have implemented Club bubbles on the homepage that show all the clubs and are clickable and will take the user to the respective club page.
 - We're doing this using React. <br />
+
 Back end: <br />
 - We data scraped Shoreline using Python and have loaded all the data into MongoDB, and our website retrieves all this data from the database and displays all the club pages. <br />
+
+
 Database: <br />
 - This database stores all the club info that was data scraped from Shoreline, including the club name, image, banner, links, club description, and the way its categorized. <br />
+
+
 User Authentication: <br />
-Login System
 - We will implement a system so that once the User logs in, they can bookmark clubs and also add club events to their personal calendar.
