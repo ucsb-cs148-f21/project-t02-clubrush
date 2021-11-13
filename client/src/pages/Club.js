@@ -1,7 +1,6 @@
 // import styled from "styled-components";
 import Container from "react-bootstrap/Container";
 import React, { useState, useEffect } from "react";
-import useLocalStorage from "../components/useLocalStorage"
 
 import Layout from "../components/Layout";
 // import getUser from "../utils/get-user";

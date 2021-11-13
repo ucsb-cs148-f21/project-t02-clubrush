@@ -4,6 +4,7 @@ import styled from "styled-components";
 // import getUser from "../utils/get-user";
 import Layout from "../components/Layout";
 import Container from "react-bootstrap/Container";
+import { requirePropFactory } from "@material-ui/core";
 const Bubble = styled.img`
   width: 500px;
   max-width: 100%;
@@ -14,6 +15,20 @@ const TextWrapper = styled.div`
   width: 700px;
   max-width: 100%;
 `;
+
+const styles = {
+  clubname:{
+    width: 250,
+    fontSize: 20,
+    color: 'black',
+    textAlign: 'center'
+  },
+  icon:{
+    display: 'grid',
+    gridTemplateColumns: '1fr 3fr 1fr 1fr 1fr',
+
+  },
+}
 
 export default function Home() {
   const [data, setData] = useState([]);
@@ -46,7 +61,7 @@ export default function Home() {
           Make sure you log in before navigating to the{" "}<a href="/club">Club</a> page!
           
         </TextWrapper> 
-        <h1 className="App">
+        <h1 className="App" style={styles.icon}>
           {data.map((item,index)=>{
             return <a href={'/club/'+ item.name}>
             <Bubble src={item.image}  style={{
@@ -58,7 +73,7 @@ export default function Home() {
                 height: 150,
                 width: 150,
             }}/>
-            {/* {item.name} */}
+            <div style={styles.clubname}>{item.name}</div>
             </a>
           })}
       </h1>
