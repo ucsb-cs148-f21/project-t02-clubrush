@@ -45,7 +45,7 @@ export default function Fraternity() {
                 //borderWidth: 5,
                 borderRadius: "50%",
                 height: 150,
-                width: 150
+                width: 150,
               }}/>
           
             {/* {item.name} */}

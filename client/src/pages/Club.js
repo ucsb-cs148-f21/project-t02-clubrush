@@ -40,7 +40,12 @@ export default function Club({cart, setCart, addToBookmark}) {
       <br/>
         <div>
         <h1>{data.name}</h1>
-        <a href={data.link}><img src={data.image}></img></a>
+        <a href={data.link}><img src={data.image} style={{
+          borderColor: "red",
+          borderRadius: "50%",
+          height: 125,
+          width: 125,
+        }}></img></a>
         <br />
         <button style = {styles.button} onClick={() => addToBookmark(data)}>Favorite</button>
 

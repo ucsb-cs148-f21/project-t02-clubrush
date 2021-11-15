@@ -19,14 +19,15 @@ const TextWrapper = styled.div`
 const styles = {
   clubname:{
     width: 250,
-    fontSize: 20,
+    fontSize: 17,
     color: 'black',
-    textAlign: 'center'
+    textAlign: 'center',
+    padding: 10
   },
   icon:{
-    display: 'grid',
-    gridTemplateColumns: '1fr 3fr 1fr 1fr 1fr',
-
+    display: "grid",
+    gridTemplateColumns: '1fr 1fr 1fr 1fr ',
+    position: "center", 
   },
 }
 
@@ -63,7 +64,12 @@ export default function Home() {
         </TextWrapper> 
         <h1 className="App" style={styles.icon}>
           {data.map((item,index)=>{
-            return <a href={'/club/'+ item.name}>
+            return <a href={'/club/'+ item.name} style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              flexDirection: "column"
+            }}>
             <Bubble src={item.image}  style={{
                 borderColor: "red",
                 boxShadow: "10px 7px 1px #9E9E9E",
