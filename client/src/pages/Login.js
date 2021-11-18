@@ -29,7 +29,7 @@ export default function Login() {
         body: JSON.stringify(account)
     })
     const datajson = await newUser.json()
-        console.log(datajson)
+    console.log(datajson)
   }
 
   return (

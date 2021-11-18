@@ -11,7 +11,6 @@ var testAPIRouter = require("./routes/testAPI");
 const connectDB = require('./config/db');
 var app = express();
 
-const Club = require('./models/club');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
