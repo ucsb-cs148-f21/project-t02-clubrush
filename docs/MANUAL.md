@@ -5,20 +5,26 @@ Upon start up the home page displays our project mission, and just below that we
 To browse all the clubs you can scroll further down until you find a club you likem click it, and you will be redirected to the club page.
 # Login 
 Our website can be used without the Login feature; however, in order to access some features like bookmarks, comments, reviews, and profile page, you can look at the navigation bar at the top seen here: (add image) <br />
-and search for a specific club 
+Once you type in letters corresponding to the club name and the desired club shows up in the search suggestions, you can click the club you want then be redirected to the club page. (add image here) <br />
  <br />
- <br />
-
 # Searching
-To search for a specific club without having to look through all the bubbles  <br />
-"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..." <br />
-
+To search for a specific club without having to look through all the bubbles, you can go up to the navigation bar at the top of the page click in the search bar seen here: (add image) <br />
+<br />
+# Club Page
+On the club page you can: <br />
+- bookmark the club that you're interested in <br />
+- leave comments <br />
+- add reviews <br />
 # Commenting
-"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..." <br />
-"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..." <br />
-
+If you wish to leave a comment on a club, you must be logged in in order to comment. <br /> 
+To log-in, see the login section of the user manual.
+Otherwise, for commenting, navigate to the club page of the club you wish to, scroll down, type your review in the comment box seen here: (add image), and then click the comment button in order to post your image.
 # Bookmarking
-"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..." <br />
-"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..." <br />
+If you wish to bookmark a club, you must be logged in. On the club page of the club you wish to bookmark, see the bookmark button here: (add image), and click the button to add it to your bookmarks list. Bookmarks will appear in the user profile page. (add image here) <br />
+ <br />
 
 # Profile Page
+One on the profile page you do the following:
+- view profile info like name and email 
+- edit profile info
+- view bookmarks
