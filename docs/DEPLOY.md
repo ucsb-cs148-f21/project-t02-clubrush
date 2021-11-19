@@ -9,6 +9,7 @@ TO-DO lab06
 7. Then the localhost:3000 will open on your browser
 
 
+# Deployment Instructions For Heroku
 1. In your machine, git clone this repository
 2. 2. cd into this repository, with the command "cd project-t02-clubrush"
 3. In the first terminal, cd into the api folder using the command "cd api", then type "npm i"
