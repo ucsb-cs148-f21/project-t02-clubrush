@@ -9,7 +9,7 @@ TO-DO lab06
 7. Follow the instructions to create a new cluster from mongoDB Atlas.
 8. Create a database user and password, give this access to readand write to any database.
 9. Obtain the mongodburi so that we can connect to it in the backend.
-10. Back in the api folder, create a ".env" file and put in "mongodburi="<your mongodburi that you obtained from mongodb atlas>"".
+10. Back in the api folder, create a ".env" file and put in "mongodburi="your mongodburi that you obtained from mongodb atlas"".
 11. Now that you have the correct mongodburi, you can run the backend and the fronend.
 12. Go into the terminal currently in api and run the command, "npm run start", and then go into the terminal in client and run "npm run start".
 13. Then the localhost:3000 will open on your browser
