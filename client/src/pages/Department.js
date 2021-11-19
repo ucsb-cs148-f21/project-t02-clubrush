@@ -15,7 +15,22 @@ const TextWrapper = styled.div`
   max-width: 100%;
 `;
 
-export default function Fraternity() {
+const styles = {
+  clubname:{
+    width: 250,
+    fontSize: 17,
+    color: 'black',
+    textAlign: 'center',
+    padding: 10
+  },
+  icon:{
+    display: "grid",
+    gridTemplateColumns: '1fr 1fr 1fr 1fr',
+    position: "center", 
+  },
+}
+
+export default function Department() {
   const [data, setData] = useState([]);
   useEffect(() => {
     fetch(`http://localhost:9000/clubs/`)
@@ -36,10 +51,15 @@ export default function Fraternity() {
         <TextWrapper>
           Here you can find all the Department Clubs!
         </TextWrapper>
-        <h1 className="App">
+        <h1 className="App" style={styles.icon}>
           {data.map((item,index)=>{
             if(item.categories === "Department")
-              return <a href={'/club/'+ item.name}>
+              return <a href={'/club/'+ item.name} style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                flexDirection: "column"
+              }}>
               <Bubble src={item.image}  style={{
                 borderColor: "red",
                 //borderWidth: 5,
@@ -48,7 +68,7 @@ export default function Fraternity() {
                 width: 150
               }}/>
           
-            {/* {item.name} */}
+            <div style={styles.clubname}>{item.name}</div>
             </a>
           })}
       </h1>

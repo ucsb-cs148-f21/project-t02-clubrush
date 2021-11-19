@@ -15,6 +15,21 @@ const TextWrapper = styled.div`
   max-width: 100%;
 `;
 
+const styles = {
+  clubname:{
+    width: 250,
+    fontSize: 17,
+    color: 'black',
+    textAlign: 'center',
+    padding: 10
+  },
+  icon:{
+    display: "grid",
+    gridTemplateColumns: '1fr 1fr 1fr 1fr ',
+    position: "center", 
+  },
+}
+
 export default function Fraternity() {
   const [data, setData] = useState([]);
   useEffect(() => {
@@ -34,21 +49,25 @@ export default function Fraternity() {
         <h1>Fraternity and Sorority page!</h1>
         <br />
         <TextWrapper>
-          Here you can find all the fraternities/Sorority!
+          Here you can find all the Fraternities and Sororities!
         </TextWrapper>
-        <h1 className="App">
+        <h1 className="App" style={styles.icon}>
           {data.map((item,index)=>{
             if(item.categories === "Social Fraternity/Sorority")
-              return <a href={'/club/'+ item.name}>
+              return <a href={'/club/'+ item.name} style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                flexDirection: "column"
+              }}>
               <Bubble src={item.image}  style={{
                 borderColor: "red",
-                //borderWidth: 5,
                 borderRadius: "50%",
                 height: 150,
                 width: 150,
               }}/>
           
-            {/* {item.name} */}
+            <div style={styles.clubname}>{item.name}</div>
             </a>
           })}
       </h1>

@@ -55,13 +55,19 @@ export default function Home() {
           students an easier time in their search for their new community. We want to have broader 
           categories displayed first such as academic, fraternity, cultural, community service, etc., 
           and then within those individual categories, have more specific filters to match what the 
-          user is looking for in their search: Co-ed, engineering, Asian, etc. We want this site to 
+          user is looking for in their search: Co-ed, engineering, Asian, etc. 
+          </TextWrapper> 
+          <br />
+          <TextWrapper>
+          We want this site to 
           be as minimal and simplistic as possible to give students an easier time in their search. 
           Sites such as Shoreline is a good option too, but Shoreline has too much unneccessary 
           information and most organization's page on Shoreline has not been updated in a very long time.
-          Make sure you log in before navigating to the{" "}<a href="/club">Club</a> page!
+          Make sure you {" "}<a href="/login">Login</a> before navigating to the Club page!
           
         </TextWrapper> 
+        <br />
+        
         <h1 className="App" style={styles.icon}>
           {data.map((item,index)=>{
             return <a href={'/club/'+ item.name} style={{
