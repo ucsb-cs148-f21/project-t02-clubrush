@@ -25,5 +25,13 @@ User Authentication: <br />
 
 
 # User Flow
------------TO-DO-----------
+https://imgur.com/wr4krC7 <br />
 # Important Team Decisions
+Some important team decisions we had from meetings are: <br /> 
+- Setting team deadlines
+- Setting team roles
+- Meeting more often to work together
+- Coming up with more ideas
+- Helping each other with work
+- Updating Kanboard more often
+
