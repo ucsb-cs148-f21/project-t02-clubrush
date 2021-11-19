@@ -32,8 +32,14 @@ async function scrapeProduct(url) {
         club => club.innerText,
     ));
     
-    console.log(names)
-    return [names, links, images, categories];
+    const description = await page.evaluate(() => Array.from(
+        document.querySelectorAll('.info_hidden_xxs'),
+        club => club.innerText,
+    ));
+    
+
+    console.log(description)
+    return [names, links, images, categories, description];
 }
 
 router.get('/', async function(req, res, next) {
@@ -42,6 +48,8 @@ router.get('/', async function(req, res, next) {
     const images = info[2];
     const names = info[0];
     const categories = info[3];
+    const description = info[4];
+
     let response = new Array(names.length);
     //  for(let i = 0; i < names.length; i++) {
     //      const newClub = new Club({
@@ -60,7 +68,9 @@ router.get('/', async function(req, res, next) {
             name: names[i],
             link: links[i],
             image: images[i],
-            categories: categories[i]
+            categories: categories[i],
+            description: description[i]
+
         };
     }
     // console.log(response)

@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch} from "react-router-dom";
 
 //import CheckingSignedIn from "./pages/CheckingSignedIn";
 import Home from "./pages/Home";
-//import Profile from "./pages/Profile";
+import Profile from "./pages/Profile";
 import Club from "./pages/Club"
 import DataScience from "./pages/DataScience"
 import Anime from "./pages/Anime"
@@ -49,6 +49,7 @@ export default function App() {
           <Route exact path="/club3/fraternity" component={Fraternity} />
           <Route exact path="/club3/Department" component={Department} />
           <Route exact path="/club3/Sports" component={Sports} />
+          <Route exact path="/Profile" component={Profile} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/club" render={() => <Bookmark cart={cart} setCart={setCart}/>}/>
