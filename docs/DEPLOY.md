@@ -13,6 +13,7 @@ TO-DO lab06
 11. Now that you have the correct mongodburi, you can run the backend and the fronend.
 12. Go into the terminal currently in api and run the command, "npm run start", and then go into the terminal in client and run "npm run start".
 13. Then the localhost:3000 will open on your browser
+14. To obtain club info, you can look through testAPI.js within api/routes/testAPI.js and see how we datascrap and insert into our mongoDB using puppeteer.
 
 
 # Deployment Instructions For Heroku
