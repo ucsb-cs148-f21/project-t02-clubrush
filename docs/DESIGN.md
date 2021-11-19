@@ -12,11 +12,11 @@ Front end: <br />
 - We're doing this using React. <br />
 
 Back end: <br />
-- We data scraped Shoreline using Python and have loaded all the data into MongoDB, and our website retrieves all this data from the database and displays all the club pages. <br />
+- We data scraped Shoreline using puppeteer and have loaded all the data into MongoDB, and our website retrieves all this data from the database and displays all the club pages. It also allows for the user to create a new user account and load it into MongoDB.<br />
 
 
 Database: <br />
-- This database stores all the club info that was data scraped from Shoreline, including the club name, image, banner, links, club description, and the way its categorized. <br />
+- This database stores all the club info that was data scraped from Shoreline, including the club name, image, banner, links, club description, and the way its categorized. It also stores existing users.<br />
 
 
 User Authentication: <br />
