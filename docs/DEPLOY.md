@@ -11,7 +11,7 @@ TO-DO lab06
 
 # Deployment Instructions For Heroku
 1. In your machine, git clone this repository
-2. 2. cd into this repository, with the command "cd project-t02-clubrush"
+2. cd into this repository, with the command "cd project-t02-clubrush"
 3. In the first terminal, cd into the api folder using the command "cd api", then type "npm i"
 4. In the second terminal, cd into the client folder using the command "cd client", then type "npm i"
 5. Within the client folder, run "npm run build". This creates a build folder within the client folder.
