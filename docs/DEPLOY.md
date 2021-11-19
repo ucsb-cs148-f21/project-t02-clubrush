@@ -5,8 +5,14 @@ TO-DO lab06
 3. Open two separate terminals
 4. In the first terminal, cd into the api folder using the command "cd api", then type "npm i"
 5. In the second terminal, cd into the client folder using the command "cd client", then type "npm i"
-6. Once both terminals finish installing all the packages, go into the terminal currently in api and run the command, "npm run start", and then go into the terminal in client and run "npm run start".
-7. Then the localhost:3000 will open on your browser
+6. Now we go onto mongodbatlas.com and signup or login if you already have an account.
+7. Follow the instructions to create a new cluster from mongoDB Atlas.
+8. Create a database user and password, give this access to readand write to any database.
+9. Obtain the mongodburi so that we can connect to it in the backend.
+10. Back in the api folder, create a ".env" file and put in "mongodburi="<your mongodburi that you obtained from mongodb atlas>"".
+11. Now that you have the correct mongodburi, you can run the backend and the fronend.
+12. Go into the terminal currently in api and run the command, "npm run start", and then go into the terminal in client and run "npm run start".
+13. Then the localhost:3000 will open on your browser
 
 
 # Deployment Instructions For Heroku
