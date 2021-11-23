@@ -1,0 +1,1 @@
+My contributions to this project were mostly pair programming with others. In the beginning I uploaded the club banner image for data science, in the middle I worked on testing, and currently I am helping Morgan with comments. Most of my commits are documentation.
