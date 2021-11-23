@@ -12,6 +12,10 @@ const Bubble = styled.img`
 
 
 const styles = {
+  buttons: {
+    display: "flex",
+    justifyContent: "flex-end"
+  },
   button:{
       borderRadius: 50,
       width: 100,
@@ -45,9 +49,6 @@ export default function Bookmark({setCart, cart} ) {
     console.log("works")
   }
 
-  const edit = () => {
-
-  }
 
   const Bookmarks  = cart.map((club, idx) => (
     <div className="club" style={styles.org} key={idx}>
@@ -77,8 +78,10 @@ export default function Bookmark({setCart, cart} ) {
       <Container>
       <br />
       <h1>Profilie</h1>
+      <div className="club" style={styles.buttons}>
       <Link to="/profile/edit"><button style={styles.button}>Edit</button></Link>
-
+      </div>
+ 
       <div style={styles.title}>Name:</div>
         {/*<div>{user.name}</div>*/}
         <br />
@@ -87,9 +90,9 @@ export default function Bookmark({setCart, cart} ) {
 
         <br />
         <h1>Bookmarked Clubs</h1>
-        <h2>----------------------------------</h2>
+        <div className="club" style={styles.buttons}>
         <button style={styles.button} onClick={clearCart}>Clear Cart</button>
-        <h2>----------------------------------</h2>
+        </div>
 
         {Bookmarks}
       </Container>
