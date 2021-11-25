@@ -14,6 +14,8 @@ import Profile from "./pages/Profile"
 
 export default function App() {
   const [isSignedIn, setIsSignedIn] = useState(null);
+  const test = "hi";
+  
 
   if(!isSignedIn) {
     return (
@@ -23,7 +25,7 @@ export default function App() {
           <Route exact path="/club/:id" component={Club}/>
           <Route exact path="/club1/datascience" component={DataScience} />
           <Route exact path="/club2/anime" component={Anime} />
-          <Route exact path="/login" component={Login} />
+          <Route exact path="/login" isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn} test={test} component={Login} />
           <Route exact path="/signup" component={Signup} />
           <Route path="/" component={PageNotFound} />
         </Switch>

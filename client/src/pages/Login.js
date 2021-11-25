@@ -5,7 +5,10 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Layout from "../components/Layout";
 
-export default function Login() {
+export default function Login({isSignedIn, setIsSignedIn, test}) {
+  console.log(isSignedIn);
+  console.log("hi");
+
   let [account, setAccount] = useState({
     email: '',
     password: ''
@@ -29,6 +32,8 @@ export default function Login() {
         body: JSON.stringify(account)
     })
     const datajson = await newUser.json()
+    console.log(test)
+    setIsSignedIn(true)
     console.log(datajson)
   }
 
