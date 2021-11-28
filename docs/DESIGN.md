@@ -5,10 +5,10 @@ Second Draft: https://imgur.com/a/rUxHsr9 <br />
 
 # Project Specifics
 Front end: <br />
-- We will implement a login system so that the user can login and see their user profile and sign up for club events and see events on their calendar. 
-- We have implemented a system for students to leave reviews for clubs so that other users may see how others think about clubs on campus.
-- We have implemented a search bar and dropdown that shows clubs
-- We have implemented Club bubbles on the homepage that show all the clubs and are clickable and will take the user to the respective club page.
+- We have implemented a login system so that the user can login and see their user profile and bookmark clubs they find interesting. The login feature also allows for users to leave comments under a club page.
+- We have implemented a system for students to leave reviews or comments for clubs so that other users may see how others think about clubs on campus.
+- We have implemented a search bar and dropdown that shows clubs, searching by club name or club categories.
+- We have implemented club bubbles on the homepage that display all the clubs and are clickable and will take the user to the respective club page.
 - We're doing this using React. <br />
 
 Back end: <br />
@@ -16,11 +16,11 @@ Back end: <br />
 
 
 Database: <br />
-- This database stores all the club info that was data scraped from Shoreline, including the club name, image, banner, links, club description, and the way its categorized. It also stores existing users.<br />
+- This database stores all the club info that was data scraped from Shoreline, including the club name, image, banner, links, club description, the way the clubs are categorized, and user data like: ID, email, comments, and bookmarks .<br />
 
 
 User Authentication: <br />
-- We will implement a system so that once the User logs in, they can bookmark clubs and also add club events to their personal calendar.
+- We have implemented a system so that once the user logs in, they can bookmark clubs and leave comments under a club page, and also view their personal information on a profile page, like bookmarks and user info.
 
 
 
