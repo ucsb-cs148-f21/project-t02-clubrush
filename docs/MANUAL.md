@@ -6,8 +6,6 @@ To browse all the clubs you can scroll further down until you find a club you li
 If you want to access features like bookmarking, commenting, or view your profile page, you must login to do so. (See login below)
 # Login 
 Our website can be used without the Login feature; however, in order to access some features like bookmarks, comments, reviews, and profile page, you can look at the navigation bar at the top seen here in the top right of the page: https://imgur.com/kR9lG8u <br />
-
- <br />
 # Searching
 To search for a specific club without having to look through all the bubbles, you can go up to the navigation bar at the top of the page click in the search bar seen here: https://imgur.com/ALikIcu <br />
 Once you type in letters corresponding to the club name and the desired club shows up in the search suggestions, you can click the club you want then be redirected to the club page. <br />
