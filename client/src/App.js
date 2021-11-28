@@ -14,7 +14,6 @@ import Profile from "./pages/Profile"
 
 export default function App() {
   const [isSignedIn, setIsSignedIn] = useState(null);
-  const test = "hi";
   
 
   if(!isSignedIn) {
@@ -25,7 +24,7 @@ export default function App() {
           <Route exact path="/club/:id" component={Club}/>
           <Route exact path="/club1/datascience" component={DataScience} />
           <Route exact path="/club2/anime" component={Anime} />
-          <Route exact path="/login" isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn} test={test} component={Login} />
+          <Route exact path="/login" render={() => <Login isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn}/>} />
           <Route exact path="/signup" component={Signup} />
           <Route path="/" component={PageNotFound} />
         </Switch>
@@ -33,6 +32,17 @@ export default function App() {
     );
   }
   else {
+    // return (
+    //   <BrowserRouter>
+    //     <Switch>
+    //       <Route exact path="/" component={Home} />
+    //       <Route exact path="/club/:id" component={Club}/>
+    //       <Route exact path="/club1/datascience" component={DataScience} />
+    //       <Route exact path="/club2/anime" component={Anime} />
+    //       <Route exact path="/profile" component={Profile} />
+    //       <Route path="/" component={PageNotFound} />
+    //     </Switch>
+    //   </BrowserRouter>
     return (
       <BrowserRouter>
         <Switch>
@@ -40,7 +50,8 @@ export default function App() {
           <Route exact path="/club/:id" component={Club}/>
           <Route exact path="/club1/datascience" component={DataScience} />
           <Route exact path="/club2/anime" component={Anime} />
-          <Route exact path="/profile" component={Profile} />
+          <Route exact path="/login" render={() => <Login isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn}/>} />
+          <Route exact path="/signup" component={Signup} />
           <Route path="/" component={PageNotFound} />
         </Switch>
       </BrowserRouter>

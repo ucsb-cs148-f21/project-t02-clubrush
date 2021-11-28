@@ -4,10 +4,11 @@ import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Layout from "../components/Layout";
+import { useLocalStorage, getStorageValue } from "../components/useLocalStorage"
 
-export default function Login({isSignedIn, setIsSignedIn, test}) {
+export default function Login({isSignedIn, setIsSignedIn}) {
   console.log(isSignedIn);
-  console.log("hi");
+  const [user, setUser] = useLocalStorage("user", "");
 
   let [account, setAccount] = useState({
     email: '',
@@ -31,10 +32,12 @@ export default function Login({isSignedIn, setIsSignedIn, test}) {
         },
         body: JSON.stringify(account)
     })
-    const datajson = await newUser.json()
-    console.log(test)
+    const datajson = await newUser.json();
+    setUser(datajson._id)
+    console.log(getStorageValue("user", "not working"));
     setIsSignedIn(true)
     console.log(datajson)
+    console.log(isSignedIn);
   }
 
   return (
