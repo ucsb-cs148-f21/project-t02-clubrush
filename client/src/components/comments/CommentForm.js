@@ -22,7 +22,7 @@ const CommentForm = ({
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
-      <button className="comment-form-button" disabled={isTextareaDisabled}>
+      <button className="comment-form-button" type="submit" disabled={isTextareaDisabled}>
         {submitLabel}
       </button>
       {hasCancelButton && (

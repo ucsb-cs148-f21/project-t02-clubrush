@@ -2,18 +2,22 @@ import { useState, useEffect } from "react";
 import CommentForm from "./CommentForm";
 import Comment from "./Comment";
 import {
-  getComments as getCommentsApi,
+  GetComments as getCommentsApi,
   createComment as createCommentApi,
   updateComment as updateCommentApi,
   deleteComment as deleteCommentApi,
 } from "../api";
 import React from "react";
 import { FaStar } from "react-icons/fa";
+import { useParams } from "react-router-dom";
+
 import Container from "react-bootstrap/Container";
 
 const Comments = ({ commentsUrl, currentUserId }) => {
   const [backendComments, setBackendComments] = useState([]);
   const [activeComment, setActiveComment] = useState(null);
+  const { id } = useParams();
+
   const rootComments = backendComments.filter(
     (backendComment) => backendComment.parentId === null
   );
@@ -26,6 +30,14 @@ const Comments = ({ commentsUrl, currentUserId }) => {
       );
   const addComment = (text, parentId) => {
     createCommentApi(text, parentId).then((comment) => {
+      fetch(`http://localhost:9000/clubs/${id}/comments`, {
+        method: 'POST', // *GET, POST, PUT, DELETE, etc.
+        headers: {
+          'Content-Type': 'application/json'
+          // 'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: JSON.stringify(comment) // body data type must match "Content-Type" header
+      })
       setBackendComments([comment, ...backendComments]);
       setActiveComment(null);
     });
@@ -54,11 +66,22 @@ const Comments = ({ commentsUrl, currentUserId }) => {
     }
   };
 
+  // useEffect(async() =>  {
+  //   // await getCommentsApi().then((data) =>  {
+  //   //    setBackendComments(data);
+  //   // });
+  //   console.log(await getCommentsApi());
+  // }, []);
   useEffect(() => {
-    getCommentsApi().then((data) => {
-      setBackendComments(data);
-    });
-  }, []);
+    async function fetchMyAPI() {
+      let response = await fetch('http://localhost:9000/clubs/')
+      response = await response.json()
+      setBackendComments(response)
+      console.log(response)
+    }
+
+    fetchMyAPI()
+  }, [])
 
   /*Get the ratings */
   const colors = {
