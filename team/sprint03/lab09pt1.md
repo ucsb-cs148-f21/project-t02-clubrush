@@ -1,7 +1,7 @@
 
 # Sprint Stand Up Meeting
 Mentor: Nagarjun <br />
-Meeting Time: lab09<br />
+Meeting Time: lab09 pt1 <br /> 
 Type of Meeting: Stand Up  <br />
 Team: Christine Ong [x], Morgan Lin [x], Robert He [x], Tommy Nguyen [x] <br />
 
