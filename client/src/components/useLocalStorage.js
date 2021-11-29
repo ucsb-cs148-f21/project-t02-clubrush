@@ -3,6 +3,7 @@ export function getStorageValue(key, defaultValue) {
     // getting stored value
     const saved = localStorage.getItem(key);
     const initial = JSON.parse(saved);
+    console.log("fetching within localstorage")
     return initial || defaultValue;
   }
 // Hook

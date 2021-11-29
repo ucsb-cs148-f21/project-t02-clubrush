@@ -1,4 +1,5 @@
 // import styled from "styled-components";
+import { useHistory } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
@@ -8,6 +9,7 @@ import { useLocalStorage, getStorageValue } from "../components/useLocalStorage"
 
 export default function Login({isSignedIn, setIsSignedIn}) {
   console.log(isSignedIn);
+  const history = useHistory();
   const [user, setUser] = useLocalStorage("user", "");
 
   let [account, setAccount] = useState({
@@ -38,6 +40,7 @@ export default function Login({isSignedIn, setIsSignedIn}) {
     setIsSignedIn(true)
     console.log(datajson)
     console.log(isSignedIn);
+    history.push("/profile")
   }
 
   return (

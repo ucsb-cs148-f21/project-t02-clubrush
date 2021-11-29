@@ -2,6 +2,7 @@ import Container from "react-bootstrap/Container";
 import Layout from "../components/Layout";
 
 export default function PageNotFound() {
+  console.log("not found")
   return (
     <Layout>
       <Container>

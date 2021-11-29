@@ -6,6 +6,7 @@ import Layout from "../components/Layout";
 // import getUser from "../utils/get-user";
 // import getData from "../utils/get-data";
 import DoggoImg from "../images/doggo.jpg";
+import { useLocalStorage, getStorageValue } from "../components/useLocalStorage"
 
 const Doggo = styled.img`
   width: 500px;
@@ -15,17 +16,18 @@ const Doggo = styled.img`
 
 export default function Profile() {
   // const user = getUser();
-  const [data, setData] = useState([]);
+  // const [data, setData] = useState([]);
 
-  useEffect(() => {
-    fetch("http://localhost:9000/testAPI")
-      .then(async (res) => {
-        const data = await res.json()
-        setData(data)
-        console.log(res)
-      }
-    );
-  },[])
+  // useEffect(() => {
+  //   fetch("http://localhost:9000/testAPI")
+  //     .then(async (res) => {
+  //       const data = await res.json()
+  //       setData(data)
+  //       console.log(res)
+  //     }
+  //   );
+  // },[])
+  const user = getStorageValue("user")
 
   return (
     <Layout>
@@ -38,7 +40,8 @@ export default function Profile() {
           Here is data:
           <ul>
             <li>
-              {JSON.stringify(data, null, 2)}
+            {JSON.stringify(user, null, 2)}
+              {/* {JSON.stringify(data, null, 2)} */}
             </li>
         </ul>
         </div>
