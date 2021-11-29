@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Container from "react-bootstrap/Container";
-
+import Button from "react-bootstrap/Button";
 import Layout from "../components/Layout";
+import { useHistory } from "react-router-dom";
 // import getUser from "../utils/get-user";
 // import getData from "../utils/get-data";
 import DoggoImg from "../images/doggo.jpg";
@@ -15,6 +16,7 @@ const Doggo = styled.img`
 `;
 
 export default function Profile() {
+  const history = useHistory();
   // const user = getUser();
   // const [data, setData] = useState([]);
 
@@ -27,7 +29,14 @@ export default function Profile() {
   //     }
   //   );
   // },[])
+  const [isSignedIn, setIsSignedIn] = useLocalStorage("isSignedIn", true);
   const user = getStorageValue("user")
+  const [userid, setUser] = useLocalStorage("user", user);
+  let logout = (e) => {
+    setUser("");
+    setIsSignedIn(null)
+    history.push("/")
+  }
 
   return (
     <Layout>
@@ -45,6 +54,9 @@ export default function Profile() {
             </li>
         </ul>
         </div>
+        <Button variant="primary" type="submit" onClick={logout}>
+                Logout
+            </Button>
       </Container>
     </Layout>
   );

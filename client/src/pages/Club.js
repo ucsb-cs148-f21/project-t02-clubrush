@@ -33,7 +33,7 @@ export default function Club() {
           Description
         </h3>
         <p>
-          Description
+          {data.description}
         </p>
         <br /> 
         <h3>
