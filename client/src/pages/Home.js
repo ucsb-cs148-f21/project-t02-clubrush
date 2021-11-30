@@ -4,6 +4,7 @@ import styled from "styled-components";
 // import getUser from "../utils/get-user";
 import Layout from "../components/Layout";
 import Container from "react-bootstrap/Container";
+import { requirePropFactory } from "@material-ui/core";
 const Bubble = styled.img`
   width: 500px;
   max-width: 100%;
@@ -14,6 +15,21 @@ const TextWrapper = styled.div`
   width: 700px;
   max-width: 100%;
 `;
+
+const styles = {
+  clubname:{
+    width: 250,
+    fontSize: 17,
+    color: 'black',
+    textAlign: 'center',
+    padding: 10
+  },
+  icon:{
+    display: "grid",
+    gridTemplateColumns: '1fr 1fr 1fr 1fr ',
+    position: "center", 
+  },
+}
 
 export default function Home() {
   const [data, setData] = useState([]);
@@ -39,24 +55,37 @@ export default function Home() {
           students an easier time in their search for their new community. We want to have broader 
           categories displayed first such as academic, fraternity, cultural, community service, etc., 
           and then within those individual categories, have more specific filters to match what the 
-          user is looking for in their search: Co-ed, engineering, Asian, etc. We want this site to 
+          user is looking for in their search: Co-ed, engineering, Asian, etc. 
+          </TextWrapper> 
+          <br />
+          <TextWrapper>
+          We want this site to 
           be as minimal and simplistic as possible to give students an easier time in their search. 
           Sites such as Shoreline is a good option too, but Shoreline has too much unneccessary 
           information and most organization's page on Shoreline has not been updated in a very long time.
-          Make sure you log in before navigating to the{" "}<a href="/club">Club</a> page!
+          Make sure you {" "}<a href="/login">Login</a> before navigating to the Club page!
           
         </TextWrapper> 
-        <h1 className="App">
+        <br />
+        
+        <h1 className="App" style={styles.icon}>
           {data.map((item,index)=>{
-            return <a href={'/club/'+ item.name}>
+            return <a href={'/club/'+ item.name} style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              flexDirection: "column"
+            }}>
             <Bubble src={item.image}  style={{
-              borderColor: "red",
-              //borderWidth: 5,
-              borderRadius: "50%",
-              height: 150,
-              width: 150
+                borderColor: "red",
+                boxShadow: "10px 7px 1px #9E9E9E",
+                borderColor: "red",
+                //borderWidth: 5,
+                borderRadius: "50%",
+                height: 150,
+                width: 150,
             }}/>
-            {/* {item.name} */}
+            <div style={styles.clubname}>{item.name}</div>
             </a>
           })}
       </h1>
