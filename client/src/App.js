@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter, Route, Switch} from "react-router-dom";
 
 //import CheckingSignedIn from "./pages/CheckingSignedIn";
@@ -10,10 +10,12 @@ import Anime from "./pages/Anime"
 import Fraternity from "./pages/Fraternity"
 import Department from "./pages/Department"
 import Sports from "./pages/Sport"
+import Edit from "./pages/Edit"
+
 
 //import Private from "./pages/Private";
 import Bookmark from "./pages/Bookmark";
-import Signup from "./pages/Signup"
+import SignUp from "./pages/SignUp"
 import Login from "./pages/Login"
 import useLocalStorage from "./components/useLocalStorage"
 
@@ -51,8 +53,11 @@ export default function App() {
           <Route exact path="/club3/Sports" component={Sports} />
           <Route exact path="/Profile" component={Profile} />
           <Route exact path="/login" component={Login} />
-          <Route exact path="/signup" component={Signup} />
-          <Route exact path="/club" render={() => <Bookmark cart={cart} setCart={setCart}/>}/>
+          <Route exact path="/signup" component={SignUp} />
+          {/*<Route exact path="/profile" component={} />*/}
+          <Route exact path="/profile" render={() => <Bookmark cart={cart} setCart={setCart}/>}/> 
+          <Route exact path="/profile/edit" component={Edit} />
+
         </Switch>
       </BrowserRouter>
     );

@@ -15,6 +15,21 @@ const TextWrapper = styled.div`
   max-width: 100%;
 `;
 
+const styles = {
+  clubname:{
+    width: 250,
+    fontSize: 17,
+    color: 'black',
+    textAlign: 'center',
+    padding: 10
+  },
+  icon:{
+    display: "grid",
+    gridTemplateColumns: '1fr 1fr 1fr 1fr ',
+    position: "center", 
+  },
+}
+
 export default function Fraternity() {
   const [data, setData] = useState([]);
   useEffect(() => {
@@ -39,7 +54,12 @@ export default function Fraternity() {
         <h1 className="App">
           {data.map((item,index)=>{
             if(item.categories === "Sport Club - Sports / Recreation")
-              return <a href={'/club/'+ item.name}>
+              return <a href={'/club/'+ item.name} style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                flexDirection: "column"
+              }}>
               <Bubble src={item.image}  style={{
                 borderColor: "red",
                 //borderWidth: 5,
@@ -48,7 +68,7 @@ export default function Fraternity() {
                 width: 150
               }}/>
           
-            {/* {item.name} */}
+          <div style={styles.clubname}>{item.name}</div>
             </a>
           })}
       </h1>

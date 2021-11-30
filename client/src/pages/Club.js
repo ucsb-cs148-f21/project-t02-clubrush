@@ -1,7 +1,6 @@
 // import styled from "styled-components";
 import Container from "react-bootstrap/Container";
 import React, { useState, useEffect } from "react";
-import useLocalStorage from "../components/useLocalStorage"
 
 import Layout from "../components/Layout";
 // import getUser from "../utils/get-user";
@@ -44,7 +43,12 @@ export default function Club({cart, setCart, addToBookmark}) {
       <br/>
         <div>
         <h1>{data.name}</h1>
-        <a href={data.link}><img src={data.image}></img></a>
+        <a href={data.link}><img src={data.image} style={{
+          borderColor: "red",
+          borderRadius: "50%",
+          height: 125,
+          width: 125,
+        }}></img></a>
         <br />
         <button style = {styles.button} onClick={() => addToBookmark(data)}>Favorite</button>
 
