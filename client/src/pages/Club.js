@@ -6,6 +6,9 @@ import Layout from "../components/Layout";
 // import getUser from "../utils/get-user";
 import { useParams } from "react-router-dom";
 import Reviews from "../components/Reviews";
+import Comments from "../components/comments/Comments";
+
+//import Button from "../components/Button";
 
 const styles = {
   button:{
@@ -65,7 +68,9 @@ export default function Club({cart, setCart, addToBookmark}) {
 
         <br />
         </div>
-        <Reviews />
+        <Comments 
+          commentsUrl="http://localhost:3000/comments"
+          currentUserId="1" />
 
       </Container>
     </Layout>

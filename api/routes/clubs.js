@@ -2,6 +2,9 @@ var express = require('express');
 var router = express.Router();
 const Club = require('../models/club');
 
+// async function addCommentsField(){
+//   await Club.updateMany({}, { $set: {comments: [] }}, {upsert: false})
+// }
 
 router.get('/:id', async function(req, res) {
   try {
@@ -36,5 +39,24 @@ router.get('/', async function(req, res) {
       res.status(500).send('Server Error');
     }
 });
+
+
+
+router.post('/:name/comments', async function(req, res, next){
+  // await addCommentsField();
+  const club = await Club.findOne({ name: req.params.name })
+  console.log(club);
+  const newComment = req.body;
+  console.log(req.body);
+  club.comments.push(newComment);
+  await club.save();
+  res.json(newComment)
+});
+
+
+/* GET comments listing. */
+// router.get('/:name/comments', async function(req, res, next) {
+//       res.render('clubs-show', { comments: comments})
+// });
 
 module.exports = router;
