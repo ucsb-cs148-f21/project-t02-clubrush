@@ -9,14 +9,21 @@ async function scrapeProduct(url) {
         timeout: 0
     });
 
-
-    const names = await page.evaluate(() => Array.from(
-        document.getElementsByClassName("h5 media-heading grey-element"),
+    const description = await page.evaluate(() => Array.from(
+        document.querySelectorAll('.noOutlineOnFocus'),
         
         club => club.innerText,
     ));
 
-    console.log(names);
+    console.log(description);
+
+    // const names = await page.evaluate(() => Array.from(
+    //     document.getElementsByClassName("h5 media-heading grey-element"),
+        
+    //     club => club.innerText,
+    // ));
+
+    // console.log(names);
     
     // const links = await page.evaluate(() => Array.from(
     //     document.querySelectorAll('.header-cg--h4 > a'),
@@ -39,7 +46,7 @@ async function scrapeProduct(url) {
     // // const imageURL = await src.jsonValue();
 
     // console.log(images);
-    return names;
+    return description;
 }
 
 

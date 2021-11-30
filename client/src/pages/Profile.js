@@ -15,6 +15,13 @@ const Doggo = styled.img`
   height: auto;
 `;
 
+const styles = {
+  title:{
+    fontSize: 40,
+  }
+}
+
+
 export default function Profile() {
   const history = useHistory();
   // const user = getUser();
@@ -41,19 +48,23 @@ export default function Profile() {
   return (
     <Layout>
       <Container>
-        <div>Google also thinks you'll like this picture :)</div>
+      <br/>
+        <h1>Profilie</h1>
         <br />
         <Doggo src={DoggoImg} />
-        {}
-        <div>
-          Here is data:
+        <div style={styles.title}>Name:</div>
+        {/*<div>{user.name}</div>*/}
+
+        <br />
+
+        <div style={styles.title}>Email:</div>
+        {/*<div>{user.email}</div>*/}
           <ul>
             <li>
             {JSON.stringify(user, null, 2)}
               {/* {JSON.stringify(data, null, 2)} */}
             </li>
         </ul>
-        </div>
         <Button variant="primary" type="submit" onClick={logout}>
                 Logout
             </Button>

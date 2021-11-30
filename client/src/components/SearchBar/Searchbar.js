@@ -56,7 +56,7 @@ function SearchBar({ placeholder, data }) {
         <div className="dataResult">
           {fetchdata.slice(0, fetchdata.length).map((value, key) => {
             return (
-              <a className="dataItem" href={'./club/' + value.name} rel="noreferrer" target="_blank">
+              <a className="dataItem" href={"./club/" + value.name} rel="noreferrer" target="_blank">
                 <p>{value.name} </p>
 
                {/* <a className="dataItem" href={value.link} rel="noreferrer" target="_blank" onClick={getClub}> /}

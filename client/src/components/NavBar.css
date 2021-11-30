@@ -9,7 +9,9 @@
     color:aquamarine
 }
 .navbar .navbar-nav li a{
-    color:antiquewhite;
+    color:antiquewhite;  
+    padding-left:50px;
+    padding-right:50px;
 }
 
 .linkText{ 

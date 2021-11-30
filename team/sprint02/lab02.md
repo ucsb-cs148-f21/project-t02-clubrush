@@ -27,5 +27,5 @@ Tasks:
 
 Christine - I am working on learning how to format things on the website ( front end things ) and will work on implenting this on the website in the future. <br />
 Morgan - I am working on getting the backend to connect with MongoDB and will work on setting up the database to store all the information gathered. <br />
-Robert - I am working on ... and will work on ... <br /> 
+Robert - I am working on learning how to style the site and will work on learning to implement certain functionalities in the site  <br /> 
 Tommy - I am working on getting express to work with alongiside React and will work on data scrapping for information on Shoreline<br />

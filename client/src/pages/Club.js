@@ -5,8 +5,23 @@ import React, { useState, useEffect } from "react";
 import Layout from "../components/Layout";
 // import getUser from "../utils/get-user";
 import { useParams } from "react-router-dom";
+import Reviews from "../components/Reviews";
+import Comments from "../components/comments/Comments";
 
-export default function Club() {
+//import Button from "../components/Button";
+
+const styles = {
+  button:{
+      border: "1px solid #a9a9a9",
+      borderRadius: 5,
+      width: 100,
+      padding: 10,
+      margin: 20,
+  }
+}
+
+
+export default function Club({cart, setCart, addToBookmark}) {
   const { id } = useParams();
   console.log(typeof(id));
 
@@ -21,14 +36,22 @@ export default function Club() {
     );
   },[]);
 
+
   return (
     <Layout>
       <Container>
       <br/>
         <div>
         <h1>{data.name}</h1>
-        <a href={data.link}><img src={data.image}></img></a>
+        <a href={data.link}><img src={data.image} style={{
+          borderColor: "red",
+          borderRadius: "50%",
+          height: 125,
+          width: 125,
+        }}></img></a>
         <br />
+        <button style = {styles.button} onClick={() => addToBookmark(data)}>Favorite</button>
+
         <h3>
           Description
         </h3>
@@ -45,6 +68,10 @@ export default function Club() {
 
         <br />
         </div>
+        <Comments 
+          commentsUrl="http://localhost:3000/comments"
+          currentUserId="1" />
+
       </Container>
     </Layout>
   );

@@ -33,22 +33,22 @@ export default function NavBar(props) {
               <h4>
               <NavDropdown title="Clubs" className="dropdown-item" id="nav-dropdown">
               
-                <NavDropdown.Item href="./pages/DataScience" eventkey="/club1">
-                  {<Nav.Link href="/club1/datascience">Clubs</Nav.Link>}
-                </NavDropdown.Item>
-                <NavDropdown.Item href="./pages/Anime" eventkey="/club2">
-                  {<Nav.Link href="/club2/anime">Fraternities</Nav.Link>}
-                </NavDropdown.Item>
-                <NavDropdown.Item href="./pages/Anime" eventkey="/club2">
-                  {<Nav.Link href="/club2/anime">Sororities</Nav.Link>}
-                </NavDropdown.Item>
-                <NavDropdown.Item href="./pages/Anime" eventkey="/club2">
-                  {<Nav.Link href="/club2/anime">Sports</Nav.Link>}
-                </NavDropdown.Item>
+              <NavDropdown.Item href="./pages/DataScience" eventkey="/club1">
+                {<Nav.Link href="/club1/datascience">Clubs</Nav.Link>}
+              </NavDropdown.Item>
+              <NavDropdown.Item href="./pages/Fraternity" eventkey="/club3">
+                {<Nav.Link href="/club3/Fraternity">Fraternities/Sororities</Nav.Link>}
+              </NavDropdown.Item>
+              <NavDropdown.Item href="./pages/Department" eventkey="/club3">
+                {<Nav.Link href="/club3/Department">Department</Nav.Link>}
+              </NavDropdown.Item>
+              <NavDropdown.Item href="./pages/Sports" eventkey="/club3">
+                {<Nav.Link href="/club3/Sports">Sports</Nav.Link>}
+              </NavDropdown.Item>
                 
               </NavDropdown></h4>
               
-              {<Nav.Link href="/club"><h4 className="linkText" href="/club">Bookmarks</h4></Nav.Link>}
+              {<Nav.Link href="/bookmark"><h4 className="linkText">Bookmarks</h4></Nav.Link>}
             </Nav>
             
             <form className="form-inline my-2 my-lg-0">
@@ -80,18 +80,18 @@ export default function NavBar(props) {
               <h4>
               <NavDropdown title="Clubs" className="dropdown-item" id="nav-dropdown">
               
-                <NavDropdown.Item href="./pages/DataScience" eventkey="/club1">
-                  {<Nav.Link href="/club1/datascience">Clubs</Nav.Link>}
-                </NavDropdown.Item>
-                <NavDropdown.Item href="./pages/Anime" eventkey="/club2">
-                  {<Nav.Link href="/club2/anime">Fraternities</Nav.Link>}
-                </NavDropdown.Item>
-                <NavDropdown.Item href="./pages/Anime" eventkey="/club2">
-                  {<Nav.Link href="/club2/anime">Sororities</Nav.Link>}
-                </NavDropdown.Item>
-                <NavDropdown.Item href="./pages/Anime" eventkey="/club2">
-                  {<Nav.Link href="/club2/anime">Sports</Nav.Link>}
-                </NavDropdown.Item>
+              <NavDropdown.Item href="./pages/DataScience" eventkey="/club1">
+                {<Nav.Link href="/club1/datascience">Clubs</Nav.Link>}
+              </NavDropdown.Item>
+              <NavDropdown.Item href="./pages/Fraternity" eventkey="/club3">
+                {<Nav.Link href="/club3/Fraternity">Fraternities/Sororities</Nav.Link>}
+              </NavDropdown.Item>
+              <NavDropdown.Item href="./pages/Department" eventkey="/club3">
+                {<Nav.Link href="/club3/Department">Department</Nav.Link>}
+              </NavDropdown.Item>
+              <NavDropdown.Item href="./pages/Sports" eventkey="/club3">
+                {<Nav.Link href="/club3/Sports">Sports</Nav.Link>}
+              </NavDropdown.Item>
                 
               </NavDropdown></h4>
               
