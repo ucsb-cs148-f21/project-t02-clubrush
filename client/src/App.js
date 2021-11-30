@@ -51,7 +51,6 @@ export default function App() {
           <Route exact path="/club3/fraternity" component={Fraternity} />
           <Route exact path="/club3/Department" component={Department} />
           <Route exact path="/club3/Sports" component={Sports} />
-          <Route exact path="/Profile" component={Profile} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={SignUp} />
           {/*<Route exact path="/profile" component={} />*/}
