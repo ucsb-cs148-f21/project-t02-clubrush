@@ -1,0 +1,5 @@
+{
+    "mongoURI": "mongodb+srv://user:Tnguyen404@cluster0.jfgms.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    "jwtSecret": "secret",
+    "githubToken": "<yoursecrectaccesstoken>"
+  }

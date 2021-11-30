@@ -19,3 +19,10 @@
 * For this retro we use the start/stop/continue to see what we are lacking in and what we can improve on.
 * It was very helpful as we got to collectively share our ideas and issues, helping us work better together as a team and giving this product value.
 * Advice I would give to the next person leading the retro is to assess what tasks are reasonable and realistic in the given amount of time we have for the project. Using this to think plan out future meetings and tasks. 
+
+## Retro Outcome Assessment
+
+* Our retro 2 experiment was to get better at setting team deadlines. 
+* The metric we planned on using was seeing progress within all the site functionalities within given deadlines
+* The outcome is looking positive. People are on task and working hard towards the project. Things are getting done and there hasn't been a lot of conflict, so it's good. 
+* With this outcome, I can say that our team progress will continue to look bright as long as we continue this habit of setting deadlines.  
