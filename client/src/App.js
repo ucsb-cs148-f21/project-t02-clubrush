@@ -58,6 +58,7 @@ export default function App() {
           <Route exact path="/login" render={() => <Login isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn}/>} />
           <Route exact path="/bookmark" render={() => <Bookmark cart={cart} setCart={setCart}/>}/> 
           <Route exact path="/signup" component={Signup} />
+          <Route exact path="/profile/edit" component={Edit} />
           <Route path="/" component={PageNotFound} />
         </Switch>
       </BrowserRouter>

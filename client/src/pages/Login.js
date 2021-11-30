@@ -43,6 +43,15 @@ export default function Login({isSignedIn, setIsSignedIn}) {
     history.push("/profile")
   }
 
+const styles = {  
+  box:{
+    width: 500,
+  },
+  name_box:{
+    width: 350,
+  },
+}
+
   return (
     <Layout>
       <Container>
@@ -51,7 +60,7 @@ export default function Login({isSignedIn, setIsSignedIn}) {
             <h1>Please Login</h1>
         </div>
         <Form onSubmit={check}>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Group className="mb-3" controlId="formBasicEmail" style={styles.box}>
                 <Form.Label>Email address</Form.Label>
                 <Form.Control type="email" placeholder="Enter email" name="email" onChange={handleChange}/>
                 <Form.Text className="text-muted">
@@ -59,7 +68,7 @@ export default function Login({isSignedIn, setIsSignedIn}) {
                 </Form.Text>
             </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Group className="mb-3" controlId="formBasicPassword" style={styles.box}>
                 <Form.Label>Password</Form.Label>
                 <Form.Control type="password" placeholder="Password" name="password" onChange={handleChange}/>
             </Form.Group>

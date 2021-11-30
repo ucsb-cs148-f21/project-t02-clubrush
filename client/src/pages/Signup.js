@@ -74,10 +74,6 @@ export default function Signup() {
                 <Form.Label>Password</Form.Label>
                 <Form.Control type="password" placeholder="Password" name="password" onChange={handleChange}/>
             </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicPassword" style={styles.box}>
-                <Form.Label>Re-Enter Password</Form.Label>
-                <Form.Control type="password" placeholder="Password" name="password" onChange={handleChange}/>
-            </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicCheckbox">
                 <Form.Check type="checkbox" label="Check me out" />

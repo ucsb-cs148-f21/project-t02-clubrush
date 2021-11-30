@@ -95,7 +95,7 @@ export default function NavBar(props) {
                 
               </NavDropdown></h4>
               
-              {<Nav.Link href="/club"><h4 className="linkText" href="/club">Bookmarks</h4></Nav.Link>}
+              {<Nav.Link href="/bookmark"><h4 className="linkText" href="/bookmark">Bookmarks</h4></Nav.Link>}
             </Nav>
             
             <form className="form-inline my-2 my-lg-0">
