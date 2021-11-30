@@ -21,19 +21,36 @@ const styles = {
       width: 100,
       padding: 7,
       margin: 0,
+      color: "black"
   },
+  top_botton:{
+    borderRadius: 50,
+    width: 100,
+    padding: 7,
+    margin: 0,
+    color: "white",
+    backgroundColor: '#004282'
+},
+
   org:{
-    width: 1000,
+    width: 825,
     fontSize: 25
   },
   remove:{
     fontSize: 20,
-
-
   },
   title:{
     fontSize: 20,
-  }
+  },
+  left:{
+    display: "flex",
+    justifyContent: "unset",
+    alignItems: "center"
+  },
+  right: {
+    display: "flex",
+    justifyContent: "flex-end"
+  },
 }
 
 
@@ -51,25 +68,25 @@ export default function Bookmark({setCart, cart} ) {
 
 
   const Bookmarks  = cart.map((club, idx) => (
-    <div className="club" style={styles.org} key={idx}>
+    <div className="club" key={idx}>
+      <div className="both" style={styles.left}>
       <a href={'/club/'+ club.name}><Bubble src={club.image}  style={{
                 borderColor: "red",
                 boxShadow: "10px 7px 1px #9E9E9E",
                 borderColor: "red",
-                //borderWidth: 5,
                 borderRadius: "50%",
                 height: 150,
                 width: 150,
                 margin: 20
             }}/></a>
       <a href={'/club/'+ club.name} style={styles.org}>{club.name}</a>
-
             <br/>
+      <div className="club" style={styles.right}>
       <div style={styles.remove}><button style={styles.button} onClick={() => removeFromCart(club)}>
         Remove
       </button></div>
-      <h2>----------------------------------------------------</h2>
-
+      </div>
+      </div>
     </div>
   ))
   
@@ -79,7 +96,7 @@ export default function Bookmark({setCart, cart} ) {
       <br />
       <h1>Profilie</h1>
       <div className="club" style={styles.buttons}>
-      <Link to="/profile/edit"><button style={styles.button}>Edit</button></Link>
+      <Link to="/profile/edit"><button style={styles.top_botton}>Edit</button></Link>
       </div>
  
       <div style={styles.title}>Name:</div>
@@ -91,7 +108,7 @@ export default function Bookmark({setCart, cart} ) {
         <br />
         <h1>Bookmarked Clubs</h1>
         <div className="club" style={styles.buttons}>
-        <button style={styles.button} onClick={clearCart}>Clear Cart</button>
+        <button style={styles.top_botton} onClick={clearCart}>Clear Cart</button>
         </div>
 
         {Bookmarks}

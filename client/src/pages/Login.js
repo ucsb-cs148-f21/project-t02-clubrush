@@ -5,6 +5,15 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Layout from "../components/Layout";
 
+const styles = {  
+  box:{
+    width: 500,
+  },
+  name_box:{
+    width: 350,
+  },
+}
+
 export default function Login() {
   return (
     <Layout>
@@ -14,7 +23,7 @@ export default function Login() {
             <h1>Please Login</h1>
         </div>
         <Form>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Group className="mb-3" controlId="formBasicEmail" style={styles.box}>
                 <Form.Label>Email address</Form.Label>
                 <Form.Control type="email" placeholder="Enter email" />
                 <Form.Text className="text-muted">
@@ -22,7 +31,7 @@ export default function Login() {
                 </Form.Text>
             </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Group className="mb-3" controlId="formBasicPassword" style={styles.box}>
                 <Form.Label>Password</Form.Label>
                 <Form.Control type="password" placeholder="Password" />
             </Form.Group>
