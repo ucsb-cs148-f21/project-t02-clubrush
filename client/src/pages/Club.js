@@ -17,7 +17,16 @@ const styles = {
       width: 100,
       padding: 10,
       margin: 20,
-  }
+  },
+  right: {
+    display: "flex",
+    justifyContent: "flex-end"
+  },
+  left: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center"
+  },
 }
 
 
@@ -42,21 +51,27 @@ export default function Club({cart, setCart, addToBookmark}) {
       <Container>
       <br/>
         <div>
+        <div className="name" style={styles.left}>
         <h1>{data.name}</h1>
+          <div className="club" style={styles.right}>
+          <button style = {styles.button} onClick={() => addToBookmark(data)}>Favorite</button>
+          </div>
+        </div>
         <a href={data.link}><img src={data.image} style={{
           borderColor: "red",
           borderRadius: "50%",
           height: 125,
           width: 125,
-        }}></img></a>
+        }}></img>
+        </a>
         <br />
-        <button style = {styles.button} onClick={() => addToBookmark(data)}>Favorite</button>
+        <br />
 
         <h3>
           Description
         </h3>
         <p>
-          Description
+        {data.description}
         </p>
         <br /> 
         <h3>
