@@ -7,8 +7,8 @@
   "private": true,
   "scripts": {
     "client-install": "npm install --prefix client",
-    "start": "node ./bin/www",
-    "server": "node ./bin/www",
+    "start": "node ./api/bin/www",
+    "server": "node ./api/bin/www",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
