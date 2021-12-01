@@ -33,7 +33,7 @@ async function scrapeProduct(url) {
     ));
     
     const description = await page.evaluate(() => Array.from(
-        document.querySelectorAll('.info_hidden_xxs'),
+        document.querySelectorAll('[aria-label^="Mission Statement"]'),
         club => club.innerText,
     ));
     
