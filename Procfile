@@ -1,1 +1,1 @@
-api: node app.js
+api: npm start
