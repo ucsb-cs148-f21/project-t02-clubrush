@@ -4,7 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var cors = require("cors");
-var indexRouter = require('./routes/index');
+var indexRouter = require('./routes/app');
 var usersRouter = require('./routes/users');
 var clubsRouter = require('./routes/clubs');
 var commentsRouter = require('./routes/comments');
@@ -15,7 +15,7 @@ var app = express();
 
 // view engine setup
 //app.set('views', path.join(__dirname, 'views'));
-// app.set('view engine', 'html');ç
+// app.set('view engine', 'html');
 // app.set('view engine', 'jade');
 // app.engine('html', require('ejs').renderFile);
 
