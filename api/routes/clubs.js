@@ -8,13 +8,12 @@ const Club = require('../models/club');
 
 router.get('/:id', async function(req, res) {
   try {
-    console.log("working")
+    console.log("working clubs")
     const club = await Club.find({"name": `${req.params.id}`});
     
     if (!club) {
       return res.status(404).json({ msg: 'club not found' });
     }
-    console.log(club)
     res.json(club);
   } catch (err) {
     console.error(err.message);
@@ -31,7 +30,6 @@ router.get('/', async function(req, res) {
       if (!club) {
         return res.status(404).json({ msg: 'club not found' });
       }
-      console.log(club)
       res.json(club);
     } catch (err) {
       console.error(err.message);

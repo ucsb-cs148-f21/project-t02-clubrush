@@ -69,7 +69,7 @@ export default function App() {
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/club/:id" component={Club}/>
+          <Route exact path="/club/:id" render={() => <Club cart={cart} setCart={setCart} addToBookmark={addToBookmark}/>}/>
           <Route exact path="/club1/datascience" component={DataScience} />
           <Route exact path="/club2/anime" component={Anime} />
           <Route exact path="/club3/fraternity" component={Fraternity} />
