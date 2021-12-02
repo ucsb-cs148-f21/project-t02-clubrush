@@ -7,6 +7,8 @@ import Layout from "../components/Layout";
 import { useParams } from "react-router-dom";
 import Reviews from "../components/Reviews";
 import Comments from "../components/comments/Comments";
+import Button from "react-bootstrap/Button";
+
 
 //import Button from "../components/Button";
 
@@ -71,7 +73,7 @@ export default function Club({cart, setCart, addToBookmark}) {
         <div className="name" style={styles.left}>
         <h1>{data.name}</h1>
           <div className="club" style={styles.right}>
-          <button style = {styles.button} onClick={() => {addToBookmark(data)}}  onMouseEnter={changeBackground} onMouseLeave={changeBackground2}>Favorite</button>
+          <Button style = {styles.button} onClick={() => {addToBookmark(data)}}  onMouseEnter={changeBackground} onMouseLeave={changeBackground2}>Favorite</Button>
           </div>
         </div>
         <a href={data.link}><img src={data.image} style={{

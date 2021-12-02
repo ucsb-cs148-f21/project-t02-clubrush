@@ -3,6 +3,7 @@ import Layout from "../components/Layout";
 import React from "react";
 import {Link } from "react-router-dom";
 import styled from "styled-components";
+import Button from "react-bootstrap/Button";
 
 const Bubble = styled.img`
   width: 500px;
@@ -82,9 +83,9 @@ export default function Bookmark({setCart, cart} ) {
       <a href={'/club/'+ club.name} style={styles.org}>{club.name}</a>
             <br/>
       <div className="club" style={styles.right}>
-      <div style={styles.remove}><button style={styles.button} onClick={() => removeFromCart(club)}>
+      <div style={styles.remove}><Button style={styles.button} onClick={() => removeFromCart(club)}>
         Remove
-      </button></div>
+      </Button></div>
       </div>
       </div>
     </div>
@@ -96,7 +97,7 @@ export default function Bookmark({setCart, cart} ) {
       <br />
       <h1>Profile</h1>
       <div className="club" style={styles.buttons}>
-      <Link to="/profile/edit"><button style={styles.top_botton}>Edit</button></Link>
+      <Link to="/profile/edit"><Button style={styles.top_botton}>Edit</Button></Link>
       </div>
  
       <div style={styles.title}>Name:</div>
@@ -108,7 +109,7 @@ export default function Bookmark({setCart, cart} ) {
         <br />
         <h1>Bookmarked Clubs</h1>
         <div className="club" style={styles.buttons}>
-        <button style={styles.top_botton} onClick={clearCart}>Clear Cart</button>
+        <Button style={styles.top_botton} onClick={clearCart}>Clear Cart</Button>
         </div>
 
         {Bookmarks}
