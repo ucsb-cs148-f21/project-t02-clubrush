@@ -27,6 +27,19 @@ User Authentication: <br />
 https://imgur.com/wr4krC7 <br />
 # User Interface and User Experience Considerations
 TO-DO: Robert
+
+Bubbles: <br />
+- By having a full list of club names, the reader can get lost in the sea of names. The bubbles displayed in the Home and Filtered Club pages helps better navigate viewers from club to club and keep engagement. The box shadow helps give the bubbles a more 3 dimensional look as well.
+
+Buttons: <br />
+- The buttons we integrated within the site all have no hard edges and are colored differently depending on "importance". Everytime a button is clicked on, they light up signifying that the functionality of the button has executed. 
+
+Layout: <br />
+- We kept the layout of the website as minimal as possible in order to avoid confusion and take out any unnecessary commodities interrupting the viewer from the main functionalities. 
+
+
+
+
 # Important Team Decisions + Design Process Documentation
 Some important team decisions we had from meetings are: <br /> 
 - Setting team deadlines
