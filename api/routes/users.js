@@ -3,12 +3,26 @@ var router = express.Router();
 var ObjectId = require('mongodb').ObjectId;
 const User = require('../models/user');
 
+
 router.get('/:id', async function(req, res, next){
   try {
     // await addCommentsField();
     // var o_id = ObjectId(req.params.id);
     // const id = req.param.id
     console.log("getting bookmark")
+    const user = await User.findById(req.params.id)
+    console.log(user);
+    
+    res.json(user)
+  }
+  catch(e) {
+    console.log(e)
+  }
+});
+
+router.get('/bookmark/:id', async function(req, res, next){
+  try {
+    console.log("testing id")
     const user = await User.findById(req.params.id)
     console.log(user);
 

@@ -66,7 +66,7 @@ export default function Bookmark({setCart, cart} ) {
   console.log(user)
 
   useEffect(() => {
-    fetch(`${website}/users/${user}`, {
+    fetch(`${website}/users/bookmark/${user}`, {
     headers : { 
       'Content-Type': 'application/json',
       'Accept': 'application/json'
