@@ -89,8 +89,8 @@ export default function Club({cart, setCart, addToBookmark}) {
         <h3>
           Contact
         </h3>
-        <div>contact@gmail.com
-        <a href="https://www.datascienceucsb.org/"> page </a> . </div>
+        <div>
+        For more information and events, check out the <a href={data.link}> Official Club Page</a>. </div>
         <br />
 
         <br />
