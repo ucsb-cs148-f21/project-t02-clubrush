@@ -27,7 +27,7 @@ app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 // app.use(express.static(path.join(__dirname, '../client/build/')));
-app.use(express.static(path.join(__dirname, '../client/build')));
+app.use(express.static(path.join(__dirname, '../build')));
 // app.use('/static', express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
@@ -44,7 +44,7 @@ app.use('/comments', commentsRouter)
 
 app.get('*', (req, res) => {
   console.log("test")
-  res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'))
+  res.sendFile(path.resolve(__dirname, '../build', 'index.html'))
 });
 
 // // error handler
