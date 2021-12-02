@@ -1,4 +1,5 @@
 // import styled from "styled-components";
+import { useHistory } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
@@ -6,6 +7,7 @@ import Button from "react-bootstrap/Button";
 import Layout from "../components/Layout";
 
 export default function Signup() {
+  const history = useHistory();
   const website = process.env.REACT_APP_website
     let [account, setAccount] = useState({
         firstname: '',
@@ -34,6 +36,7 @@ export default function Signup() {
         })
         const datajson = await newUser.json()
             console.log(datajson)
+        history.push("/login")
       }
 
       const styles = {  
