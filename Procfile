@@ -1,1 +1,1 @@
-api: node app.js
+web: node api/bin/www

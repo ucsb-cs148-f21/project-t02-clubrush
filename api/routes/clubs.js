@@ -10,13 +10,11 @@ const Club = require('../models/club');
 
 router.get('/:id', async function(req, res) {
   try {
-    console.log("working")
     const club = await Club.find({"name": `${req.params.id}`});
     
     if (!club) {
       return res.status(404).json({ msg: 'club not found' });
     }
-    console.log(club)
     res.json(club);
   } catch (err) {
     console.error(err.message);
@@ -27,13 +25,11 @@ router.get('/:id', async function(req, res) {
 
 router.get('/', async function(req, res) {
   try {
-    console.log("working")
       const club = await Club.find();
   
       if (!club) {
         return res.status(404).json({ msg: 'club not found' });
       }
-      console.log(club)
       res.json(club);
     } catch (err) {
       console.error(err.message);
@@ -61,6 +57,7 @@ router.post('/:name/comments', async function(req, res, next){
 
 router.get('/:name/comments', async function(req, res, next) {
   const club = await Club.findOne({ name: req.params.name })
+  console.log("joe momma")
   res.json(club.comments)
   // res.render('clubs-show', { comments: comments})
 });
