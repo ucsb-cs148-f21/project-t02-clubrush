@@ -33,10 +33,10 @@ const styles = {
 export default function Club({cart, setCart, addToBookmark}) {
   const { id } = useParams();
   console.log(typeof(id));
-
+  const website = process.env.REACT_APP_website
   const [data, setData] = useState({});
   useEffect(() => {
-    fetch(`http://localhost:9000/clubs/${id}`)
+    fetch(`${website}/clubs/${id}`)
       .then(async (res) => {
         const data = await res.json();
         console.log(data)

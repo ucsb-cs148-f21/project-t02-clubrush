@@ -31,9 +31,10 @@ const styles = {
 }
 
 export default function Fraternity() {
+  const website = process.env.REACT_APP_website
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:9000/clubs/`)
+    fetch(`${website}/clubs/`)
       .then(async (res) => {
         const data = await res.json();
         console.log(data)

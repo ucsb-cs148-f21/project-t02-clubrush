@@ -32,8 +32,9 @@ const styles = {
 
 export default function Department() {
   const [data, setData] = useState([]);
+  const website = process.env.REACT_APP_website
   useEffect(() => {
-    fetch(`http://localhost:9000/clubs/`)
+    fetch(`${website}/clubs/`)
       .then(async (res) => {
         const data = await res.json();
         console.log(data)

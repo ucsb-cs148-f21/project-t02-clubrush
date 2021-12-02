@@ -5,6 +5,7 @@ import Button from "react-bootstrap/Button";
 import Layout from "../components/Layout";
 
 export default function Edit() {
+  const website = process.env.REACT_APP_website
   let [account, setAccount] = useState({
         firstname: '',
         lastname: '',
@@ -22,7 +23,7 @@ export default function Edit() {
       let save = async (e) => {
         e.preventDefault();
         
-        const newUser = await fetch('http://localhost:9000/users/signup', {
+        const newUser = await fetch(`${website}/users/signup`, {
             method: 'POST',
             mode: 'cors',
             headers: {

@@ -11,6 +11,7 @@ export default function Login({isSignedIn, setIsSignedIn}) {
   console.log(isSignedIn);
   const history = useHistory();
   const [user, setUser] = useLocalStorage("user", "");
+  const website = process.env.REACT_APP_website
 
   let [account, setAccount] = useState({
     email: '',
@@ -26,7 +27,7 @@ export default function Login({isSignedIn, setIsSignedIn}) {
 
   let check = async (e) => {
     e.preventDefault();
-    const newUser = await fetch('http://localhost:9000/users/login', {
+    const newUser = await fetch(`${website}/users/login`, {
         method: 'POST',
         mode: 'cors',
         headers: {
