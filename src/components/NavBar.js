@@ -8,11 +8,12 @@ import "./NavBar.css"
 import { useLocalStorage, getStorageValue } from "./useLocalStorage.js"
 
 export default function NavBar(props) {
+  const website = process.env.REACT_APP_website
   const isSignedIn = getStorageValue("isSignedIn")
   // const user = props.user;
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:9000/clubs/`)
+    fetch(`${website}/clubs/`)
       .then(async (res) => {
         const data = await res.json();
         setData(data)

@@ -14,6 +14,7 @@ import { useParams } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 
 const Comments = ({ commentsUrl, currentUserId }) => {
+  const website = process.env.REACT_APP_website
   const [backendComments, setBackendComments] = useState([]);
   const [activeComment, setActiveComment] = useState(null);
   const { id } = useParams();
@@ -30,7 +31,7 @@ const Comments = ({ commentsUrl, currentUserId }) => {
       );
   const addComment = (text, parentId) => {
     createCommentApi(text, parentId).then((comment) => {
-      fetch(`http://localhost:9000/clubs/${id}/comments`, {
+      fetch(`${website}/clubs/${id}/comments`, {
         method: 'POST', // *GET, POST, PUT, DELETE, etc.
         headers: {
           'Content-Type': 'application/json'
@@ -74,7 +75,7 @@ const Comments = ({ commentsUrl, currentUserId }) => {
   // }, []);
   useEffect(() => {
     async function fetchMyAPI() {
-      let response = await fetch('http://localhost:9000/clubs/')
+      let response = await fetch(`${website}/clubs/`)
       response = await response.json()
       setBackendComments(response)
       console.log(response)

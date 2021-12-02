@@ -4,10 +4,11 @@ import SearchIcon from "@material-ui/icons/Search";
 import CloseIcon from "@material-ui/icons/Close";
 
 function SearchBar({ placeholder, data }) {
+  const website = process.env.REACT_APP_website
   // fetch data from database
   const [fetchdata, setData] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:9000/clubs/`)
+    fetch(`${website}/clubs/`)
       .then(async (res) => {
         const fetchdata = await res.json();
         setData(fetchdata)
