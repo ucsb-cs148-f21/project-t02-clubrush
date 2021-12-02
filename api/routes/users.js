@@ -4,8 +4,9 @@ const User = require('../models/user');
 
 router.post('/signup', async function(req, res, next){
   try{
-    const { email } = req.params;
-    const searchUser = await User.find(email) 
+    const { email } = req.body;
+    console.log(email)
+    const searchUser = await User.find({"email": email}) 
     if(searchUser.length !== 0) {
       console.log("User already exists")
       console.log(searchUser[0])
@@ -24,8 +25,29 @@ router.post('/signup', async function(req, res, next){
 });
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+router.post('/login', async function(req, res, next) {
+  try {
+    const searchUser = await User.find({"email": req.body.email})
+    console.log(searchUser)
+    if(searchUser.length !== 0) {
+      console.log(searchUser[0].password)
+      if(req.body.password == searchUser[0].password) {
+        res.json(searchUser[0])
+      }
+      else{
+        console.log("Incorrect Password")
+        res.json("Incorrect Password")
+      }
+    }
+    else {
+      console.log("User does not exist")
+      res.json("User does not exist")
+    }
+  }
+  catch (e) {
+    console.log("Error logging in")
+    console.log(e)
+  }
 });
 
 

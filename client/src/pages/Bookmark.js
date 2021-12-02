@@ -1,22 +1,56 @@
 import Container from "react-bootstrap/Container";
 import Layout from "../components/Layout";
-import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import React from "react";
+import {Link } from "react-router-dom";
+import styled from "styled-components";
+
+const Bubble = styled.img`
+  width: 500px;
+  max-width: 100%;
+  height: auto;
+`;
+
 
 const styles = {
+  buttons: {
+    display: "flex",
+    justifyContent: "flex-end"
+  },
   button:{
       borderRadius: 50,
       width: 100,
       padding: 7,
       margin: 0,
+      color: "black"
   },
+  top_botton:{
+    borderRadius: 50,
+    width: 100,
+    padding: 7,
+    margin: 0,
+    color: "white",
+    backgroundColor: '#004282'
+},
+
   org:{
-    width: 1000,
+    width: 825,
     fontSize: 25
   },
   remove:{
     fontSize: 20,
-  }
+  },
+  title:{
+    fontSize: 20,
+  },
+  left:{
+    display: "flex",
+    justifyContent: "unset",
+    alignItems: "center"
+  },
+  right: {
+    display: "flex",
+    justifyContent: "flex-end"
+  },
 }
 
 
@@ -32,25 +66,50 @@ export default function Bookmark({setCart, cart} ) {
     console.log("works")
   }
 
+
   const Bookmarks  = cart.map((club, idx) => (
-    <div className="club" style={styles.org} key={idx}>
-      <div style={styles.org}>{club.name}</div>
+    <div className="club" key={idx}>
+      <div className="both" style={styles.left}>
+      <a href={'/club/'+ club.name}><Bubble src={club.image}  style={{
+                borderColor: "red",
+                boxShadow: "10px 7px 1px #9E9E9E",
+                borderColor: "red",
+                borderRadius: "50%",
+                height: 150,
+                width: 150,
+                margin: 20
+            }}/></a>
+      <a href={'/club/'+ club.name} style={styles.org}>{club.name}</a>
+            <br/>
+      <div className="club" style={styles.right}>
       <div style={styles.remove}><button style={styles.button} onClick={() => removeFromCart(club)}>
         Remove
       </button></div>
-      <h2>----------------------------------------------------</h2>
-
+      </div>
+      </div>
     </div>
   ))
   
   return (
 <Layout>
       <Container>
+      <br />
+      <h1>Profilie</h1>
+      <div className="club" style={styles.buttons}>
+      <Link to="/profile/edit"><button style={styles.top_botton}>Edit</button></Link>
+      </div>
+ 
+      <div style={styles.title}>Name:</div>
+        {/*<div>{user.name}</div>*/}
+        <br />
+        <div style={styles.title}>Email:</div>
+        {/*<div>{user.email}</div>*/}
+
         <br />
         <h1>Bookmarked Clubs</h1>
-        <h2>----------------------------------</h2>
-        <button style={styles.button} onClick={clearCart}>Clear Cart</button>
-        <h2>----------------------------------</h2>
+        <div className="club" style={styles.buttons}>
+        <button style={styles.top_botton} onClick={clearCart}>Clear Cart</button>
+        </div>
 
         {Bookmarks}
       </Container>

@@ -51,7 +51,7 @@ export default function Reviews() {
     return(
         <Container>
         <div style={styles.container}>
-            {/* <h2>Club Reviews</h2> */}
+            <h2>Club Reviews</h2>
             <div style  = {styles.start}>
                 {stars.map((_, index) => {
                     return(
@@ -70,11 +70,11 @@ export default function Reviews() {
                     )
                 })}
             </div>
-            {/* <textarea
+            <textarea
                 placeholder="What's your feedback"
                 style = {styles.textarea}
             />
-            <button style = {styles.button}>Submit</button> */}
+            <button style = {styles.button}>Submit</button>
 
         </div>
         </Container>
