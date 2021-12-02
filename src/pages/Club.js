@@ -5,9 +5,10 @@ import React, { useState, useEffect } from "react";
 import Layout from "../components/Layout";
 // import getUser from "../utils/get-user";
 import { useParams } from "react-router-dom";
-import Reviews from "../components/Reviews";
 import Comments from "../components/comments/Comments";
 import { useLocalStorage, getStorageValue } from "../components/useLocalStorage"
+import Button from "react-bootstrap/Button";
+
 
 //import Button from "../components/Button";
 
@@ -84,7 +85,7 @@ export default function Club({cart, setCart, addToBookmark}) {
         <div className="name" style={styles.left}>
         <h1>{data.name}</h1>
           <div className="club" style={styles.right}>
-          <button style = {styles.button} onClick={() => check(data)}>Favorite</button>
+          <Button style = {styles.button} onClick={() => {check(data)}}  onMouseEnter={changeBackground} onMouseLeave={changeBackground2}>Favorite</Button>
           </div>
         </div>
         <a href={data.link}><img src={data.image} style={{
@@ -107,8 +108,8 @@ export default function Club({cart, setCart, addToBookmark}) {
         <h3>
           Contact
         </h3>
-        <div>contact@gmail.com
-        <a href="https://www.datascienceucsb.org/"> page </a> . </div>
+        <div>
+        For more information and events, check out the <a href={data.link}> Official Club Page</a>. </div>
         <br />
 
         <br />

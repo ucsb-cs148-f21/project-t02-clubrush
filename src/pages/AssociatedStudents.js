@@ -25,14 +25,14 @@ const styles = {
   },
   icon:{
     display: "grid",
-    gridTemplateColumns: '1fr 1fr 1fr 1fr ',
+    gridTemplateColumns: '1fr 1fr 1fr 1fr',
     position: "center", 
   },
 }
 
-export default function Fraternity() {
-  const website = process.env.REACT_APP_website
+export default function AssociatedStudents() {
   const [data, setData] = useState([]);
+  const website = process.env.REACT_APP_website
   useEffect(() => {
     fetch(`${website}/clubs/`)
       .then(async (res) => {
@@ -47,14 +47,14 @@ export default function Fraternity() {
     <Layout>
       <Container>
         <br/>
-        <h1>Sports page!</h1>
+        <h1>Associated Students page!</h1>
         <br />
         <TextWrapper>
-          Here you can find all the sport clubs!
+          Here you can find all the Associate Student Clubs!
         </TextWrapper>
         <h1 className="App" style={styles.icon}>
           {data.map((item,index)=>{
-            if(item.categories === "Sport Club - Sports / Recreation")
+            if(item.categories === "Associated Students (AS)")
               return <a href={'/club/'+ item.name} style={{
                 display: "flex",
                 alignItems: "center",
@@ -69,7 +69,7 @@ export default function Fraternity() {
                 width: 150
               }}/>
           
-          <div style={styles.clubname}>{item.name}</div>
+            <div style={styles.clubname}>{item.name}</div>
             </a>
           })}
       </h1>

@@ -170,34 +170,7 @@ const styles = {
     <div className="comments">
       <h3 className="comments-title">Comments</h3>
       <div className="comment-form-title">Write comment</div>
-      
-      <div style={styles.container}>
-            {/* <h2>Club Reviews</h2> */}
-            <div style  = {styles.start}>
-                {stars.map((_, index) => {
-                    return(
-                        <FaStar 
-                        key={index}
-                        size={24}
-                        style={{
-                            marginRight: 10,
-                            cuursor: "pointer"
-                        }}
-                        color ={(hoverValue || currentValue) > index ? colors.orange : colors.grey}
-                        onClick={() => handleClick(index+1)}
-                        onMouseOver={() => handleMouseOver(index+1)}
-                        onMouseLeave={handleMouseLeave}
-                        />
-                    )
-                })}
-            </div>
-            {/* <textarea
-                placeholder="What's your feedback"
-                style = {styles.textarea}
-            />
-            <button style = {styles.button}>Submit</button> */}
-
-        </div>
+  
     
 
       <CommentForm submitLabel="Write" handleSubmit={addComment} />

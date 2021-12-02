@@ -60,6 +60,25 @@ const styles = {
 
 
 export default function Bookmark({setCart, cart} ) {
+  const [data, setData] = useState([]);
+  const website = process.env.REACT_APP_website
+  const user = getStorageValue("user")
+  console.log(user)
+
+  useEffect(() => {
+    fetch(`${website}/users/${user}`, {
+    headers : { 
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+     }
+    })
+      .then(async (res) => {
+        const data = await res.json();
+        setData(data)
+        console.log(data)
+      }
+    );
+  },[]);
 
   const removeFromCart = (productToRemove) => {
     setCart(
@@ -70,6 +89,29 @@ export default function Bookmark({setCart, cart} ) {
     setCart([]);
     console.log("works")
   }
+
+  const Bookmarked  = data.map((club, idx) => (
+    <div className="club" key={idx}>
+      <div className="both" style={styles.left}>
+      <a href={'/club/'+ club.name}><Bubble src={club.image}  style={{
+                borderColor: "red",
+                boxShadow: "10px 7px 1px #9E9E9E",
+                borderColor: "red",
+                borderRadius: "50%",
+                height: 150,
+                width: 150,
+                margin: 20
+            }}/></a>
+      <a href={'/club/'+ club.name} style={styles.org}>{club.name}</a>
+            <br/>
+      <div className="club" style={styles.right}>
+      <div style={styles.remove}><Button style={styles.button} onMouseOver={changeColor} onMouseLeave={changeColor2} onClick={() => removeFromCart(club)}>
+        Remove
+      </Button></div>
+      </div>
+      </div>
+    </div>
+  ))
 
 
   const Bookmarks  = cart.map((club, idx) => (
@@ -96,10 +138,8 @@ export default function Bookmark({setCart, cart} ) {
   ))
 
   const history = useHistory();
-  const website = process.env.REACT_APP_website
 
   const [isSignedIn, setIsSignedIn] = useLocalStorage("isSignedIn", true);
-  const user = getStorageValue("user")
   const [userid, setUser] = useLocalStorage("user", user);
   let logout = (e) => {
     setUser("");
@@ -153,6 +193,7 @@ export default function Bookmark({setCart, cart} ) {
         </div>
 
         {Bookmarks}
+        {Bookmarked}
         <br />
 
       </Container>
