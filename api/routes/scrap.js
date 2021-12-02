@@ -9,21 +9,22 @@ async function scrapeProduct(url) {
         timeout: 0
     });
 
-    const description = await page.evaluate(() => Array.from(
-        document.querySelectorAll('.noOutlineOnFocus'),
+    // const description = await page.evaluate(() => Array.from(
+    //     // document.querySelectorAll('[id^="club_"]:not([id*="whatwedo"])'),
+    //     document.querySelectorAll('[aria-label^="Mission Statement"]'),
+
+    //     club => club.innerText,
+    // ));
+
+    // console.log(description);
+    // console.log(description.length);
+    const names = await page.evaluate(() => Array.from(
+        document.getElementsByClassName("h5 media-heading grey-element"),
         
         club => club.innerText,
     ));
 
-    console.log(description);
-
-    // const names = await page.evaluate(() => Array.from(
-    //     document.getElementsByClassName("h5 media-heading grey-element"),
-        
-    //     club => club.innerText,
-    // ));
-
-    // console.log(names);
+    console.log(names);
     
     // const links = await page.evaluate(() => Array.from(
     //     document.querySelectorAll('.header-cg--h4 > a'),
@@ -46,9 +47,9 @@ async function scrapeProduct(url) {
     // // const imageURL = await src.jsonValue();
 
     // console.log(images);
-    return description;
+    return names;
 }
 
 
 
-scrapeProduct('https://shoreline.ucsb.edu/club_signup');
+scrapeProduct('https://shoreline.ucsb.edu/club_signup?view=all&');

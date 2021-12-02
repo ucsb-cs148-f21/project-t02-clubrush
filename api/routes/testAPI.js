@@ -33,12 +33,16 @@ async function scrapeProduct(url) {
     ));
     
     const description = await page.evaluate(() => Array.from(
-        document.querySelectorAll('.info_hidden_xxs'),
-        club => club.innerText,
-    ));
-    
 
-    console.log(description)
+        
+
+            // document.querySelectorAll('[id^="club_"]:not([id*="whatwedo"])'),
+            document.querySelectorAll('[aria-label^="Mission Statement"]'),
+
+    
+            club => club.innerText,
+        ));
+
     return [names, links, images, categories, description];
 }
 
@@ -49,30 +53,21 @@ router.get('/', async function(req, res, next) {
     const names = info[0];
     const categories = info[3];
     const description = info[4];
-
     let response = new Array(names.length);
-    //  for(let i = 0; i < names.length; i++) {
-    //      const newClub = new Club({
-    //          name: names[i],
-    //         link: links[i],
-    //         image: images[i],
-    //         categories: categories[i]
-    //     });
-    //     response[i] = newClub;
-    //     const post = await newClub.save(function(err){
-    //         if(err) console.log(err); 
-    //     });
-    //  }
-    for(let i = 0; i < response.length; i++) {
-        const newClub = {
+     for(let i = 0; i < names.length; i++) {
+         const newClub = new Club({
             name: names[i],
             link: links[i],
             image: images[i],
             categories: categories[i],
             description: description[i]
-
-        };
-    }
+        });
+        response[i] = newClub;
+        const post = await newClub.save(function(err){
+            if(err) console.log(err); 
+        });
+     }
+     console.log("test")
     // console.log(response)
     res.json(response);
 });

@@ -1,0 +1,39 @@
+.navbar{
+    background-color: #0C285C;
+    /* max-height: 80px; */
+    position: -webkit-sticky;
+    position: sticky;
+}
+
+.navbar .nav-brand{
+    color:aquamarine
+}
+.navbar .navbar-nav li a{
+    color:antiquewhite;  
+    padding-left:50px;
+    padding-right:50px;
+
+}
+
+
+.linkText{ 
+    color: white;     
+    /* font-family: "Audiowide", sans-serif; */
+    font-family: 'Maven Pro', sans-serif;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    padding-right:30px;
+    padding-left:40px;
+
+
+}
+
+.dropdown-item {
+    color: #ffffff;  
+}
+
+#nav-dropdown {
+    color: #ffffff;
+    font-family: 'Maven Pro', sans-serif;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    padding-top: 5px
+}
