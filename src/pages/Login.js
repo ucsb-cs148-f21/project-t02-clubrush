@@ -41,7 +41,7 @@ export default function Login({isSignedIn, setIsSignedIn}) {
     setIsSignedIn(true)
     console.log(datajson)
     console.log(isSignedIn);
-    history.push("/profile")
+    history.push("/bookmark")
   }
 
 const styles = {  
