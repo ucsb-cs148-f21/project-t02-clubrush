@@ -21,9 +21,11 @@ export default function NavBar(props) {
 
   return (
     <Navbar class="navbar navbar-expand-lg navbar-light bg-light">
-      <Container>
+      <Container style={{
+      alignItems: "self-end",
+    }}>
 
-        <Navbar.Brand class="navbar-brand" href="/"><h1 className="linkText" href="/">Club Rush</h1></Navbar.Brand>
+        <Navbar.Brand class="navbar-brand" href="/"><h1 className="linkText" href="/" >Club Rush</h1></Navbar.Brand>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

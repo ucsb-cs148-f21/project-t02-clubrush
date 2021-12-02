@@ -17,6 +17,9 @@ const styles = {
       width: 100,
       padding: 10,
       margin: 20,
+      background: '#004282',
+      color: "white"
+
   },
   right: {
     display: "flex",
@@ -46,6 +49,20 @@ export default function Club({cart, setCart, addToBookmark}) {
   },[]);
 
 
+  function changeBackground(e) {
+    e.target.style.background = '#4682b4';
+  }
+
+  function changeBackground2(e) {
+    e.target.style.background = '#004282';
+  }
+
+  function changeBackground3(e) {
+    e.target.style.background = '#000080';
+
+  }
+
+
   return (
     <Layout>
       <Container>
@@ -54,7 +71,7 @@ export default function Club({cart, setCart, addToBookmark}) {
         <div className="name" style={styles.left}>
         <h1>{data.name}</h1>
           <div className="club" style={styles.right}>
-          <button style = {styles.button} onClick={() => addToBookmark(data)}>Favorite</button>
+          <button style = {styles.button} onClick={() => addToBookmark(data)} onClick={changeBackground3} onMouseEnter={changeBackground} onMouseLeave={changeBackground2}>Favorite</button>
           </div>
         </div>
         <a href={data.link}><img src={data.image} style={{
