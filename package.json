@@ -1,5 +1,6 @@
 {
   "name": "api",
+  "homepage": "https://t02-clubrush.herokuapp.com/",
   "version": "0.0.0",
   "engines": {
     "node": "16.x"
