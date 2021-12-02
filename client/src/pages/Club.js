@@ -17,7 +17,7 @@ const styles = {
       width: 100,
       padding: 10,
       margin: 20,
-      background: '#004282',
+      background: '#191970',
       color: "white"
 
   },
@@ -71,7 +71,7 @@ export default function Club({cart, setCart, addToBookmark}) {
         <div className="name" style={styles.left}>
         <h1>{data.name}</h1>
           <div className="club" style={styles.right}>
-          <button style = {styles.button} onClick={() => addToBookmark(data)} onClick={changeBackground3} onMouseEnter={changeBackground} onMouseLeave={changeBackground2}>Favorite</button>
+          <button style = {styles.button} onClick={() => {addToBookmark(data)}}  onMouseEnter={changeBackground} onMouseLeave={changeBackground2}>Favorite</button>
           </div>
         </div>
         <a href={data.link}><img src={data.image} style={{
