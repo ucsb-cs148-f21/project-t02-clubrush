@@ -33,8 +33,12 @@ async function scrapeProduct(url) {
     ));
     
     const description = await page.evaluate(() => Array.from(
+
+        
+
             // document.querySelectorAll('[id^="club_"]:not([id*="whatwedo"])'),
             document.querySelectorAll('[aria-label^="Mission Statement"]'),
+
     
             club => club.innerText,
         ));

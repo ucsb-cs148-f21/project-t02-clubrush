@@ -1,5 +1,7 @@
 var express = require('express');
 var router = express.Router();
+var cors = require('cors');
+
 const Club = require('../models/club');
 
 // async function addCommentsField(){
@@ -55,16 +57,17 @@ router.post('/:name/comments', async function(req, res, next){
 
 
 /* GET comments listing. */
-// router.get('/:name/comments', async function(req, res, next) {
-//       res.render('clubs-show', { comments: comments})
-// });
+
+
 router.get('/:name/comments', async function(req, res, next) {
   const club = await Club.findOne({ name: req.params.name })
   res.json(club.comments)
   // res.render('clubs-show', { comments: comments})
 });
 
+
 router.put('/:name/comments', async function(req, res, next) {
+
   const club = await Club.findOne({ name: req.params.name })
   const comments = Club.comments.map()
   const newComment = req.body;
