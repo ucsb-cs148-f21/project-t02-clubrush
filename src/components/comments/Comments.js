@@ -45,6 +45,7 @@ const Comments = ({ commentsUrl, currentUserId }) => {
   };
 
   useEffect(() => {
+    console.log("testing pls")
     fetch(`${website}/clubs/${id}/comments`)
       .then(async (res) => {
         const comment = await res.json();

@@ -10,7 +10,6 @@ const Club = require('../models/club');
 
 router.get('/:id', async function(req, res) {
   try {
-    console.log("working clubs")
     const club = await Club.find({"name": `${req.params.id}`});
     
     if (!club) {
@@ -26,7 +25,6 @@ router.get('/:id', async function(req, res) {
 
 router.get('/', async function(req, res) {
   try {
-    console.log("working")
       const club = await Club.find();
   
       if (!club) {
@@ -59,6 +57,7 @@ router.post('/:name/comments', async function(req, res, next){
 
 router.get('/:name/comments', async function(req, res, next) {
   const club = await Club.findOne({ name: req.params.name })
+  console.log("joe momma")
   res.json(club.comments)
   // res.render('clubs-show', { comments: comments})
 });

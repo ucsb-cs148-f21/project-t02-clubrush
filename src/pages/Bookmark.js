@@ -94,7 +94,7 @@ export default function Bookmark({setCart, cart} ) {
 <Layout>
       <Container>
       <br />
-      <h1>Profilie</h1>
+      <h1>Profile</h1>
       <div className="club" style={styles.buttons}>
       <Link to="/profile/edit"><button style={styles.top_botton}>Edit</button></Link>
       </div>

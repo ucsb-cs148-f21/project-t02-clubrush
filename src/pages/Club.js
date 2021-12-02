@@ -45,6 +45,18 @@ export default function Club({cart, setCart, addToBookmark}) {
     );
   },[]);
 
+  function changeBackground(e) {
+    e.target.style.background = '#4682b4';
+  }
+
+  function changeBackground2(e) {
+    e.target.style.background = '#004282';
+  }
+
+  function changeBackground3(e) {
+    e.target.style.background = '#000080';
+
+  }
 
   return (
     <Layout>
@@ -84,7 +96,7 @@ export default function Club({cart, setCart, addToBookmark}) {
         <br />
         </div>
         <Comments 
-          commentsUrl="http://localhost:3000/comments"
+          commentsUrl="${website}/comments"
           currentUserId="1" />
 
       </Container>
