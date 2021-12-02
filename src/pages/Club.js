@@ -90,7 +90,7 @@ export default function Club({cart, setCart, addToBookmark}) {
           Contact
         </h3>
         <div>contact@gmail.com
-        <a href="https://www.datascienceucsb.org/"> page </a> . </div>
+        <a href={data.link}> page </a> . </div>
         <br />
 
         <br />
