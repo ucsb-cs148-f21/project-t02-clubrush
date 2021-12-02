@@ -64,22 +64,20 @@ const styles = {
             <Form.Group className="mb-3" controlId="formBasicEmail" style={styles.box}>
                 <Form.Label>Email address</Form.Label>
                 <Form.Control type="email" placeholder="Enter email" name="email" onChange={handleChange}/>
-                <Form.Text className="text-muted">
-                We'll never share your email with anyone else.
-                </Form.Text>
+                
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicPassword" style={styles.box}>
                 <Form.Label>Password</Form.Label>
                 <Form.Control type="password" placeholder="Password" name="password" onChange={handleChange}/>
             </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                <Form.Check type="checkbox" label="Check me out" />
-            </Form.Group>
+            <br />
             <Button variant="primary" type="submit">
                 Submit
             </Button>
             </Form>
+            <br />
+
       </Container>
     </Layout>
   );

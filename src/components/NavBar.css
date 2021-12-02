@@ -15,11 +15,16 @@
 
 }
 
+
 .linkText{ 
     color: white;     
-    /* font-family: "Audiowide", sans-serif; */
     font-family: 'Maven Pro', sans-serif;
     font-family: 'Zen Maru Gothic', sans-serif;
+    padding-right:20px;
+    padding-left:20px;
+
+
+
 }
 
 .dropdown-item {

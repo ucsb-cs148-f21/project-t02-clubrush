@@ -1,8 +1,12 @@
 import Container from "react-bootstrap/Container";
 import Layout from "../components/Layout";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {Link } from "react-router-dom";
 import styled from "styled-components";
+import Button from "react-bootstrap/Button";
+import { useHistory } from "react-router-dom";
+import { useLocalStorage, getStorageValue } from "../components/useLocalStorage"
+
 
 const Bubble = styled.img`
   width: 500px;
@@ -21,7 +25,8 @@ const styles = {
       width: 100,
       padding: 7,
       margin: 0,
-      color: "black"
+      color: "white",
+      background: "#424242 "
   },
   top_botton:{
     borderRadius: 50,
@@ -82,13 +87,43 @@ export default function Bookmark({setCart, cart} ) {
       <a href={'/club/'+ club.name} style={styles.org}>{club.name}</a>
             <br/>
       <div className="club" style={styles.right}>
-      <div style={styles.remove}><button style={styles.button} onClick={() => removeFromCart(club)}>
+      <div style={styles.remove}><Button style={styles.button} onMouseOver={changeColor} onMouseLeave={changeColor2} onClick={() => removeFromCart(club)}>
         Remove
-      </button></div>
+      </Button></div>
       </div>
       </div>
     </div>
   ))
+
+  const history = useHistory();
+  const website = process.env.REACT_APP_website
+
+  const [isSignedIn, setIsSignedIn] = useLocalStorage("isSignedIn", true);
+  const user = getStorageValue("user")
+  const [userid, setUser] = useLocalStorage("user", user);
+  let logout = (e) => {
+    setUser("");
+    setIsSignedIn(null)
+    history.push("/")
+  }
+
+
+  function changeColor(e) {
+    e.target.style.background = "#9a9a9a";
+  }
+
+  function changeColor2(e) {
+    e.target.style.background = "#424242";
+  }
+
+  function changeColor_cart(e) {
+    e.target.style.background = "#7DB1E5";
+  }
+
+  function changeColor_cart2(e) {
+    e.target.style.background = "#004282";
+  }
+  
   
   return (
 <Layout>
@@ -96,7 +131,7 @@ export default function Bookmark({setCart, cart} ) {
       <br />
       <h1>Profile</h1>
       <div className="club" style={styles.buttons}>
-      <Link to="/profile/edit"><button style={styles.top_botton}>Edit</button></Link>
+      <Link to="/profile/edit"><Button style={styles.top_botton} onMouseEnter={changeColor_cart} onMouseLeave={changeColor_cart2}>Edit</Button></Link>
       </div>
  
       <div style={styles.title}>Name:</div>
@@ -104,14 +139,22 @@ export default function Bookmark({setCart, cart} ) {
         <br />
         <div style={styles.title}>Email:</div>
         {/*<div>{user.email}</div>*/}
+        <br/>
 
+        <Button variant="primary" type="submit" onClick={logout}>
+                Logout
+            </Button>
         <br />
+        <br/>
+
         <h1>Bookmarked Clubs</h1>
         <div className="club" style={styles.buttons}>
-        <button style={styles.top_botton} onClick={clearCart}>Clear Cart</button>
+        <Button style={styles.top_botton} onMouseEnter={changeColor_cart} onMouseLeave={changeColor_cart2} onClick={clearCart}>Clear Cart</Button>
         </div>
 
         {Bookmarks}
+        <br />
+
       </Container>
 </Layout>
   );

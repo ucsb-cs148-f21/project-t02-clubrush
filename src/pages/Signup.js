@@ -78,14 +78,14 @@ export default function Signup() {
                 <Form.Label>Password</Form.Label>
                 <Form.Control type="password" placeholder="Password" name="password" onChange={handleChange}/>
             </Form.Group>
-
-            <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                <Form.Check type="checkbox" label="Check me out" />
-            </Form.Group>
+            <br />
             <Button variant="primary" type="submit">
                 Submit
             </Button>
+
             </Form>
+            <br />
+
       </Container>
     </Layout>
   );

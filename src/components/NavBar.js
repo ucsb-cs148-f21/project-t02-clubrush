@@ -22,8 +22,11 @@ export default function NavBar(props) {
   },[]);
   if(!isSignedIn) {
     return (
-      <Navbar class="navbar navbar-expand-lg navbar-light bg-light">
-        <Container>
+      <Navbar class="navbar navbar-expand-lg navbar-light bg-light" >
+        <Container style={{
+          alignItems: "self-end",
+          
+        }}>
 
           <Navbar.Brand class="navbar-brand" href="/"><h1 className="linkText" href="/">Club Rush</h1></Navbar.Brand>
 
@@ -49,7 +52,7 @@ export default function NavBar(props) {
                 
               </NavDropdown></h4>
               
-              {<Nav.Link href="/bookmark"><h4 className="linkText">Bookmarks</h4></Nav.Link>}
+              {<Nav.Link href="/bookmark"><h4 className="linkText">Profile</h4></Nav.Link>}
             </Nav>
             
             <form className="form-inline my-2 my-lg-0">
@@ -70,7 +73,10 @@ export default function NavBar(props) {
   else{
     return (
       <Navbar class="navbar navbar-expand-lg navbar-light bg-light">
-        <Container>
+        <Container style={{
+          alignItems: "self-end",
+          
+        }}>
 
           <Navbar.Brand class="navbar-brand" href="/"><h1 className="linkText" href="/">Club Rush</h1></Navbar.Brand>
 
@@ -96,7 +102,7 @@ export default function NavBar(props) {
                 
               </NavDropdown></h4>
               
-              {<Nav.Link href="/bookmark"><h4 className="linkText" href="/bookmark">Bookmarks</h4></Nav.Link>}
+              {<Nav.Link href="/bookmark"><h4 className="linkText" href="/bookmark">Profile</h4></Nav.Link>}
             </Nav>
             
             <form className="form-inline my-2 my-lg-0">
@@ -107,7 +113,6 @@ export default function NavBar(props) {
                 </div>
               </div>
             </form>
-            <Nav.Link href="/profile"><h4 className="linkText">Profile</h4></Nav.Link>
           </Navbar.Collapse>
         </Container>
       </Navbar>

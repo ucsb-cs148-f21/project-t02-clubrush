@@ -52,7 +52,7 @@ export default function Fraternity() {
         <TextWrapper>
           Here you can find all the sport clubs!
         </TextWrapper>
-        <h1 className="App">
+        <h1 className="App" style={styles.icon}>
           {data.map((item,index)=>{
             if(item.categories === "Sport Club - Sports / Recreation")
               return <a href={'/club/'+ item.name} style={{
