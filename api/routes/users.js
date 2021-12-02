@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var ObjectId = require('mongodb').ObjectId;
 const User = require('../models/user');
 
 router.post('/signup', async function(req, res, next){
@@ -46,6 +47,24 @@ router.post('/login', async function(req, res, next) {
   }
   catch (e) {
     console.log("Error logging in")
+    console.log(e)
+  }
+});
+
+router.post('/:id/bookmark', async function(req, res, next){
+  try {
+    // await addCommentsField();
+    // var o_id = ObjectId(req.params.id);
+    // const id = req.param.id
+    const user = await User.findById(req.params.id)
+    console.log(user);
+    const newBookmark = req.body;
+    console.log(req.body);
+    user.bookmark.push(newBookmark);
+    await user.save();
+    res.json(newBookmark)
+  }
+  catch(e) {
     console.log(e)
   }
 });

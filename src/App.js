@@ -26,7 +26,12 @@ export default function App() {
 
   const [cart, setCart] = useLocalStorage("cart", []);
 
-  const addToBookmark = (club) => {
+  const addToBookmark = async (club) => {
+    if(!isSignedIn) {
+      console.log("Cannot add bookmark if not logged in")
+      return
+    }
+
     let newCart = [...cart];
     let itemInCart = newCart.find(
       (item) => club.name === item.name
@@ -40,6 +45,7 @@ export default function App() {
       newCart.push(itemInCart);
     }
     setCart(newCart);
+
     console.log("work")
     console.log(cart)
 };
@@ -49,7 +55,7 @@ export default function App() {
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/club/:id" render={() => <Club cart={cart} setCart={setCart} addToBookmark={addToBookmark}/>}/>
+          <Route exact path="/club/:id" render={() => <Club cart={cart} setCart={setCart} addToBookmark={addToBookmark} />}/>
           <Route exact path="/club1/datascience" component={DataScience} />
           <Route exact path="/club2/anime" component={Anime} />
           <Route exact path="/club3/fraternity" component={Fraternity} />
