@@ -43,14 +43,35 @@ const Comments = ({ commentsUrl, currentUserId }) => {
     });
   };
 
+  useEffect(() => {
+    fetch(`http://localhost:9000/clubs/${id}/comments`)
+      .then(async (res) => {
+        const comment = await res.json();
+        console.log(comment)
+        setBackendComments(comment);
+
+      }
+    );
+  },[]);
+
   const updateComment = (text, commentId) => {
     updateCommentApi(text).then(() => {
+      fetch(`http://localhost:9000/clubs/${id}/comments/${commentId}`, {
+        method: 'PUT', // *GET, POST, PUT, DELETE, etc.
+        headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
+          // 'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: JSON.stringify(text) // body data type must match "Content-Type" header
+      })
       const updatedBackendComments = backendComments.map((backendComment) => {
         if (backendComment.id === commentId) {
           return { ...backendComment, body: text };
         }
         return backendComment;
       });
+      console.log(text)
       setBackendComments(updatedBackendComments);
       setActiveComment(null);
     });
@@ -61,27 +82,35 @@ const Comments = ({ commentsUrl, currentUserId }) => {
         const updatedBackendComments = backendComments.filter(
           (backendComment) => backendComment.id !== commentId
         );
+      //   fetch(`http://localhost:9000/clubs/${id}/comments`, {
+      //   method: 'DELETE', // *GET, POST, PUT, DELETE, etc.
+      //   headers: {
+      //     'Content-Type': 'application/json'
+      //     // 'Content-Type': 'application/x-www-form-urlencoded',
+      //   },
+      //   body: JSON.stringify(comment) // body data type must match "Content-Type" header
+      // })
         setBackendComments(updatedBackendComments);
       });
     }
   };
 
   // useEffect(async() =>  {
-  //   // await getCommentsApi().then((data) =>  {
-  //   //    setBackendComments(data);
-  //   // });
-  //   console.log(await getCommentsApi());
+  //   await getCommentsApi(id).then((data) =>  {
+  //      setBackendComments(data);
+  //   });
   // }, []);
-  useEffect(() => {
-    async function fetchMyAPI() {
-      let response = await fetch('http://localhost:9000/clubs/')
-      response = await response.json()
-      setBackendComments(response)
-      console.log(response)
-    }
 
-    fetchMyAPI()
-  }, [])
+  // useEffect(() => {
+  //   async function fetchMyAPI() {
+  //     let response = await fetch('http://localhost:9000/clubs/')
+  //     response = await response.json()
+  //     setBackendComments(response)
+  //     console.log(response)
+  //   }
+
+  //   fetchMyAPI()
+  // }, [])
 
   /*Get the ratings */
   const colors = {
