@@ -37,8 +37,8 @@ export default function NavBar(props) {
               <h4>
               <NavDropdown title="Clubs" className="dropdown-item" id="nav-dropdown">
               
-              <NavDropdown.Item href="./pages/DataScience" eventkey="/club1">
-                {<Nav.Link href="/club1/datascience">Clubs</Nav.Link>}
+              <NavDropdown.Item href="./pages/AssociatedStudents" eventkey="/club3">
+                {<Nav.Link href="/club3/AssociatedStudents">Associated Students</Nav.Link>}
               </NavDropdown.Item>
               <NavDropdown.Item href="./pages/Fraternity" eventkey="/club3">
                 {<Nav.Link href="/club3/Fraternity">Fraternities/Sororities</Nav.Link>}
@@ -87,8 +87,8 @@ export default function NavBar(props) {
               <h4>
               <NavDropdown title="Clubs" className="dropdown-item" id="nav-dropdown">
               
-              <NavDropdown.Item href="./pages/DataScience" eventkey="/club1">
-                {<Nav.Link href="/club1/datascience">Clubs</Nav.Link>}
+              <NavDropdown.Item href="./pages/AssociatedStudents" eventkey="/club3">
+                {<Nav.Link href="/club3/AssociatedStudents">Associated Students</Nav.Link>}
               </NavDropdown.Item>
               <NavDropdown.Item href="./pages/Fraternity" eventkey="/club3">
                 {<Nav.Link href="/club3/Fraternity">Fraternities/Sororities</Nav.Link>}
