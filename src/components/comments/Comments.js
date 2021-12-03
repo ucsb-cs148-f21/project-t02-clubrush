@@ -58,15 +58,15 @@ const Comments = ({ commentsUrl, currentUserId }) => {
 
   const updateComment = (text, commentId) => {
     updateCommentApi(text).then(() => {
-      fetch(`${website}/clubs/${id}/comments/${commentId}`, {
-        method: 'PUT', // *GET, POST, PUT, DELETE, etc.
-        headers: {
-          'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': '*',
-          // 'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: JSON.stringify(text) // body data type must match "Content-Type" header
-      })
+      // fetch(`${website}/clubs/${id}/comments/${commentId}`, {
+      //   method: 'PUT', // *GET, POST, PUT, DELETE, etc.
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //     'Access-Control-Allow-Origin': '*',
+      //     // 'Content-Type': 'application/x-www-form-urlencoded',
+      //   },
+      //   body: JSON.stringify(text) // body data type must match "Content-Type" header
+      // })
       const updatedBackendComments = backendComments.map((backendComment) => {
         if (backendComment.id === commentId) {
           return { ...backendComment, body: text };
@@ -81,17 +81,17 @@ const Comments = ({ commentsUrl, currentUserId }) => {
   const deleteComment = (commentId) => {
     if (window.confirm("Are you sure you want to remove comment?")) {
       deleteCommentApi().then(() => {
+        fetch(`http://localhost:9000/clubs/update/${id}/${commentId}`, {
+        method: 'PUT', // *GET, POST, PUT, DELETE, etc.
+        headers: {
+          'Content-Type': 'application/json'
+          // 'Content-Type': 'application/x-www-form-urlencoded',
+        },
+      })
         const updatedBackendComments = backendComments.filter(
           (backendComment) => backendComment.id !== commentId
         );
-      //   fetch(`http://localhost:9000/clubs/${id}/comments`, {
-      //   method: 'DELETE', // *GET, POST, PUT, DELETE, etc.
-      //   headers: {
-      //     'Content-Type': 'application/json'
-      //     // 'Content-Type': 'application/x-www-form-urlencoded',
-      //   },
-      //   body: JSON.stringify(comment) // body data type must match "Content-Type" header
-      // })
+      
         setBackendComments(updatedBackendComments);
       });
     }
