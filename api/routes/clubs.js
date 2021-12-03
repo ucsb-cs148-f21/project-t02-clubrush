@@ -61,6 +61,7 @@ router.get('/:name/comments', async function(req, res, next) {
   // res.render('clubs-show', { comments: comments})
 });
 
+
 // update comments
 router.put('/change/:name/:id', async function(req, res, next) {
   try {
@@ -80,6 +81,7 @@ router.put('/change/:name/:id', async function(req, res, next) {
 router.put('/update/:name/:id', async function(req, res, next) {
   const filter = { name: req.params.name }
   const update = { $pull: { comments: { id: req.params.id }}}
+
   await Club.findOneAndUpdate(filter,  update, {new:true})
 });
 

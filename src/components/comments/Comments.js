@@ -69,6 +69,7 @@ const Comments = ({ commentsUrl, currentUserId }) => {
       return "Not logged in";
     }
     updateCommentApi(text).then(() => {
+
       try{
         console.log(text)
         const comment = {
@@ -89,6 +90,7 @@ const Comments = ({ commentsUrl, currentUserId }) => {
       catch(e) {
         console.log(e);
       }
+
       const updatedBackendComments = backendComments.map((backendComment) => {
         if (backendComment.id === commentId) {
           return { ...backendComment, body: text };
@@ -107,7 +109,9 @@ const Comments = ({ commentsUrl, currentUserId }) => {
     }
     if (window.confirm("Are you sure you want to remove comment?")) {
       deleteCommentApi().then(() => {
+
         fetch(`${website}/clubs/update/${id}/${commentId}`, {
+
         method: 'PUT', // *GET, POST, PUT, DELETE, etc.
         headers: {
           'Content-Type': 'application/json'
