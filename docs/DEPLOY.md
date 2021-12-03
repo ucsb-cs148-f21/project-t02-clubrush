@@ -10,12 +10,14 @@ Make sure you have node and npm installed. You can check that by running "node -
 
 
 ### Generating MongoDB URI
-Go to the website https://www.mongodb.com/cloud/atlas/register. Here you would want to sign up for a new account. Free users are only allowed to host one free cluster, so you probably want to create a new account. From here you can sign in, and you should be redirected to Organizations page.
+Go to the website https://www.mongodb.com/cloud/atlas/register. Here you would want to sign up for a new account. Free users are only allowed to host one free cluster, so you probably want to create a new account. From here you can sign in, and you should be redirected to Organizations page. You can press "Create an Organization" and select MongoDB Atlas. Feel free to give the organization any name. For now skip the add members tab and create organization.
 <img width="1437" alt="Screen Shot 2021-12-02 at 4 48 01 PM" src="https://user-images.githubusercontent.com/56321654/144525820-1ec42f7a-d283-429d-8f2e-b2a63d90442c.png">
-You can press "Create an Organization" and select MongoDB Atlas. Feel free to give the organization any name. For now skip the add members tab and create organization.
 <img width="1435" alt="Screen Shot 2021-12-02 at 4 50 17 PM" src="https://user-images.githubusercontent.com/56321654/144526024-3173c128-b6bd-4d78-81d5-9441f20221ac.png">
 Now repeat the same process for creating a new project. It should lead you to the database page. Create a new database cluster, choosing the free shared option. Then choose the default options and create the cluster. 
-<img width="1437" alt="Screen Shot 2021-12-02 at 4 48 01 PM" src="https://user-images.githubusercontent.com/56321654/144526219-1acd0e5c-ef5b-4aaa-9880-dfbb88bbd761.png">
+
+<img width="1440" alt="Screen Shot 2021-12-02 at 4 52 05 PM" src="https://user-images.githubusercontent.com/56321654/144527207-6442afca-e381-407b-a135-1bdff3d6d2cf.png">
+
+
 It leads you to Security Quickstart and create a new username and password. You will use this within your Mongo DB URI. Select local environment for connection location and within the IP access list, include 0.0.0.0/0 as the IP address. This allows anybody to access mongodb operations. Now click finish and close. Now we can obtain our mongouri. Within Cluster0 click connect. After that click the "connect your application" option.
 
 <img width="1238" alt="Screen Shot 2021-12-02 at 4 58 14 PM" src="https://user-images.githubusercontent.com/56321654/144526674-aa055735-d271-4e29-9579-b6d0075cdb68.png">
