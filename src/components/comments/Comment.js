@@ -30,7 +30,8 @@ const Comment = ({
   return (
     <div key={comment.id} className="comment">
       <div className="comment-image-container">
-        <img src="/user-icon.png" />
+        <img src="https://pkhungurn.github.io/talking-head-anime-2/data/characters/otogibara_era/emotion/00000002.png"  width="40" 
+     height="40" />
       </div>
       <div className="comment-right-part">
         <div className="comment-content">
