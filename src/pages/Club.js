@@ -8,6 +8,8 @@ import { useParams } from "react-router-dom";
 import Comments from "../components/comments/Comments";
 import { useLocalStorage, getStorageValue } from "../components/useLocalStorage"
 import Button from "react-bootstrap/Button";
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
 
 
 //import Button from "../components/Button";
@@ -50,7 +52,7 @@ export default function Club({cart, setCart, addToBookmark}) {
     const user = getStorageValue("user")
     console.log(user)
     if(user == "" || user == undefined) {
-      console.log("cannot bookmark if not logged in")
+      alert("Cannot bookmark if not logged in. Please log in")
       return "Not logged in";
     }
     const newUser = await fetch(`${website}/users/${user}/bookmark`, {

@@ -98,6 +98,18 @@ router.post('/:id/bookmark', async function(req, res, next){
   }
 });
 
+router.put('/delete/:id/:name', async function(req, res, next){
+  try {
+    const filter = {_id:req.params.id}
+    const update = {$pull: {bookmark: {name: req.params.name}}}
+    const data = await User.findOneAndUpdate(filter,update,{new:true})
+    res.json(data)
+  }
+  catch(e) {
+    console.log(e)
+  }
+});
+
 
 
 

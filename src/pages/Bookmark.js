@@ -80,11 +80,19 @@ export default function Bookmark({setCart, cart} ) {
     );
   },[]);
 
-  const removeFromCart = (productToRemove) => {
-    setCart(
-      cart.filter((club) => club !== productToRemove)
-    );
-  };
+  const removeFromCart = async (productToRemove) => {
+    const remove = await fetch(`${website}/users/delete/${user}/${productToRemove.name}`,{
+      method: 'PUT', // *GET, POST, PUT, DELETE, etc.
+      headers: {
+        'Content-Type': 'application/json'
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+      },
+    });
+    const data = await remove.json();
+    setCart(data.bookmark);
+    window.location.reload(false);
+  }
+
   const clearCart = () => {
     setCart([]);
     console.log("works")
@@ -192,7 +200,7 @@ export default function Bookmark({setCart, cart} ) {
         <Button style={styles.top_botton} onMouseEnter={changeColor_cart} onMouseLeave={changeColor_cart2} onClick={clearCart}>Clear Cart</Button>
         </div>
 
-        {Bookmarks}
+        {/* {Bookmarks} */}
         {Bookmarked}
         <br />
 
