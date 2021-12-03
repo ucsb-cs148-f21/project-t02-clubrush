@@ -22,7 +22,9 @@ It leads you to Security Quickstart and create a new username and password. You 
 
 <img width="1238" alt="Screen Shot 2021-12-02 at 4 58 14 PM" src="https://user-images.githubusercontent.com/56321654/144526674-aa055735-d271-4e29-9579-b6d0075cdb68.png">
 
-The MongoDB URI should be displayed here and should look something like mongodb+srv://<username>:<password>@cluster0.gikbx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority. Replace <username> and <password> with the respective info that you created earlier. This will be you final Mongo DB URI that you will use within the application.
+The MongoDB URI should be displayed here and should look something like 
+```mongodb+srv://<username>:<password>@cluster0.gikbx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority```
+Replace <username> and <password> with the respective info that you created earlier. This will be you final Mongo DB URI that you will use within the application.
 
 
 1. In your machine, git clone this repository
