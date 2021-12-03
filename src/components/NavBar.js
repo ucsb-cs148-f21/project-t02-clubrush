@@ -52,7 +52,7 @@ export default function NavBar(props) {
                 
               </NavDropdown></h4>
               
-              {<Nav.Link href="/bookmark"><h4 className="linkText">Profile</h4></Nav.Link>}
+              {/* {<Nav.Link href="/bookmark"><h4 className="linkText">Profile</h4></Nav.Link>} */}
             </Nav>
             
             <form className="form-inline my-2 my-lg-0">
@@ -102,7 +102,6 @@ export default function NavBar(props) {
                 
               </NavDropdown></h4>
               
-              {<Nav.Link href="/bookmark"><h4 className="linkText" href="/bookmark">Profile</h4></Nav.Link>}
             </Nav>
             
             <form className="form-inline my-2 my-lg-0">
@@ -113,6 +112,7 @@ export default function NavBar(props) {
                 </div>
               </div>
             </form>
+              {<Nav.Link href="/bookmark"><h4 className="linkText" href="/bookmark">Profile</h4></Nav.Link>}
           </Navbar.Collapse>
         </Container>
       </Navbar>
