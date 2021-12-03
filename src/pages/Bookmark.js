@@ -190,15 +190,13 @@ export default function Bookmark({setCart, cart} ) {
       <Container>
       <br />
       <h1>Profile</h1>
-      <div className="club" style={styles.buttons}>
+      {/* <div className="club" style={styles.buttons}>
       <Link to="/profile/edit"><Button style={styles.top_botton} onMouseEnter={changeColor_cart} onMouseLeave={changeColor_cart2}>Edit</Button></Link>
-      </div>
+      </div> */}
  
-      <div style={styles.title}>Name:</div>
-        <div>{data.firstname}</div>
+      <div style={styles.title}>Name: {data.firstname} {data.lastname}</div>
         <br />
-        <div style={styles.title}>Email:</div>
-        {/*<div>{user.email}</div>*/}
+        <div style={styles.title}>Email: {data.email}</div>
         <br/>
 
         <Button variant="primary" type="submit" onClick={logout}>
