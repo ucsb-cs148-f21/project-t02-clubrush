@@ -71,11 +71,10 @@ const Comments = ({ commentsUrl, currentUserId }) => {
     updateCommentApi(text).then(() => {
       try{
         console.log(text)
-        console.log(JSON.stringify(text))
         fetch(`${website}/clubs/change/${id}/${commentId}`, {
           method: 'PUT', // *GET, POST, PUT, DELETE, etc.
           headers: {
-            'Content-Type': 'text/html',
+            'Content-Type': 'text',
             "Access-Control-Allow-Origin": {
               "type": "string"
             }
