@@ -110,6 +110,18 @@ router.put('/delete/:id/:name', async function(req, res, next){
   }
 });
 
+router.put('/deleteall/:id', async function(req, res, next){
+  try {
+    const filter = { _id: req.params.id }
+    const update = {$set: {bookmark: []}}
+    const data = await User.updateMany(filter,update,{new:true})
+    res.json(data)
+  }
+  catch(e) {
+    console.log(e)
+  }
+});
+
 
 
 

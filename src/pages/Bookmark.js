@@ -93,9 +93,17 @@ export default function Bookmark({setCart, cart} ) {
     window.location.reload(false);
   }
 
-  const clearCart = () => {
+  const clearCart = async () => {
+    const remove = await fetch(`${website}/users/deleteall/${user}`,{
+      method: 'PUT', // *GET, POST, PUT, DELETE, etc.
+      headers: {
+        'Content-Type': 'application/json'
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+      },
+    });
     setCart([]);
     console.log("works")
+    window.location.reload(false);
   }
 
   const Bookmarked  = data.map((club, idx) => (
