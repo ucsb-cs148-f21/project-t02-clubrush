@@ -29,9 +29,12 @@ Replace <username> and <password> with the respective info that you created earl
 
 ### Obtaining Data with Datascrapping
 Go to the src/pages/Home.js. Then go to line 35. Edit the fetch call so that it fethces the url: ```http://localhost:9000/testAPI```. It should look like this.
+  
   <img width="422" alt="Screen Shot 2021-12-02 at 5 16 11 PM" src="https://user-images.githubusercontent.com/56321654/144528100-ee383c12-9f20-4e44-b677-8245652d1e6c.png">
+  
 ***IMPORTANT. Make sure you only run the homepage once, so that the route /testAPI is only called once, and only uploads once to your database. Calling homepage more than once can lead to multiple copies of data being saved to your database.
 Now, you want to load up the frontend and backend, and go to the homepage. Fetching the http://localhost:9000/testAPI tells the backend to run the code within the /testAPI route, which datascraps the code from Shoreline and saves it into your MongoDB. You can see the code to datascrap within api/routes/testAPI. After running this once, change the code back to the original code.
+  
 <img width="432" alt="Screen Shot 2021-12-02 at 5 12 51 PM" src="https://user-images.githubusercontent.com/56321654/144528520-c3d200bb-a8c8-4ff1-ae6e-c4b1ccf6bfd1.png">
   
 ### Deploying to heroku
