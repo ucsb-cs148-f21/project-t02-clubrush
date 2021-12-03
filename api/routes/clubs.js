@@ -57,25 +57,32 @@ router.post('/:name/comments', async function(req, res, next){
 
 router.get('/:name/comments', async function(req, res, next) {
   const club = await Club.findOne({ name: req.params.name })
-  console.log("joe momma")
   res.json(club.comments)
   // res.render('clubs-show', { comments: comments})
 });
 
-
-router.put('/:name/comments', async function(req, res, next) {
-
-  const club = await Club.findOne({ name: req.params.name })
-  const comments = Club.comments.map()
-  const newComment = req.body;
-  console.log(req)
-
-  res.json(comments)
+// update comments
+router.put('/change/:name/:id', async function(req, res, next) {
+  try {
+    const filter = { name: req.params.name, comments: {$elemMatch: {id: req.params.id}} }
+    const data = await Club.find(filter)
+    console.log(data)
+    var string = req.body
+    console.log(string)
+    console.log(req.body)
+    const update = { $set:  {"comments.$.body": JSON.stringify(req.body) } }
+    await Club.updateOne(filter,  update, {new:true})
+  }
+  catch(e) {
+    console.log(e)
+  }
 });
 
-router.delete('/:name/comments', async function(req, res, next) {
-  const club = await Club.findOne({ name: req.params.name })
-  club.deleteAll()
+// delete comments
+router.put('/update/:name/:id', async function(req, res, next) {
+  const filter = { name: req.params.name }
+  const update = { $pull: { comments: { id: req.params.id }}}
+  await Club.findOneAndUpdate(filter,  update, {new:true})
 });
 
 module.exports = router;
