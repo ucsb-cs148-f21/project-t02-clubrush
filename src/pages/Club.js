@@ -6,7 +6,10 @@ import Layout from "../components/Layout";
 // import getUser from "../utils/get-user";
 import { useParams } from "react-router-dom";
 import Comments from "../components/comments/Comments";
+import { useLocalStorage, getStorageValue } from "../components/useLocalStorage"
 import Button from "react-bootstrap/Button";
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
 
 
 //import Button from "../components/Button";
@@ -40,11 +43,28 @@ export default function Club({cart, setCart, addToBookmark}) {
     fetch(`${website}/clubs/${id}`)
       .then(async (res) => {
         const data = await res.json();
-        console.log(data)
         setData(data[0])
       }
     );
   },[]);
+
+  let check = async (data) => {
+    const user = getStorageValue("user")
+    console.log(user)
+    if(user == "" || user == undefined) {
+      alert("Cannot bookmark if not logged in. Please log in")
+      return "Not logged in";
+    }
+    const newUser = await fetch(`${website}/users/${user}/bookmark`, {
+        method: 'POST',
+        mode: 'cors',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data)
+    })
+    addToBookmark(data)
+  }
 
   function changeBackground(e) {
     e.target.style.background = '#4682b4';
@@ -67,7 +87,7 @@ export default function Club({cart, setCart, addToBookmark}) {
         <div className="name" style={styles.left}>
         <h1>{data.name}</h1>
           <div className="club" style={styles.right}>
-          <Button style = {styles.button} onClick={() => {addToBookmark(data)}}  onMouseEnter={changeBackground} onMouseLeave={changeBackground2}>Favorite</Button>
+          <Button style = {styles.button} onClick={() => {check(data)}}  onMouseEnter={changeBackground} onMouseLeave={changeBackground2}>Favorite</Button>
           </div>
         </div>
         <a href={data.link}><img src={data.image} style={{

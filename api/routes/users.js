@@ -1,7 +1,37 @@
 var express = require('express');
 var router = express.Router();
+var ObjectId = require('mongodb').ObjectId;
 const User = require('../models/user');
 
+
+router.get('/:id', async function(req, res, next){
+  try {
+    // await addCommentsField();
+    // var o_id = ObjectId(req.params.id);
+    // const id = req.param.id
+    console.log("getting bookmark")
+    const user = await User.findById(req.params.id)
+    console.log(user);
+    
+    res.json(user)
+  }
+  catch(e) {
+    console.log(e)
+  }
+});
+
+router.get('/bookmark/:id', async function(req, res, next){
+  try {
+    console.log("testing id")
+    const user = await User.findById(req.params.id)
+    console.log(user);
+
+    res.json(user.bookmark)
+  }
+  catch(e) {
+    console.log(e)
+  }
+});
 router.post('/signup', async function(req, res, next){
   try{
     const { email } = req.body;
@@ -49,6 +79,37 @@ router.post('/login', async function(req, res, next) {
     console.log(e)
   }
 });
+
+router.post('/:id/bookmark', async function(req, res, next){
+  try {
+    // await addCommentsField();
+    // var o_id = ObjectId(req.params.id);
+    // const id = req.param.id
+    const user = await User.findById(req.params.id)
+    console.log(user);
+    const newBookmark = req.body;
+    console.log(req.body);
+    user.bookmark.push(newBookmark);
+    await user.save();
+    res.json(newBookmark)
+  }
+  catch(e) {
+    console.log(e)
+  }
+});
+
+router.put('/delete/:id/:name', async function(req, res, next){
+  try {
+    const filter = {_id:req.params.id}
+    const update = {$pull: {bookmark: {name: req.params.name}}}
+    const data = await User.findOneAndUpdate(filter,update,{new:true})
+    res.json(data)
+  }
+  catch(e) {
+    console.log(e)
+  }
+});
+
 
 
 

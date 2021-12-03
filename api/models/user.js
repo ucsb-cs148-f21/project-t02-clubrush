@@ -17,6 +17,12 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: false
     },
+    bookmark: [{
+        name: {
+            type: String,
+            Required: false
+        }
+    }]
     
 })
 
