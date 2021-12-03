@@ -6,7 +6,8 @@ First, you want to git clone our repo to your local machine. You can do this by 
 
 ### Getting Started
 Make sure you have node and npm installed. You can check that by running "node -v" and "npm -v" on your computer. Within the root directory, should be called "project-t02-clubrush", run npm install. This installs all the dependencies listed within the package.json file. Within the same root directory, create a file called ".env" to hold some variables that we will use. Within that file, add the code: ```REACT_APP_website="http://localhost:9000"```. Now we need to generate our own mongodburi. After generating the MongoDB URI, insert it into the ".env" file with the respective user and password. <br/>
-```mongodburi= "mongodb+srv://<user>:<password>@cluster0.jfgms.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"```
+```mongodburi= "mongodb+srv://<user>:<password>@cluster0.jfgms.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"``` <br/>
+Now you can run the application on your local machine by running within the terminal "npm run start" for the frontend and "npm run server" for the backend. However, you will need the club data in order to display anything. 
 
 
 ### Generating MongoDB URI
@@ -22,11 +23,12 @@ It leads you to Security Quickstart and create a new username and password. You 
 
 <img width="1238" alt="Screen Shot 2021-12-02 at 4 58 14 PM" src="https://user-images.githubusercontent.com/56321654/144526674-aa055735-d271-4e29-9579-b6d0075cdb68.png">
 
-The MongoDB URI should be displayed here and should look something like 
-```mongodb+srv://<username>:<password>@cluster0.gikbx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority```
-Replace <username> and <password> with the respective info that you created earlier. This will be you final Mongo DB URI that you will use within the application.
+The MongoDB URI should be displayed here and should look something like <br/>
+```mongodb+srv://<username>:<password>@cluster0.gikbx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority``` <br/>
+Replace <username> and <password> with the respective info that you created earlier. This will be you final Mongo DB URI that you will use within the application. 
 
-
+### Obtaining Data with Datascrapping
+  
 1. In your machine, git clone this repository
 2. cd into this repository, with the command "cd project-t02-clubrush"
 3. Open two separate terminals
