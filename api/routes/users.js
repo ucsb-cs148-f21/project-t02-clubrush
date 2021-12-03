@@ -86,9 +86,14 @@ router.post('/:id/bookmark', async function(req, res, next){
     // var o_id = ObjectId(req.params.id);
     // const id = req.param.id
     const user = await User.findById(req.params.id)
-    console.log(user);
-    const newBookmark = req.body;
+    console.log("Body");
+    // const newBookmark = req.body;
     console.log(req.body);
+    const newBookmark = {
+      name: req.body.name,
+      image: req.body.image
+    }
+    console.log(newBookmark)
     user.bookmark.push(newBookmark);
     await user.save();
     res.json(newBookmark)
