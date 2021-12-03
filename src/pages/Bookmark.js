@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import {Link } from "react-router-dom";
 import styled from "styled-components";
 import Button from "react-bootstrap/Button";
+import Spinner from "react-bootstrap/Spinner";
 import { useHistory } from "react-router-dom";
 import { useLocalStorage, getStorageValue } from "../components/useLocalStorage"
 
@@ -60,13 +61,14 @@ const styles = {
 
 
 export default function Bookmark({setCart, cart} ) {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState();
+  console.log(data)
   const website = process.env.REACT_APP_website
   const user = getStorageValue("user")
   console.log(user)
 
   useEffect(() => {
-    fetch(`${website}/users/bookmark/${user}`, {
+    fetch(`${website}/users/${user}`, {
     headers : { 
       'Content-Type': 'application/json',
       'Accept': 'application/json'
@@ -93,12 +95,22 @@ export default function Bookmark({setCart, cart} ) {
     window.location.reload(false);
   }
 
-  const clearCart = () => {
+  const clearCart = async () => {
+    const remove = await fetch(`${website}/users/deleteall/${user}`,{
+      method: 'PUT', // *GET, POST, PUT, DELETE, etc.
+      headers: {
+        'Content-Type': 'application/json'
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+      },
+    });
     setCart([]);
     console.log("works")
+    window.location.reload(false);
   }
 
-  const Bookmarked  = data.map((club, idx) => (
+  var Bookmarked = []
+  if(data != null) {
+  Bookmarked  = data.bookmark.map((club, idx) => (
     <div className="club" key={idx}>
       <div className="both" style={styles.left}>
       <a href={'/club/'+ club.name}><Bubble src={club.image}  style={{
@@ -120,30 +132,30 @@ export default function Bookmark({setCart, cart} ) {
       </div>
     </div>
   ))
+          }
 
-
-  const Bookmarks  = cart.map((club, idx) => (
-    <div className="club" key={idx}>
-      <div className="both" style={styles.left}>
-      <a href={'/club/'+ club.name}><Bubble src={club.image}  style={{
-                borderColor: "red",
-                boxShadow: "10px 7px 1px #9E9E9E",
-                borderColor: "red",
-                borderRadius: "50%",
-                height: 150,
-                width: 150,
-                margin: 20
-            }}/></a>
-      <a href={'/club/'+ club.name} style={styles.org}>{club.name}</a>
-            <br/>
-      <div className="club" style={styles.right}>
-      <div style={styles.remove}><Button style={styles.button} onMouseOver={changeColor} onMouseLeave={changeColor2} onClick={() => removeFromCart(club)}>
-        Remove
-      </Button></div>
-      </div>
-      </div>
-    </div>
-  ))
+  // const Bookmarks  = cart.map((club, idx) => (
+  //   <div className="club" key={idx}>
+  //     <div className="both" style={styles.left}>
+  //     <a href={'/club/'+ club.name}><Bubble src={club.image}  style={{
+  //               borderColor: "red",
+  //               boxShadow: "10px 7px 1px #9E9E9E",
+  //               borderColor: "red",
+  //               borderRadius: "50%",
+  //               height: 150,
+  //               width: 150,
+  //               margin: 20
+  //           }}/></a>
+  //     <a href={'/club/'+ club.name} style={styles.org}>{club.name}</a>
+  //           <br/>
+  //     <div className="club" style={styles.right}>
+  //     <div style={styles.remove}><Button style={styles.button} onMouseOver={changeColor} onMouseLeave={changeColor2} onClick={() => removeFromCart(club)}>
+  //       Remove
+  //     </Button></div>
+  //     </div>
+  //     </div>
+  //   </div>
+  // ))
 
   const history = useHistory();
 
@@ -172,7 +184,7 @@ export default function Bookmark({setCart, cart} ) {
     e.target.style.background = "#004282";
   }
   
-  
+  if(data != undefined) {
   return (
 <Layout>
       <Container>
@@ -183,7 +195,7 @@ export default function Bookmark({setCart, cart} ) {
       </div>
  
       <div style={styles.title}>Name:</div>
-        {/*<div>{user.name}</div>*/}
+        <div>{data.firstname}</div>
         <br />
         <div style={styles.title}>Email:</div>
         {/*<div>{user.email}</div>*/}
@@ -206,5 +218,15 @@ export default function Bookmark({setCart, cart} ) {
 
       </Container>
 </Layout>
-  );
+  
+  );}
+  else {
+    return <Spinner style={{
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+  }} animation="border" role="status">
+    <span className="visually-hidden"></span>
+  </Spinner>
+  }
 }
