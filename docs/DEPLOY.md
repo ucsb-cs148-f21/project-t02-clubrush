@@ -7,7 +7,7 @@ First, you want to git clone our repo to your local machine. You can do this by 
 ### Getting Started
 Make sure you have node and npm installed. You can check that by running "node -v" and "npm -v" on your computer. Within the root directory, should be called "project-t02-clubrush", run npm install. This installs all the dependencies listed within the package.json file. Within the same root directory, create a file called ".env" to hold some variables that we will use. Within that file, add the code: ```REACT_APP_website="http://localhost:9000"```. Now we need to generate our own mongodburi. After generating the MongoDB URI, insert it into the ".env" file with the respective user and password. <br/>
 ```mongodburi= "mongodb+srv://<user>:<password>@cluster0.jfgms.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"``` <br/>
-Now you can run the application on your local machine by running within the terminal "npm run start" for the frontend and "npm run server" for the backend. However, you will need the club data in order to display anything. 
+Now you can run the application on your local machine by running within the terminal "npm run start" for the frontend and "npm run server" for the backend. Now you need to obtain the club data from data scrapping. See the steps down below. After this, the application should be ready to run on your local machine!
 
 
 ### Generating MongoDB URI
@@ -25,10 +25,18 @@ It leads you to Security Quickstart and create a new username and password. You 
 
 The MongoDB URI should be displayed here and should look something like <br/>
 ```mongodb+srv://<username>:<password>@cluster0.gikbx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority``` <br/>
-Replace <username> and <password> with the respective info that you created earlier. This will be you final Mongo DB URI that you will use within the application. 
+Replace <username> and <password> with the respective info that you created earlier. This will be your final Mongo DB URI that you will use within the application. 
 
 ### Obtaining Data with Datascrapping
+Go to the src/pages/Home.js. Then go to line 35. Edit the fetch call so that it fethces the url: ```http://localhost:9000/testAPI```. It should look like this.
+  <img width="422" alt="Screen Shot 2021-12-02 at 5 16 11 PM" src="https://user-images.githubusercontent.com/56321654/144528100-ee383c12-9f20-4e44-b677-8245652d1e6c.png">
+***IMPORTANT. Make sure you only run the homepage once, so that the route /testAPI is only called once, and only uploads once to your database. Calling homepage more than once can lead to multiple copies of data being saved to your database.
+Now, you want to load up the frontend and backend, and go to the homepage. Fetching the http://localhost:9000/testAPI tells the backend to run the code within the /testAPI route, which datascraps the code from Shoreline and saves it into your MongoDB. You can see the code to datascrap within api/routes/testAPI. After running this once, change the code back to the original code.
+<img width="432" alt="Screen Shot 2021-12-02 at 5 12 51 PM" src="https://user-images.githubusercontent.com/56321654/144528520-c3d200bb-a8c8-4ff1-ae6e-c4b1ccf6bfd1.png">
   
+### Deploying to heroku
+Go to https://www.heroku.com/, which is a FREE cloud platform to host your app to the web. 
+
 1. In your machine, git clone this repository
 2. cd into this repository, with the command "cd project-t02-clubrush"
 3. Open two separate terminals
