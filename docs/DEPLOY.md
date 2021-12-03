@@ -7,8 +7,12 @@ First, you want to git clone our repo to your local machine. You can do this by 
 ### Getting Started
 Make sure you have node and npm installed. You can check that by running "node -v" and "npm -v" on your computer. Within the root directory, should be called "project-t02-clubrush", run npm install. This installs all the dependencies listed within the package.json file. Within the same root directory, create a file called ".env" to hold some variables that we will use. Within that file, add the code: ```REACT_APP_website="http://localhost:9000"```. Now we need to generate our own mongodburi. 
 
-### Generating MongoDB URI
 
+### Generating MongoDB URI
+Go to the website https://www.mongodb.com/cloud/atlas/register. Here you would want to sign up for a new account. Free users are only allowed to host one free cluster, so you probably want to create a new account. From here you can sign in, and you should be redirected to Organizations page.
+<img width="1437" alt="Screen Shot 2021-12-02 at 4 48 01 PM" src="https://user-images.githubusercontent.com/56321654/144525820-1ec42f7a-d283-429d-8f2e-b2a63d90442c.png">
+You can press "Create an Organization" and select MongoDB Atlas. Feel free to give the organization any name. For now skip the add members tab and create organization.
+<img width="1435" alt="Screen Shot 2021-12-02 at 4 50 17 PM" src="https://user-images.githubusercontent.com/56321654/144526024-3173c128-b6bd-4d78-81d5-9441f20221ac.png">
 
 1. In your machine, git clone this repository
 2. cd into this repository, with the command "cd project-t02-clubrush"
