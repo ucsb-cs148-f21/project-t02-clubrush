@@ -39,6 +39,6 @@ Now, you want to load up the frontend and backend, and go to the homepage. Fetch
   
 ### Deploying to heroku
 Go to https://www.heroku.com/, which is a FREE cloud platform to host your app to the web. Login/Create an account. Then click the "New" button and create a new app. Name this app whatever you'd like. Within the deploy tab, choose GitHub as your Deployment Method. Connect to the respective github repo that contains the starter code. Now go to settings tab, and click "Reveal Config Vars". Add the variables from you .env file, but the make sure you insert your heroku website for the REACT_APP_website key. Ex: <br/>
-KEY: REACT_APP_website, VALUE: https://<website name>.herokuapp.com<br/>
-KEY: mongodburi, VALUE: <your mongodburi> <br/>
+```KEY: REACT_APP_website, VALUE: https://<website name>.herokuapp.com<br/>```
+```KEY: mongodburi, VALUE: <your mongodburi> <br/>```
 After this, go back to Deploy tab and deploy branch. After this, your app should be ready launch!
