@@ -10,10 +10,13 @@ import {
 import React from "react";
 import { FaStar } from "react-icons/fa";
 import { useParams } from "react-router-dom";
+import { useLocalStorage, getStorageValue } from "../useLocalStorage"
 
 import Container from "react-bootstrap/Container";
 
 const Comments = ({ commentsUrl, currentUserId }) => {
+  const user = getStorageValue("user")
+
   const website = process.env.REACT_APP_website
   const [backendComments, setBackendComments] = useState([]);
   const [activeComment, setActiveComment] = useState(null);
@@ -30,6 +33,11 @@ const Comments = ({ commentsUrl, currentUserId }) => {
           new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()
       );
   const addComment = (text, parentId) => {
+
+    if(user == "" || user == undefined) {
+      alert("Cannot comment if not logged in. Please log in")
+      return "Not logged in";
+    }
     createCommentApi(text, parentId).then((comment) => {
       fetch(`${website}/clubs/${id}/comments`, {
         method: 'POST', // *GET, POST, PUT, DELETE, etc.
@@ -45,7 +53,6 @@ const Comments = ({ commentsUrl, currentUserId }) => {
   };
 
   useEffect(() => {
-    console.log("testing pls")
     fetch(`${website}/clubs/${id}/comments`)
       .then(async (res) => {
         const comment = await res.json();
@@ -57,16 +64,29 @@ const Comments = ({ commentsUrl, currentUserId }) => {
   },[]);
 
   const updateComment = (text, commentId) => {
+    if(user == "" || user == undefined) {
+      alert("Cannot bookmark if not logged in. Please log in")
+      return "Not logged in";
+    }
     updateCommentApi(text).then(() => {
-      // fetch(`${website}/clubs/${id}/comments/${commentId}`, {
-      //   method: 'PUT', // *GET, POST, PUT, DELETE, etc.
-      //   headers: {
-      //     'Content-Type': 'application/json',
-      //     'Access-Control-Allow-Origin': '*',
-      //     // 'Content-Type': 'application/x-www-form-urlencoded',
-      //   },
-      //   body: JSON.stringify(text) // body data type must match "Content-Type" header
-      // })
+      try{
+        console.log(text)
+        console.log(JSON.stringify(text))
+        fetch(`${website}/clubs/change/${id}/${commentId}`, {
+          method: 'PUT', // *GET, POST, PUT, DELETE, etc.
+          headers: {
+            'Content-Type': 'text/html',
+            "Access-Control-Allow-Origin": {
+              "type": "string"
+            }
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          body: JSON.stringify(text) // body data type must match "Content-Type" header
+        })
+      }
+      catch(e) {
+        console.log(e);
+      }
       const updatedBackendComments = backendComments.map((backendComment) => {
         if (backendComment.id === commentId) {
           return { ...backendComment, body: text };
@@ -79,9 +99,13 @@ const Comments = ({ commentsUrl, currentUserId }) => {
     });
   };
   const deleteComment = (commentId) => {
+    if(user == "" || user == undefined) {
+      alert("Cannot bookmark if not logged in. Please log in")
+      return "Not logged in";
+    }
     if (window.confirm("Are you sure you want to remove comment?")) {
       deleteCommentApi().then(() => {
-        fetch(`http://localhost:9000/clubs/update/${id}/${commentId}`, {
+        fetch(`${website}/clubs/update/${id}/${commentId}`, {
         method: 'PUT', // *GET, POST, PUT, DELETE, etc.
         headers: {
           'Content-Type': 'application/json'
