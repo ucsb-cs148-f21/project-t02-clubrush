@@ -9,7 +9,6 @@ router.get('/:id', async function(req, res, next){
     // await addCommentsField();
     // var o_id = ObjectId(req.params.id);
     // const id = req.param.id
-    console.log("getting bookmark")
     const user = await User.findById(req.params.id)
     console.log(user);
     
