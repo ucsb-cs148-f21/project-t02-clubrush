@@ -5,7 +5,7 @@ TO-DO lab06
 First, you want to git clone our repo to your local machine. You can do this by running "git init" followed by "git clone https://github.com/ucsb-cs148-f21/project-t02-clubrush.git". 
 
 ### Getting Started
-Make sure you have node and npm installed. You can check that by running "node -v" and "npm -v" on your computer. Within the root directory, should be called "project-t02-clubrush", run npm install. This installs all the dependencies listed within the package.json file. Within the same root directory, create a file called ".env" to hold some variables that we will use. Within that file, add the code: ```REACT_APP_website="http://localhost:9000"```. Now we need to generate our own mongodburi. After generating the MongoDB URI, insert it into the ".env" file with the respective user and password. 
+Make sure you have node and npm installed. You can check that by running "node -v" and "npm -v" on your computer. Within the root directory, should be called "project-t02-clubrush", run npm install. This installs all the dependencies listed within the package.json file. Within the same root directory, create a file called ".env" to hold some variables that we will use. Within that file, add the code: ```REACT_APP_website="http://localhost:9000"```. Now we need to generate our own mongodburi. After generating the MongoDB URI, insert it into the ".env" file with the respective user and password. <br/>
 ```mongodburi= "mongodb+srv://<user>:<password>@cluster0.jfgms.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"```
 
 
