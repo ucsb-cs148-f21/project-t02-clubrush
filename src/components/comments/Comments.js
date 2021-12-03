@@ -71,16 +71,19 @@ const Comments = ({ commentsUrl, currentUserId }) => {
     updateCommentApi(text).then(() => {
       try{
         console.log(text)
+        const comment = {
+          comment: text
+        }
         fetch(`${website}/clubs/change/${id}/${commentId}`, {
           method: 'PUT', // *GET, POST, PUT, DELETE, etc.
           headers: {
-            'Content-Type': 'text',
+            'Content-Type': 'application/json',
             "Access-Control-Allow-Origin": {
               "type": "string"
             }
             // 'Content-Type': 'application/x-www-form-urlencoded',
           },
-          body: JSON.stringify(text) // body data type must match "Content-Type" header
+          body: JSON.stringify(comment) // body data type must match "Content-Type" header
         })
       }
       catch(e) {
