@@ -1,4 +1,3 @@
-TO-DO lab06
 # Deployment Instructions
 
 ### Getting Starter Code
