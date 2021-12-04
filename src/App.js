@@ -39,6 +39,8 @@ export default function App() {
       (item) => club.name === item.name
     );
     if(itemInCart){
+      alert("Cannot duplicate bookmark. ")
+      return "Try again";
     }
     else{
       itemInCart= {

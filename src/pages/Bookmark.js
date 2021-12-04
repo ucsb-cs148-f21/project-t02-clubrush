@@ -42,18 +42,21 @@ const styles = {
   org:{
     width: 825,
     fontSize: 25,
+
     textDecoration: 'none'
+
   },
   remove:{
     fontSize: 20,
   },
   title:{
-    fontSize: 20,
+    fontSize: 25,
   },
   left:{
     display: "flex",
     justifyContent: "unset",
-    alignItems: "center"
+    alignItems: "center",
+    border: 0
   },
   right: {
     display: "flex",
@@ -126,10 +129,11 @@ export default function Bookmark({setCart, cart} ) {
                 width: 150,
                 margin: 20
             }}/></a>
+
       <a href={'/club/'+ club.name} style={styles.org}>{club.name}</a>
             <br/>
       <div className="club" style={styles.right}>
-      <div style={styles.remove}><Button style={styles.button} onMouseOver={changeColor} onMouseLeave={changeColor2} onClick={() => removeFromCart(club)}>
+      <div style={styles.remove}><Button style={styles.button} onClick={() => removeFromCart(club)}>
         Remove
       </Button></div>
       </div>
@@ -171,22 +175,6 @@ export default function Bookmark({setCart, cart} ) {
     history.push("/")
   }
 
-
-  function changeColor(e) {
-    e.target.style.background = "#9a9a9a";
-  }
-
-  function changeColor2(e) {
-    e.target.style.background = "#424242";
-  }
-
-  function changeColor_cart(e) {
-    e.target.style.background = "#7DB1E5";
-  }
-
-  function changeColor_cart2(e) {
-    e.target.style.background = "#004282";
-  }
   
   if(data != undefined) {
   return (
@@ -194,6 +182,8 @@ export default function Bookmark({setCart, cart} ) {
       <Container>
       <br />
       <h1>Profile</h1>
+      <br />
+
 
       {/* <div className="club" style={styles.buttons}>
       <Link to="/profile/edit"><Button style={styles.top_botton} onMouseEnter={changeColor_cart} onMouseLeave={changeColor_cart2}>Edit</Button></Link>
@@ -202,17 +192,21 @@ export default function Bookmark({setCart, cart} ) {
         <Button style={styles.top_botton} onMouseEnter={changeColor_cart} onMouseLeave={changeColor_cart2} onClick={logout}>Logout</Button>
         </div>
  
-      <div style={styles.title}>Name: {data.firstname} {data.lastname}</div>
+      <h1 style={styles.title}>Name:</h1>
+        <div> {data.firstname} {data.lastname}</div>
         <br />
-        <div style={styles.title}>Email: {data.email}</div>
+        <h2 style={styles.title}>Email:</h2> 
+        <div>   {data.email}</div>
         <br/>
 
         <br />
         <br/>
 
         <h1>Bookmarked Clubs</h1>
+
         <div className="club" style={styles.buttons}>
         <Button style={styles.top_botton} onMouseEnter={changeColor_cart} onMouseLeave={changeColor_cart2} onClick={clearCart}>Clear All</Button>
+
         </div>
 
         {/* {Bookmarks} */}

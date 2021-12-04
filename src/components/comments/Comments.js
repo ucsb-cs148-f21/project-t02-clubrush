@@ -70,6 +70,7 @@ const Comments = ({ commentsUrl, currentUserId }) => {
     }
     updateCommentApi(text).then(() => {
 
+
       try{
         console.log(text)
         const comment = {
@@ -84,6 +85,7 @@ const Comments = ({ commentsUrl, currentUserId }) => {
             }
             // 'Content-Type': 'application/x-www-form-urlencoded',
           },
+
           body: JSON.stringify(comment) // body data type must match "Content-Type" header
         })
       }
@@ -109,6 +111,7 @@ const Comments = ({ commentsUrl, currentUserId }) => {
     }
     if (window.confirm("Are you sure you want to remove comment?")) {
       deleteCommentApi().then(() => {
+
 
         fetch(`${website}/clubs/update/${id}/${commentId}`, {
 
