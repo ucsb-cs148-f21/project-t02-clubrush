@@ -9,12 +9,16 @@
     background-color: #05C;
 } */
 
-a:hover{
+.navbar a:hover{
     background-color: #0C285C;
 }
 
 h4:hover{
     background-color: #0C285C;
+}
+
+a:hover{
+    background-color: transparent;
 }
 
 
