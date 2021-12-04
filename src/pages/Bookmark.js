@@ -108,37 +108,9 @@ export default function Bookmark({setCart, cart} ) {
     window.location.reload(false);
   }
 
-<<<<<<< HEAD
-  const Bookmarked  = data.map((club, idx) => (
-    <div className="club" key={idx}>
-      <div className="both" style={styles.left}>
-      <a href={'/club/'+ club.name}><Bubble src={club.image}  style={{
-                borderColor: "red",
-                boxShadow: "10px 7px 1px #9E9E9E",
-                borderColor: "red",
-                borderRadius: "50%",
-                height: 150,
-                width: 150,
-                margin: 20
-            }}/></a>
-      <a href={'/club/'+ club.name} style={styles.org}>{club.name}</a>
-            <br/>
-      <div className="club" style={styles.right}>
-      <div style={styles.remove}><Button style={styles.button} onMouseOver={changeColor} onMouseLeave={changeColor2} onClick={() => removeFromCart(club)}>
-        Remove
-      </Button></div>
-      </div>
-      </div>
-    </div>
-  ))
-
-/*
-  const Bookmarks  = cart.map((club, idx) => (
-=======
   var Bookmarked = []
   if(data != null) {
   Bookmarked  = data.bookmark.map((club, idx) => (
->>>>>>> 76b6f9d7e84f578dfec34861b4757471b10f6ed1
     <div className="club" key={idx}>
       <div className="both" style={styles.left}>
       <a href={'/club/'+ club.name}><Bubble src={club.image}  style={{
@@ -159,9 +131,6 @@ export default function Bookmark({setCart, cart} ) {
       </div>
       </div>
     </div>
-<<<<<<< HEAD
-  ))*/
-=======
   ))
           }
 
@@ -187,7 +156,6 @@ export default function Bookmark({setCart, cart} ) {
   //     </div>
   //   </div>
   // ))
->>>>>>> 76b6f9d7e84f578dfec34861b4757471b10f6ed1
 
   const history = useHistory();
 

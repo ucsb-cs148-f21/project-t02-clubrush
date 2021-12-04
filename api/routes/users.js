@@ -85,11 +85,6 @@ router.post('/:id/bookmark', async function(req, res, next){
     // var o_id = ObjectId(req.params.id);
     // const id = req.param.id
     const user = await User.findById(req.params.id)
-<<<<<<< HEAD
-    console.log(user);
-    const newBookmark = req.body;       //need to push club image in as well
-    console.log(req);
-=======
     console.log("Body");
     // const newBookmark = req.body;
     console.log(req.body);
@@ -98,7 +93,6 @@ router.post('/:id/bookmark', async function(req, res, next){
       image: req.body.image
     }
     console.log(newBookmark)
->>>>>>> 76b6f9d7e84f578dfec34861b4757471b10f6ed1
     user.bookmark.push(newBookmark);
     await user.save();
     res.json(newBookmark)
