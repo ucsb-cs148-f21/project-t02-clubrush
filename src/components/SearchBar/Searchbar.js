@@ -5,6 +5,8 @@ import CloseIcon from "@material-ui/icons/Close";
 
 function SearchBar({ placeholder, data }) {
   const website = process.env.REACT_APP_website
+  const frontend = process.env.REACT_APP_frontend
+  console.log(frontend)
   // fetch data from database
   const [fetchdata, setData] = useState([]);
   useEffect(() => {
@@ -57,7 +59,7 @@ function SearchBar({ placeholder, data }) {
         <div className="dataResult">
           {fetchdata.slice(0, fetchdata.length).map((value, key) => {
             return (
-              <a className="dataItem" href={`./club/` + value.name} rel="noreferrer" target="_blank">
+              <a className="dataItem" href={`${frontend}/club/` + value.name} rel="noreferrer" target="_blank">
                 <p>{value.name} </p>
 
                {/* <a className="dataItem" href={value.link} rel="noreferrer" target="_blank" onClick={getClub}> /}

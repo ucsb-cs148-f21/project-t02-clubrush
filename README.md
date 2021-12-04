@@ -28,5 +28,6 @@ Our Club Rush application would have Users that are students who can search up o
 # Design 
 
 
-# Deploy 
+# Deployment
+https://t02-clubrush.herokuapp.com/
 * [Deployment Instructions](./docs/DEPLOY.md)

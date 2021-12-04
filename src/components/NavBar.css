@@ -1,9 +1,27 @@
 .navbar{
     background-color: #0C285C;
-    /* max-height: 80px; */
+    max-height: 80px;
+    /* background-image: linear-gradient(to right, #0C285C, rgb(25, 62, 165), rgb(78, 118, 228));
     position: -webkit-sticky;
-    position: sticky;
+    position: sticky; */
 }
+
+/* .navbar:not(.nohover):hover {
+    background-color: #05C;
+} */
+
+.navbar a:hover{
+    background-color: #0C285C;
+}
+
+h4:hover{
+    background-color: #0C285C;
+}
+
+a:hover{
+    background-color: transparent;
+}
+
 
 .navbar .nav-brand{
     color:aquamarine
@@ -12,9 +30,7 @@
     color:antiquewhite;  
     padding-left:50px;
     padding-right:50px;
-
 }
-
 
 .linkText{ 
     color: white;     
@@ -22,10 +38,17 @@
     font-family: 'Zen Maru Gothic', sans-serif;
     padding-right:20px;
     padding-left:20px;
-
-
-
+    /* transition: color 0.5s ease-in-out; */
+    transition: all 0.5s ease-in-out;
 }
+.linkText:hover {
+    color: rgb(136, 189, 248);
+    font-size: 2.1em;
+}
+  /* .navbar:hover {
+    text-decoration: none;
+    background-color: transparent !important;
+} */
 
 .dropdown-item {
     color: #ffffff;  

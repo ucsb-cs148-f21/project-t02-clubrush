@@ -8,8 +8,6 @@ import { useParams } from "react-router-dom";
 import Comments from "../components/comments/Comments";
 import { useLocalStorage, getStorageValue } from "../components/useLocalStorage"
 import Button from "react-bootstrap/Button";
-import Popup from 'reactjs-popup';
-import 'reactjs-popup/dist/index.css';
 
 
 //import Button from "../components/Button";
@@ -67,18 +65,6 @@ export default function Club({cart, setCart, addToBookmark}) {
     addToBookmark(data)
   }
 
-  function changeBackground(e) {
-    e.target.style.background = '#4682b4';
-  }
-
-  function changeBackground2(e) {
-    e.target.style.background = '#004282';
-  }
-
-  function changeBackground3(e) {
-    e.target.style.background = '#000080';
-
-  }
 
   return (
     <Layout>
@@ -88,7 +74,7 @@ export default function Club({cart, setCart, addToBookmark}) {
         <div className="name" style={styles.left}>
         <h1>{data.name}</h1>
           <div className="club" style={styles.right}>
-          <Button style = {styles.button} onClick={() => {check(data)}}  onMouseEnter={changeBackground} onMouseLeave={changeBackground2}>Favorite</Button>
+          <Button style = {styles.button} onClick={() => {check(data)}}>Favorite</Button>
           </div>
         </div>
         <a href={data.link}><img src={data.image} style={{
