@@ -36,7 +36,7 @@ export default function Home() {
   const [data, setData] = useState([]);
   const website = process.env.REACT_APP_website
   useEffect(() => {
-    fetch(`${website}/clubs/`)
+    fetch('${website}/clubs/')
       .then(async (res) => {
         const data = await res.json();
         setData(data)
