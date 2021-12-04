@@ -13,8 +13,9 @@ const Bubble = styled.img`
 `;
 
 const TextWrapper = styled.div`
-  width: 700px;
+  width: 1100px;
   max-width: 100%;
+  text-align: center;
 `;
 
 const styles = {
@@ -49,16 +50,17 @@ export default function Home() {
       <Layout>
         <Container>
           <br/>
-          <h1>Welcome to Club Rush!</h1>
-          <br />
           <TextWrapper>
-            Our project will allow students to find at community at UCSB in a more 
+          <h1>Welcome to Club Rush!</h1>
+          </TextWrapper>
+          <TextWrapper>
+            Our project will allow students to find a community at UCSB in a more 
             streamlined website that is more convenient than the current website, Shoreline.
             For our project, we want to utilize filters and nested drop-down menus, to give 
-            students an easier time in their search for their new community. We want to have broader 
-            categories displayed first such as academic, fraternity, cultural, community service, etc., 
+            students an easier time in their search for clubs. We want to have broader 
+            categories displayed first such as fraternity/sorority, sports, department, etc., 
             and then within those individual categories, have more specific filters to match what the 
-            user is looking for in their search: Co-ed, engineering, Asian, etc. 
+            user is looking for in their search: Co-ed, engineering, Hispanic, etc. 
             </TextWrapper> 
             <br />
             <TextWrapper>
@@ -66,8 +68,11 @@ export default function Home() {
             be as minimal and simplistic as possible to give students an easier time in their search. 
             Sites such as Shoreline is a good option too, but Shoreline has too much unneccessary 
             information and most organization's page on Shoreline has not been updated in a very long time.
+            </TextWrapper> 
+            <br />
+
+            <TextWrapper>
             Make sure you {" "}<a href="/login">Login</a> before navigating to the Club page!
-            
           </TextWrapper> 
           <br />
           
