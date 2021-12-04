@@ -87,15 +87,30 @@ router.post('/:id/bookmark', async function(req, res, next){
     const user = await User.findById(req.params.id)
     console.log("Body");
     // const newBookmark = req.body;
-    console.log(req.body);
+    // console.log(req.body);
+    // const newBookmark = {
+    //   name: req.body.name,
+    //   image: req.body.image
+    // }
+    // console.log(newBookmark)
+    // user.bookmark.push(newBookmark);
+    // await user.save();
+    // res.json(newBookmark)
     const newBookmark = {
-      name: req.body.name,
-      image: req.body.image
+        name: req.body.name,
+        image: req.body.image
     }
-    console.log(newBookmark)
+    for(let i=0; i < user.bookmark.length; i++){
+      if(user.bookmark[i].name === newBookmark.name){
+        console.log("Bookmark already exists")
+        console.log(searchBookmark[0])
+        res.json("Bookmark already exists")
+      }
+    }
+
     user.bookmark.push(newBookmark);
     await user.save();
-    res.json(newBookmark)
+    res.json(newBookmark) 
   }
   catch(e) {
     console.log(e)

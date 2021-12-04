@@ -68,6 +68,7 @@ router.put('/change/:name/:id', async function(req, res, next) {
     const filter = { name: req.params.name, comments: {$elemMatch: {id: req.params.id}} }
     const data = await Club.find(filter)
     console.log(data)
+
     console.log(req.body.comment)
     const update = { $set:  {"comments.$.body": req.body.comment } }
     await Club.updateOne(filter,  update, {new:true})
