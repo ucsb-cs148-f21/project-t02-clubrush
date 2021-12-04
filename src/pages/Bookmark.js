@@ -13,6 +13,7 @@ const Bubble = styled.img`
   width: 500px;
   max-width: 100%;
   height: auto;
+  borderColor: "black";
 `;
 
 
@@ -118,10 +119,12 @@ export default function Bookmark({setCart, cart} ) {
     <div className="club" key={idx}>
       <div className="both" style={styles.left}>
       <a href={'/club/'+ club.name}><Bubble src={club.image}  style={{
-                borderColor: "red",
                 boxShadow: "10px 7px 1px #9E9E9E",
                 borderColor: "red",
                 borderRadius: "50%",
+                borderColor: "black",
+                borderStyle: "solid",
+                borderWidth: 1,
                 height: 150,
                 width: 150,
                 margin: 20
@@ -170,6 +173,22 @@ export default function Bookmark({setCart, cart} ) {
     setUser("");
     setIsSignedIn(null)
     history.push("/")
+  }
+
+  function changeColor(e) {
+    e.target.style.background = "#9a9a9a";
+  }
+
+  function changeColor2(e) {
+    e.target.style.background = "#424242";
+  }
+
+  function changeColor_cart(e) {
+    e.target.style.background = "#7DB1E5";
+  }
+
+  function changeColor_cart2(e) {
+    e.target.style.background = "#004282";
   }
 
   
