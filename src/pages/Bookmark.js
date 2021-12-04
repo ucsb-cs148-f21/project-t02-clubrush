@@ -193,21 +193,21 @@ export default function Bookmark({setCart, cart} ) {
       {/* <div className="club" style={styles.buttons}>
       <Link to="/profile/edit"><Button style={styles.top_botton} onMouseEnter={changeColor_cart} onMouseLeave={changeColor_cart2}>Edit</Button></Link>
       </div> */}
+      <div className="club" style={styles.buttons}>
+        <Button style={styles.top_botton} onMouseEnter={changeColor_cart} onMouseLeave={changeColor_cart2} onClick={logout}>Logout</Button>
+        </div>
  
       <div style={styles.title}>Name: {data.firstname} {data.lastname}</div>
         <br />
         <div style={styles.title}>Email: {data.email}</div>
         <br/>
 
-        <Button variant="primary" type="submit" onClick={logout}>
-                Logout
-            </Button>
         <br />
         <br/>
 
         <h1>Bookmarked Clubs</h1>
         <div className="club" style={styles.buttons}>
-        <Button style={styles.top_botton} onMouseEnter={changeColor_cart} onMouseLeave={changeColor_cart2} onClick={clearCart}>Clear Cart</Button>
+        <Button style={styles.top_botton} onMouseEnter={changeColor_cart} onMouseLeave={changeColor_cart2} onClick={clearCart}>Clear All</Button>
         </div>
 
         {/* {Bookmarks} */}
