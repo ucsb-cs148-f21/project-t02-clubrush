@@ -21,6 +21,10 @@ const userSchema = new mongoose.Schema({
         name: {
             type: String,
             Required: false
+        },
+        image: {
+            type: String,
+            Required: false
         }
     }]
     
