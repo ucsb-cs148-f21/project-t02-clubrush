@@ -61,10 +61,12 @@ const styles = {
 
 
 export default function Bookmark({setCart, cart} ) {
+
   const [data, setData] = useState();
   console.log(data)
   const website = process.env.REACT_APP_website
   const user = getStorageValue("user")
+  
   console.log(user)
 
   useEffect(() => {
@@ -76,10 +78,26 @@ export default function Bookmark({setCart, cart} ) {
     })
       .then(async (res) => {
         const data = await res.json();
+
         setData(data)
         console.log(data)
       }
-    );
+      );
+        
+  },[]);
+
+  useEffect(() => {
+    fetch(`${website}/users/${user}`, {
+      headers : { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+       }
+      }).then(async (res) => {
+        const username = await res.json()
+        setUserName(username)
+      }
+      );
+      
   },[]);
 
   const removeFromCart = async (productToRemove) => {
@@ -168,6 +186,9 @@ export default function Bookmark({setCart, cart} ) {
   }
 
 
+
+
+
   function changeColor(e) {
     e.target.style.background = "#9a9a9a";
   }
@@ -196,6 +217,7 @@ export default function Bookmark({setCart, cart} ) {
       </div> */}
 
  
+
       <div style={styles.title}>Name: {data.firstname} {data.lastname}</div>
         <br />
         <div style={styles.title}>Email: {data.email}</div>

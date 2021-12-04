@@ -8,8 +8,6 @@ import { useParams } from "react-router-dom";
 import Comments from "../components/comments/Comments";
 import { useLocalStorage, getStorageValue } from "../components/useLocalStorage"
 import Button from "react-bootstrap/Button";
-import Popup from 'reactjs-popup';
-import 'reactjs-popup/dist/index.css';
 
 
 //import Button from "../components/Button";
