@@ -113,6 +113,30 @@ export default function Bookmark({setCart, cart} ) {
     window.location.reload(false);
   }
 
+  function changeColor3(e) {
+    e.target.style.background = "#D3D3D3";
+  }
+  function changeColor4(e) {
+    e.target.style.background = "#424242";
+  }
+
+  function changeColor(e) {
+    e.target.style.background = "#9a9a9a";
+  }
+
+  function changeColor2(e) {
+    e.target.style.background = "#424242";
+  }
+
+  function changeColor_cart(e) {
+    e.target.style.background = "#7DB1E5";
+  }
+
+  function changeColor_cart2(e) {
+    e.target.style.background = "#004282";
+  }
+
+
   var Bookmarked = []
   if(data != null) {
   Bookmarked  = data.bookmark.map((club, idx) => (
@@ -133,7 +157,7 @@ export default function Bookmark({setCart, cart} ) {
       <a href={'/club/'+ club.name} style={styles.org}>{club.name}</a>
             <br/>
       <div className="club" style={styles.right}>
-      <div style={styles.remove}><Button style={styles.button} onClick={() => removeFromCart(club)}>
+      <div style={styles.remove}><Button style={styles.button}  onMouseEnter={changeColor3} onMouseLeave={changeColor4} onClick={() => removeFromCart(club)}>
         Remove
       </Button></div>
       </div>
@@ -173,6 +197,14 @@ export default function Bookmark({setCart, cart} ) {
     setUser("");
     setIsSignedIn(null)
     history.push("/")
+  }
+
+
+  function changeColor3(e) {
+    e.target.style.background = "#D3D3D3";
+  }
+  function changeColor4(e) {
+    e.target.style.background = "#424242";
   }
 
   function changeColor(e) {
