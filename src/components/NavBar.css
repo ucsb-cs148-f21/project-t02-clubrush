@@ -1,9 +1,9 @@
 .navbar{
-    /*background-color: #0C285C;*/
-    background-image: linear-gradient(to right, #0C285C, rgb(25, 62, 165), rgb(78, 118, 228));
-    /* max-height: 80px; */
+    background-color: #0C285C;
+    max-height: 80px;
+    /* background-image: linear-gradient(to right, #0C285C, rgb(25, 62, 165), rgb(78, 118, 228));
     position: -webkit-sticky;
-    position: sticky;
+    position: sticky; */
 }
 
 /* .navbar:not(.nohover):hover {

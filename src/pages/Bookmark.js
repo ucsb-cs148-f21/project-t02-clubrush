@@ -175,6 +175,22 @@ export default function Bookmark({setCart, cart} ) {
     history.push("/")
   }
 
+  function changeColor(e) {
+    e.target.style.background = "#9a9a9a";
+  }
+
+  function changeColor2(e) {
+    e.target.style.background = "#424242";
+  }
+
+  function changeColor_cart(e) {
+    e.target.style.background = "#7DB1E5";
+  }
+
+  function changeColor_cart2(e) {
+    e.target.style.background = "#004282";
+  }
+
   
   if(data != undefined) {
   return (
