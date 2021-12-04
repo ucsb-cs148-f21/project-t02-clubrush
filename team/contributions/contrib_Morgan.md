@@ -4,4 +4,4 @@ In the middle I worked on testing, including several unit tests and some integra
 the search bar is correctly rendering the page if we click on one of the clubs.
 I also worked on filtering the bubbles so that the users can find the clubs they are interested more easily.
 Currently I am working on the comment section, which allows the users to leave comments on what they think about the club.
-Although I didn't commit a lot to Github since I prefer to finish everything and get everything to work before committing, most of my commits are larger features of our app.
+Although I didn't commit a lot to Github since I prefer to finish everything and get everything to work before committing, most of my commits are larger features of our app. Also, for some reason, it shows that I have 2 accounts with the same name and one of them does not show on the actual graph, which is the reason why my commits graph fell exponentially after MVP.
