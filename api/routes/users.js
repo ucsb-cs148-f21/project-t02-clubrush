@@ -107,6 +107,7 @@ router.post('/:id/bookmark', async function(req, res, next){
         res.json("Bookmark already exists")
       }
     }
+
     user.bookmark.push(newBookmark);
     await user.save();
     res.json(newBookmark) 

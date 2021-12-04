@@ -49,6 +49,7 @@ export default function Club({cart, setCart, addToBookmark}) {
   let check = async (data) => {
     const user = getStorageValue("user")
     console.log(user)
+    console.log(data)
     if(user == "" || user == undefined) {
       alert("Cannot bookmark if not logged in. Please log in")
       return "Not logged in";
