@@ -13,8 +13,9 @@ const Bubble = styled.img`
 `;
 
 const TextWrapper = styled.div`
-  width: 700px;
+  width: 1100px;
   max-width: 100%;
+  text-align: center;
 `;
 
 const styles = {
@@ -36,7 +37,7 @@ export default function Home() {
   const [data, setData] = useState([]);
   const website = process.env.REACT_APP_website
   useEffect(() => {
-    fetch('${website}/clubs/')
+    fetch(`${website}/clubs/`)
       .then(async (res) => {
         const data = await res.json();
         setData(data)
@@ -49,8 +50,9 @@ export default function Home() {
       <Layout>
         <Container>
           <br/>
+          <TextWrapper>
           <h1>Welcome to Club Rush!</h1>
-          <br />
+          </TextWrapper>
           <TextWrapper>
             Our project will allow students to find a community at UCSB in a more 
             streamlined website that is more convenient than the current website, Shoreline.
