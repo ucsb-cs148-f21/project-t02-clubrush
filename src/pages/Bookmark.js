@@ -41,9 +41,9 @@ const styles = {
   org:{
     width: 825,
     fontSize: 25,
-    outline: "none",
-    textDecoration: "none",
-    shadowOpacity: 0
+
+    textDecoration: 'none'
+
   },
   remove:{
     fontSize: 20,
@@ -185,7 +185,9 @@ export default function Bookmark({setCart, cart} ) {
       {/* <div className="club" style={styles.buttons}>
       <Link to="/profile/edit"><Button style={styles.top_botton} onMouseEnter={changeColor_cart} onMouseLeave={changeColor_cart2}>Edit</Button></Link>
       </div> */}
-
+      <div className="club" style={styles.buttons}>
+        <Button style={styles.top_botton} onMouseEnter={changeColor_cart} onMouseLeave={changeColor_cart2} onClick={logout}>Logout</Button>
+        </div>
  
       <h1 style={styles.title}>Name:</h1>
         <div> {data.firstname} {data.lastname}</div>
@@ -193,17 +195,15 @@ export default function Bookmark({setCart, cart} ) {
         <h2 style={styles.title}>Email:</h2> 
         <div>   {data.email}</div>
         <br/>
-        <div className="club" style={styles.right}>
-        <Button variant="primary" type="submit" onClick={logout}>
-                Logout
-            </Button>
-        </div>
+
         <br />
         <br/>
 
         <h1>Bookmarked Clubs</h1>
-        <div className="club" style={styles.right}>
-        <Button variant="primary" type="submit" onClick={clearCart}>Clear Cart</Button>
+
+        <div className="club" style={styles.buttons}>
+        <Button style={styles.top_botton} onMouseEnter={changeColor_cart} onMouseLeave={changeColor_cart2} onClick={clearCart}>Clear All</Button>
+
         </div>
 
         {/* {Bookmarks} */}

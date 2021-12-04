@@ -22,8 +22,8 @@ export default function NavBar(props) {
   },[]);
   if(!isSignedIn) {
     return (
-      <Navbar class="navbar navbar-expand-lg navbar-light bg-light" >
-        <Container style={{
+      <Navbar class="navbar nohover navbar-expand-lg navbar-light bg-light" >
+        <Container class="contain nohover" style={{
           alignItems: "self-end",
           
         }}>
@@ -33,7 +33,7 @@ export default function NavBar(props) {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-              <Nav.Link href="/"><h4 className="linkText" href="/">Home</h4></Nav.Link>
+              <Nav.Link href="/"><h4 className="linkText nohover" href="/">Home</h4></Nav.Link>
               <h4>
               <NavDropdown title="Clubs" className="dropdown-item" id="nav-dropdown">
               
