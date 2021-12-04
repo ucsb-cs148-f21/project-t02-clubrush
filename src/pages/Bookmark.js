@@ -121,7 +121,7 @@ export default function Bookmark({setCart, cart} ) {
     </div>
   ))
 
-
+/*
   const Bookmarks  = cart.map((club, idx) => (
     <div className="club" key={idx}>
       <div className="both" style={styles.left}>
@@ -143,7 +143,7 @@ export default function Bookmark({setCart, cart} ) {
       </div>
       </div>
     </div>
-  ))
+  ))*/
 
   const history = useHistory();
 
