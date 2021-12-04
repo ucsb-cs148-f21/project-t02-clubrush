@@ -40,7 +40,8 @@ const styles = {
 
   org:{
     width: 825,
-    fontSize: 25
+    fontSize: 25,
+    textDecoration: 'none'
   },
   remove:{
     fontSize: 20,
