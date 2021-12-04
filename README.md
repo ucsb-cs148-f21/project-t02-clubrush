@@ -28,5 +28,5 @@ Our Club Rush application would have Users that are students who can search up o
 # Design 
 
 
-# Deploy 
+# Deployment
 * [Deployment Instructions](./docs/DEPLOY.md)
