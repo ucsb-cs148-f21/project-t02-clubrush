@@ -2,7 +2,7 @@
 
 |  Name     |   Contributions |
 |-----------|---------------------------------------|
-| Christine | placeholder |
+| Christine | My contributions to this project were mostly pair programming with others, and fixing small issues, fixing issues with github, and finding bugs in our website. In the beginning I uploaded the club banner image for data science and fixed team members errors with github, in the middle I worked on testing and the user manual and design document, managing the Kanban Board and helping with comments, and at the end of the project I have been working on user manual and finding bugs along the way, and fixing some or reporting to the rest of the team the errors I cannot fix, so that we have a fully functioning app before our code freeze. I feel like although I had the most commits on the team, my team did much more technical work than me. |
 |  Morgan   | placeholder |
 |   Tommy   | placeholder |
 |  Robert   | placeholder |
